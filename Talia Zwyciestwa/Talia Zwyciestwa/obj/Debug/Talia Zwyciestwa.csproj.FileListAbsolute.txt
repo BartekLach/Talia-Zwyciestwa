@@ -1,0 +1,10 @@
+D:\Talia zwycięstwa\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\bin\Debug\Talia Zwyciestwa.exe.config
+D:\Talia zwycięstwa\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\bin\Debug\Talia Zwyciestwa.exe
+D:\Talia zwycięstwa\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\bin\Debug\Talia Zwyciestwa.pdb
+D:\Talia zwycięstwa\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Debug\Talia Zwyciestwa.csprojAssemblyReference.cache
+D:\Talia zwycięstwa\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Debug\Talia_Zwyciestwa.Form1.resources
+D:\Talia zwycięstwa\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Debug\Talia_Zwyciestwa.Properties.Resources.resources
+D:\Talia zwycięstwa\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Debug\Talia Zwyciestwa.csproj.GenerateResource.cache
+D:\Talia zwycięstwa\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Debug\Talia Zwyciestwa.csproj.CoreCompileInputs.cache
+D:\Talia zwycięstwa\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Debug\Talia Zwyciestwa.exe
+D:\Talia zwycięstwa\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Debug\Talia Zwyciestwa.pdb
