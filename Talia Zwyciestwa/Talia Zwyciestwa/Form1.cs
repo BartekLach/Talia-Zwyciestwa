@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Talia_Zwyciestwa
 {
-	public partial class Form1 : Form
+	public partial class B : Form
 	{
 		private bool isCollapsed;
-		public Form1()
+		public B()
 		{
 			InitializeComponent();
 		}
@@ -43,6 +43,11 @@ namespace Talia_Zwyciestwa
 		private void button3_Click(object sender, EventArgs e)
 		{
 			timer1.Start();
+		}
+
+		private void exitButton_Click(object sender, EventArgs e)
+		{
+			this.Close();
 		}
 	}
 }
