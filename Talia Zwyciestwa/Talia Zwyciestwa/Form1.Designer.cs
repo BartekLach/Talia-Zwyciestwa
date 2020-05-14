@@ -1,4 +1,8 @@
-﻿namespace Talia_Zwyciestwa
+﻿
+using System;
+using System.Windows.Forms;
+
+namespace Talia_Zwyciestwa
 {
 	partial class B
 	{
@@ -53,6 +57,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Wczytaj";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new EventHandler(button2Click);
             // 
             // panelDropDown
             // 
@@ -127,6 +132,7 @@
             // 
             // timer1
             // 
+            this.timer1.Enabled = true;
             this.timer1.Interval = 15;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
@@ -154,18 +160,19 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Graj";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new EventHandler(button1Click);
             // 
             // B
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.OldLace;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.ClientSize = new System.Drawing.Size(1284, 1005);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.panelDropDown);
             this.Controls.Add(this.button2);
-            this.Font = new System.Drawing.Font("BlackCastleMF", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "B";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Talia Zwyciestwa";
@@ -175,8 +182,19 @@
 
 		}
 
-		#endregion
-		private System.Windows.Forms.Button button2;
+
+        #endregion
+
+        private void button2Click(object sender, EventArgs e)
+        {
+            //TODO: Wczytać grę
+        }
+
+        private void button1Click(object sender, EventArgs e)
+        {
+            //TODO: Wywołać nową grę
+        }
+        private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Panel panelDropDown;
 		private System.Windows.Forms.Button button6;
 		private System.Windows.Forms.Button button5;
@@ -185,6 +203,8 @@
 		private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Button button1;
+
+
     }
 }
 

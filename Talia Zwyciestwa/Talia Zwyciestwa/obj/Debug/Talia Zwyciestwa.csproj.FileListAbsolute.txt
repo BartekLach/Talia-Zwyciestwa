@@ -8,3 +8,13 @@ D:\Talia zwycięstwa\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Debu
 D:\Talia zwycięstwa\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Debug\Talia Zwyciestwa.exe
 D:\Talia zwycięstwa\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Debug\Talia Zwyciestwa.pdb
 D:\Talia zwycięstwa\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Debug\Talia_Zwyciestwa.B.resources
+C:\Users\Sheamus\source\repos\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\bin\Debug\Talia Zwyciestwa.exe.config
+C:\Users\Sheamus\source\repos\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\bin\Debug\Talia Zwyciestwa.exe
+C:\Users\Sheamus\source\repos\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\bin\Debug\Talia Zwyciestwa.pdb
+C:\Users\Sheamus\source\repos\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Debug\Talia Zwyciestwa.csprojAssemblyReference.cache
+C:\Users\Sheamus\source\repos\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Debug\Talia_Zwyciestwa.B.resources
+C:\Users\Sheamus\source\repos\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Debug\Talia_Zwyciestwa.Properties.Resources.resources
+C:\Users\Sheamus\source\repos\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Debug\Talia Zwyciestwa.csproj.GenerateResource.cache
+C:\Users\Sheamus\source\repos\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Debug\Talia Zwyciestwa.csproj.CoreCompileInputs.cache
+C:\Users\Sheamus\source\repos\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Debug\Talia Zwyciestwa.exe
+C:\Users\Sheamus\source\repos\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Debug\Talia Zwyciestwa.pdb
