@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Talia_Zwyciestwa
 {
-	public partial class B : Form
+	public partial class Menu : Form
 	{
 		private bool isCollapsed;
-		public B()
+		public Menu()
 		{
 			InitializeComponent();
 		}

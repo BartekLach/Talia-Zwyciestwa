@@ -5,7 +5,7 @@ using Talia_Zwyciestwa.Classes;
 
 namespace Talia_Zwyciestwa
 {
-	partial class B
+	partial class Menu
 	{
 		/// <summary>
 		/// Wymagana zmienna projektanta.
@@ -33,9 +33,11 @@ namespace Talia_Zwyciestwa
 		/// </summary>
 		private void InitializeComponent()
 		{
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(B));
-            this.button2 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
+            this.LoadButton = new System.Windows.Forms.Button();
             this.panelDropDown = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -43,22 +45,22 @@ namespace Talia_Zwyciestwa
             this.button3 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.exitButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.playButton = new System.Windows.Forms.Button();
             this.panelDropDown.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button2
+            // LoadButton
             // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.Location = new System.Drawing.Point(346, 565);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(308, 78);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Wczytaj";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new EventHandler(button2Click);
+            this.LoadButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("loadButton.BackgroundImage")));
+            this.LoadButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.LoadButton.FlatAppearance.BorderSize = 0;
+            this.LoadButton.Location = new System.Drawing.Point(346, 565);
+            this.LoadButton.Name = "LoadButton";
+            this.LoadButton.Size = new System.Drawing.Size(308, 78);
+            this.LoadButton.TabIndex = 1;
+            this.LoadButton.Text = "Wczytaj";
+            this.LoadButton.UseVisualStyleBackColor = true;
+            this.LoadButton.Click += new EventHandler(LoadButtonClick);
             // 
             // panelDropDown
             // 
@@ -150,31 +152,31 @@ namespace Talia_Zwyciestwa
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
-            // button1
+            // playButton
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Location = new System.Drawing.Point(346, 479);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(308, 78);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Graj";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new EventHandler(button1Click);
+            this.playButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("playButton.BackgroundImage")));
+            this.playButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.playButton.FlatAppearance.BorderSize = 0;
+            this.playButton.Location = new System.Drawing.Point(346, 479);
+            this.playButton.Name = "playButton";
+            this.playButton.Size = new System.Drawing.Size(308, 78);
+            this.playButton.TabIndex = 5;
+            this.playButton.Text = "Graj";
+            this.playButton.UseVisualStyleBackColor = true;
+            this.playButton.Click += new EventHandler(PlayButtonClick);
             // 
-            // B
+            // Menu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.OldLace;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1284, 1005);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.playButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.panelDropDown);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.LoadButton);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "B";
+            this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Talia Zwyciestwa";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -186,16 +188,16 @@ namespace Talia_Zwyciestwa
 
         #endregion
 
-        private void button2Click(object sender, EventArgs e)
+        private void LoadButtonClick(object sender, EventArgs e)
         {
-            GameHandler.Load();
+            GameHandler.Load(this);
         }
 
-        private void button1Click(object sender, EventArgs e)
+        private void PlayButtonClick(object sender, EventArgs e)
         {
-            GameHandler.Play();
+            GameHandler.Play(this);
         }
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button LoadButton;
 		private System.Windows.Forms.Panel panelDropDown;
 		private System.Windows.Forms.Button button6;
 		private System.Windows.Forms.Button button5;
@@ -203,7 +205,7 @@ namespace Talia_Zwyciestwa
 		private System.Windows.Forms.Button button3;
 		private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button exitButton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button playButton;
 
 
     }

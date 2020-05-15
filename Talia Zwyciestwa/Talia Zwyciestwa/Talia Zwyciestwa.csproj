@@ -53,6 +53,18 @@
     <Compile Include="Classes\Fighter.cs" />
     <Compile Include="Classes\GameHandler.cs" />
     <Compile Include="Classes\Player.cs" />
+    <Compile Include="Forms\Equipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Equipment.Designer.cs">
+      <DependentUpon>Equipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Map.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Map.Designer.cs">
+      <DependentUpon>Map.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Menu.cs">
       <SubType>Form</SubType>
     </Compile>

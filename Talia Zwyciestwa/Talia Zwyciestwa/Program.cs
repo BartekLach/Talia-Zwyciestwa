@@ -16,7 +16,7 @@ namespace Talia_Zwyciestwa
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new B());
+			Application.Run(new Menu());
 		}
 	}
 }

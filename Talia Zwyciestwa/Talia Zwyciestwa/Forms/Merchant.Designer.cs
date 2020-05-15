@@ -28,9 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.ClientSize = new System.Drawing.Size(1284, 1005);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Text = "Handlarz";
         }
 

@@ -22,9 +22,9 @@ C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciest
 C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\bin\Debug\Talia Zwyciestwa.exe
 C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\bin\Debug\Talia Zwyciestwa.pdb
 C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Debug\Talia Zwyciestwa.csprojAssemblyReference.cache
-C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Debug\Talia_Zwyciestwa.B.resources
 C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Debug\Talia_Zwyciestwa.Properties.Resources.resources
 C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Debug\Talia Zwyciestwa.csproj.GenerateResource.cache
 C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Debug\Talia Zwyciestwa.csproj.CoreCompileInputs.cache
 C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Debug\Talia Zwyciestwa.exe
 C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Debug\Talia Zwyciestwa.pdb
+C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Debug\Talia_Zwyciestwa.Menu.resources
