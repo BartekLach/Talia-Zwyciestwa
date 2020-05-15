@@ -53,16 +53,28 @@
     <Compile Include="Classes\Fighter.cs" />
     <Compile Include="Classes\GameHandler.cs" />
     <Compile Include="Classes\Player.cs" />
-    <Compile Include="Forms\Form1.cs">
+    <Compile Include="Forms\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Fight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Fight.Designer.cs">
+      <DependentUpon>Fight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Merchant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Merchant.Designer.cs">
+      <DependentUpon>Merchant.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
