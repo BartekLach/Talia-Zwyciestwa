@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace Talia_Zwyciestwa.Classes
 {
-    class Player : Fighter
+    public class Player : Fighter
     {
-
+        Player()
+        {
+            MaxHP = CurrentHP = 100;
+            Str = 0;
+            Dex = 0;
+        }
     }
 }

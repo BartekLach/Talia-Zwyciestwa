@@ -9,7 +9,7 @@ using Talia_Zwyciestwa.Forms;
 
 namespace Talia_Zwyciestwa.Classes
 {
-    class GameHandler
+    public class GameHandler
     {
         public static void Load(Menu menu)
         {
@@ -34,6 +34,12 @@ namespace Talia_Zwyciestwa.Classes
             Map map = new Map();
             menu.Hide();
             map.Show();
+        }
+        public static void ShowEQ(Map map)
+        {
+            Equipment equipment = new Equipment();
+            map.Hide();
+            equipment.Show();
         }
     }
 }

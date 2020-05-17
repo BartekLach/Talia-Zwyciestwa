@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace Talia_Zwyciestwa.Classes
 {
-    abstract class Card
+    abstract public class Card
     {
         private int value;
-        public int Value { get => value; set => this.value = value; }
+        private string name;
 
-        abstract public void Efect();
+        public int Value { get => value; set => this.value = value; }
+        public string Name { get => name; set => name = value; }
+
+        abstract public void Efect(Player player);
     }
 
 }

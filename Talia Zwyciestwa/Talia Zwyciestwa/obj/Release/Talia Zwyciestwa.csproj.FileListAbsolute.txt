@@ -1,0 +1,11 @@
+C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\bin\Release\Talia Zwyciestwa.exe.config
+C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\bin\Release\Talia Zwyciestwa.exe
+C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\bin\Release\Talia Zwyciestwa.pdb
+C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Release\Talia Zwyciestwa.csprojAssemblyReference.cache
+C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Release\Talia_Zwyciestwa.Forms.Map.resources
+C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Release\Talia_Zwyciestwa.Menu.resources
+C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Release\Talia_Zwyciestwa.Properties.Resources.resources
+C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Release\Talia Zwyciestwa.csproj.GenerateResource.cache
+C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Release\Talia Zwyciestwa.csproj.CoreCompileInputs.cache
+C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Release\Talia Zwyciestwa.exe
+C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Release\Talia Zwyciestwa.pdb

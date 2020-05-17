@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace Talia_Zwyciestwa.Classes.Card_Types
 {
-    class AttackCard : Card
+    public class AttackCard : Card
     {
-        override public void Efect()
+        public AttackCard()
         {
-            //TODO:
+            Value = 1;
+            Name = "Uderzenie";
+        }
+        override public void Efect(Player player)
+        {
+            //TODO
         }
     }
 }

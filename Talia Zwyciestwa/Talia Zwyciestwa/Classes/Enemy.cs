@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Talia_Zwyciestwa.Classes
 {
-    class Enemy : Fighter
+    public class Enemy : Fighter
     {
 
     }

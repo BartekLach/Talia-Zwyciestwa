@@ -1,7 +1,15 @@
-﻿namespace Talia_Zwyciestwa.Forms
+﻿using System;
+using Talia_Zwyciestwa.Classes;
+
+namespace Talia_Zwyciestwa.Forms
 {
     partial class Map
     {
+        private Player player;
+        private Deck deck;
+
+
+        
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -20,7 +28,7 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+
 
         /// <summary>
         /// Required method for Designer support - do not modify
@@ -28,6 +36,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            #region Windows Form Designer generated code
+
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Map));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -283,18 +293,19 @@
             this.button25.TabIndex = 24;
             this.button25.UseVisualStyleBackColor = true;
             // 
-            // LoadButton
+            // EQButton
             // 
             this.LoadButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LoadButton.BackgroundImage")));
             this.LoadButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.LoadButton.FlatAppearance.BorderSize = 0;
             this.LoadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F);
             this.LoadButton.Location = new System.Drawing.Point(33, 64);
-            this.LoadButton.Name = "LoadButton";
+            this.LoadButton.Name = "EQButton";
             this.LoadButton.Size = new System.Drawing.Size(308, 78);
             this.LoadButton.TabIndex = 25;
             this.LoadButton.Text = "Ekwipunek";
             this.LoadButton.UseVisualStyleBackColor = true;
+            this.LoadButton.Click += new EventHandler(EQButtonClick);
             // 
             // button26
             // 
@@ -314,7 +325,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1300, 1044);
             this.Controls.Add(this.button26);
             this.Controls.Add(this.LoadButton);
             this.Controls.Add(this.button25);
@@ -349,9 +360,19 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
+            #endregion
+
+            deck = new Deck();
+
         }
 
-        #endregion
+
+
+
+        private void EQButtonClick(object sender, EventArgs e)
+        {
+            GameHandler.ShowEQ(this);
+        }
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
@@ -380,5 +401,8 @@
         private System.Windows.Forms.Button button25;
         private System.Windows.Forms.Button LoadButton;
         private System.Windows.Forms.Button button26;
+  
+        internal Deck Deck { get => deck; set => deck = value; }
+        internal Player Player { get => player; set => player = value; }
     }
 }
