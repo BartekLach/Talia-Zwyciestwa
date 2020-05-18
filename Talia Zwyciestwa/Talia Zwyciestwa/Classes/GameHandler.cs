@@ -40,11 +40,7 @@ namespace Talia_Zwyciestwa.Classes
         }
         public static void Play(Menu menu)
         {
-            if (menu is null)
-            {
-                throw new ArgumentNullException(nameof(menu));
-            }
-            Map map = new Map();
+            Map map = new Map(menu);
             menu.Hide();
             map.Show();
         }
@@ -54,11 +50,14 @@ namespace Talia_Zwyciestwa.Classes
             map.Hide();
             equipment.Show();
         }
-        public static void FightEngager(Map map)
+        public static void FightEngager(Map map, Enemy enemy)
         {
-            Fight fight = new Fight();
+            Fight fight = new Fight(map,enemy);
             map.Hide();
             fight.Show();
+        }
+        public static void Toggler()
+        {
         }
     }
 }

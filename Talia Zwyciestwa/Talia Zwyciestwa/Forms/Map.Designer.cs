@@ -1,11 +1,13 @@
 ﻿using System;
 using Talia_Zwyciestwa.Classes;
+using Talia_Zwyciestwa.Classes.Enemies_Types;
 
 namespace Talia_Zwyciestwa.Forms
 {
     partial class Map
     {
-        private Player player = new Player();
+        public Menu menu;
+        private Player player;
         private Deck deck;
 
 
@@ -34,6 +36,12 @@ namespace Talia_Zwyciestwa.Forms
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
+        /// 
+        public Map(Menu m)
+        {
+            menu = m;
+            InitializeComponent();
+        }
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Map));
@@ -359,11 +367,18 @@ namespace Talia_Zwyciestwa.Forms
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
+            this.Load += new EventHandler(Begin);
+
+        }
+        private void Begin(object sender, System.EventArgs e)
+        {
+            deck = new Deck();
+            player = new Player();
         }
 
         private void button2Clicked(object sender, EventArgs e)
         {
-            GameHandler.FightEngager(this);
+            GameHandler.FightEngager(this, new EnemyCommon());
         }
 
         private void EQButtonClick(object sender, EventArgs e)

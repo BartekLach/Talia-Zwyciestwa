@@ -48,11 +48,12 @@
   <ItemGroup>
     <Compile Include="Classes\Card Types\AttackCard.cs" />
     <Compile Include="Classes\Card Types\DefCard.cs" />
+    <Compile Include="Classes\Card Types\Parry.cs" />
     <Compile Include="Classes\Card.cs" />
     <Compile Include="Classes\Deck.cs" />
-    <Compile Include="Classes\Enemies Types\Boss.cs" />
-    <Compile Include="Classes\Enemies Types\Common.cs" />
-    <Compile Include="Classes\Enemies Types\Elite.cs" />
+    <Compile Include="Classes\Enemies Types\EnemyBoss.cs" />
+    <Compile Include="Classes\Enemies Types\EnemyCommon.cs" />
+    <Compile Include="Classes\Enemies Types\EnemyElite.cs" />
     <Compile Include="Classes\Enemy.cs" />
     <Compile Include="Classes\Fighter.cs" />
     <Compile Include="Classes\FightHandler.cs" />
@@ -89,6 +90,12 @@
     </Compile>
     <Compile Include="Forms\Merchant.Designer.cs">
       <DependentUpon>Merchant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RewardsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RewardsForm.Designer.cs">
+      <DependentUpon>RewardsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -10,9 +10,11 @@ namespace Talia_Zwyciestwa.Classes
     {
         private int value;
         private string name;
+        private string describtion;
 
         public int Value { get => value; set => this.value = value; }
         public string Name { get => name; set => name = value; }
+        public string Describtion { get => describtion; set => describtion = value; }
 
         abstract public void Effect(Player player, Enemy enemy);
     }

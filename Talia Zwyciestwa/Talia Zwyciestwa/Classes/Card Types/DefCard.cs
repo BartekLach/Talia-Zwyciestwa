@@ -14,6 +14,7 @@ namespace Talia_Zwyciestwa.Classes.Card_Types
         {
             Value = 1;
             Name = "Broń się";
+            Describtion = "Zyskaj (" + defValue.ToString() + " + zręczność) punktów obrony";
         }
 
         override public void Effect(Player player,Enemy enemy)

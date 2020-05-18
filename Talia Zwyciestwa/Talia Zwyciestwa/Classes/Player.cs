@@ -10,14 +10,17 @@ namespace Talia_Zwyciestwa.Classes
     public class Player : Fighter
     {
         private int power;
+        private int money;
         public Player()
         {
-            MaxHP = CurrentHP = 100;
+            MaxHP = CurrentHP = 1;
             Str = 0;
-            Dex = 0;
-            power = 3;
+            Dex = CurrentDex = 0;
+            power = CurrentHP = 3;
+            CurrentPO = 0;
         }
 
         public int Power { get => power; set => power = value; }
+        public int Money { get => money; set => money = value; }
     }
 }

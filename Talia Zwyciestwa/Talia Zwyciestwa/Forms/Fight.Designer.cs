@@ -12,10 +12,12 @@ namespace Talia_Zwyciestwa.Forms
 
     partial class Fight
     {
+
+        private Map map;
         private Button[] CardButtons;
-        private Deck mainDeck = new Deck();
-        private Player player = new Player();
-        private Common enemy = new Common();
+        private ToolTip[] toolTips = new ToolTip[5];
+        private Player player;
+        private Enemy enemy;
         private Card[] hand = new Card[5];
         private List<Card> trash = new List<Card>();
         private List<Card> deck;
@@ -45,6 +47,14 @@ namespace Talia_Zwyciestwa.Forms
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
+        /// 
+        public Fight(Map m, Enemy e)
+        {
+            enemy = e;
+            map = m;
+            InitializeComponent();
+        }
+
         private void InitializeComponent()
         {
             
@@ -134,19 +144,34 @@ namespace Talia_Zwyciestwa.Forms
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
-            deck = mainDeck.Cards;
+            this.Load += new EventHandler(Begin);
+
+        }
+        private void Begin(object sender, System.EventArgs e)
+        {
+            player = map.Player;
+            deck = map.Deck.Cards;
             deck.Shuffle();
-            for(int i = 0; i<5; i++)
-            {
+
+            for (int i = 0; i < 5; i++)
                 hand[i] = null;
-            }
+
             CardButtons = new Button[5];
             CardButtons[0] = Card1;
             CardButtons[1] = Card2;
             CardButtons[2] = Card3;
             CardButtons[3] = Card4;
             CardButtons[4] = Card5;
+
             currentPower = player.Power;
+
+            for (int i = 0; i < 5; i++)
+            {
+                toolTips[i] = new ToolTip();
+                toolTips[i].AutoPopDelay = 3000;
+                toolTips[i].InitialDelay = 500;
+                toolTips[i].ReshowDelay = 500;
+            }
             FillHand();
         }
 
@@ -156,6 +181,9 @@ namespace Talia_Zwyciestwa.Forms
             if(player.CurrentHP<=0)
             {
                 MessageBox.Show("Przegałeś!!!");
+                map.menu.Show();
+                map.Close();
+                this.Close();
             }
             else
             {
@@ -201,7 +229,12 @@ namespace Talia_Zwyciestwa.Forms
                 currentPower -= hand[v].Value;
                 hand[v].Effect(player, enemy);
                 if(enemy.CurrentHP<=0)
+                {
                     MessageBox.Show("Wygrałeś!!!");
+                    //TODO: reward
+                    map.Show();
+                    this.Close();
+                }
                 trash.Add(hand[v]);
                 hand[v] = null;
                 CardButtons[v].Hide();
@@ -223,6 +256,7 @@ namespace Talia_Zwyciestwa.Forms
                 deck.RemoveAt(0);
                 CardButtons[i].Text = hand[i].Name;
                 CardButtons[i].Show();
+                toolTips[i].SetToolTip(CardButtons[i], hand[i].Describtion);
             }
         }
         private void TrashToHand()
