@@ -10,19 +10,16 @@ namespace Talia_Zwyciestwa.Classes
 {
     public class Deck
     {
-        public List<Card> deck = new List<Card>();
+        private List<Card> cards = new List<Card>();
         public Deck()
         {
             for (int i = 0; i<10;i++)
             {
-                deck.Add(new AttackCard());
-                deck.Add(new DefCard());
+                Cards.Add(new AttackCard());
+                Cards.Add(new DefCard());
             }
-            //MessageBox.Show("Utworzono deck");
-            //for(int i =0; i<deck.Count();i++)
-            //{
-            //    MessageBox.Show(deck[i].Name + deck[i].Value);
-            //}
         }
+
+        public List<Card> Cards { get => cards; set => cards = value; }
     }
 }

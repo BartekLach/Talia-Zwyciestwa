@@ -50,9 +50,15 @@
     <Compile Include="Classes\Card Types\DefCard.cs" />
     <Compile Include="Classes\Card.cs" />
     <Compile Include="Classes\Deck.cs" />
+    <Compile Include="Classes\Enemies Types\Boss.cs" />
+    <Compile Include="Classes\Enemies Types\Common.cs" />
+    <Compile Include="Classes\Enemies Types\Elite.cs" />
     <Compile Include="Classes\Enemy.cs" />
     <Compile Include="Classes\Fighter.cs" />
+    <Compile Include="Classes\FightHandler.cs" />
     <Compile Include="Classes\GameHandler.cs" />
+    <Compile Include="Classes\Item.cs" />
+    <Compile Include="Classes\Location.cs" />
     <Compile Include="Classes\Player.cs" />
     <Compile Include="Forms\Equipment.cs">
       <SubType>Form</SubType>
@@ -86,8 +92,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Fight.resx">
+      <DependentUpon>Fight.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Map.resx">
       <DependentUpon>Map.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

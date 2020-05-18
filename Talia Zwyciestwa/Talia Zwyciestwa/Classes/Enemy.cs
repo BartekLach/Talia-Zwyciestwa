@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Talia_Zwyciestwa.Classes
 {
-    public class Enemy : Fighter
+    abstract public class Enemy : Fighter
     {
-
+        abstract public void MakeTurn(Player player);
     }
 }

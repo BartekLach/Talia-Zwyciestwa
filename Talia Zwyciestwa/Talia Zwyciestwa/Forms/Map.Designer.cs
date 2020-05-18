@@ -5,7 +5,7 @@ namespace Talia_Zwyciestwa.Forms
 {
     partial class Map
     {
-        private Player player;
+        private Player player = new Player();
         private Deck deck;
 
 
@@ -36,8 +36,6 @@ namespace Talia_Zwyciestwa.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            #region Windows Form Designer generated code
-
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Map));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -85,6 +83,7 @@ namespace Talia_Zwyciestwa.Forms
             this.button2.Size = new System.Drawing.Size(64, 64);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new EventHandler(button2Clicked);
             // 
             // button3
             // 
@@ -293,19 +292,19 @@ namespace Talia_Zwyciestwa.Forms
             this.button25.TabIndex = 24;
             this.button25.UseVisualStyleBackColor = true;
             // 
-            // EQButton
+            // LoadButton
             // 
             this.LoadButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LoadButton.BackgroundImage")));
             this.LoadButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.LoadButton.FlatAppearance.BorderSize = 0;
             this.LoadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F);
             this.LoadButton.Location = new System.Drawing.Point(33, 64);
-            this.LoadButton.Name = "EQButton";
+            this.LoadButton.Name = "LoadButton";
             this.LoadButton.Size = new System.Drawing.Size(308, 78);
             this.LoadButton.TabIndex = 25;
             this.LoadButton.Text = "Ekwipunek";
             this.LoadButton.UseVisualStyleBackColor = true;
-            this.LoadButton.Click += new EventHandler(EQButtonClick);
+            this.LoadButton.Click += new System.EventHandler(this.EQButtonClick);
             // 
             // button26
             // 
@@ -360,14 +359,12 @@ namespace Talia_Zwyciestwa.Forms
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
-            #endregion
-
-            deck = new Deck();
-
         }
 
-
-
+        private void button2Clicked(object sender, EventArgs e)
+        {
+            GameHandler.FightEngager(this);
+        }
 
         private void EQButtonClick(object sender, EventArgs e)
         {

@@ -14,7 +14,7 @@ namespace Talia_Zwyciestwa.Classes
         public int Value { get => value; set => this.value = value; }
         public string Name { get => name; set => name = value; }
 
-        abstract public void Efect(Player player);
+        abstract public void Effect(Player player, Enemy enemy);
     }
 
 }

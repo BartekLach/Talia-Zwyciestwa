@@ -9,8 +9,21 @@ using Talia_Zwyciestwa.Forms;
 
 namespace Talia_Zwyciestwa.Classes
 {
-    public class GameHandler
+    public static class GameHandler
     {
+        private static Random rng = new Random();
+        public static void Shuffle<T>(this IList<T> list)
+        {
+            int n = list.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = rng.Next(n + 1);
+                T value = list[k];
+                list[k] = list[n];
+                list[n] = value;
+            }
+        }
         public static void Load(Menu menu)
         {
             if (menu is null)
@@ -40,6 +53,12 @@ namespace Talia_Zwyciestwa.Classes
             Equipment equipment = new Equipment();
             map.Hide();
             equipment.Show();
+        }
+        public static void FightEngager(Map map)
+        {
+            Fight fight = new Fight();
+            map.Hide();
+            fight.Show();
         }
     }
 }
