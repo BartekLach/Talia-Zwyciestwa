@@ -1,12 +1,15 @@
 ﻿
 using System;
+using System.Media;
 using System.Windows.Forms;
+using Talia_Zwyciestwa.Assets.Music;
 using Talia_Zwyciestwa.Classes;
 
 namespace Talia_Zwyciestwa
 {
 	partial class Menu
 	{
+        private SoundPlayer soundPlayer = new SoundPlayer(Music.battleThemeA);
 		/// <summary>
 		/// Wymagana zmienna projektanta.
 		/// </summary>
@@ -33,8 +36,6 @@ namespace Talia_Zwyciestwa
 		/// </summary>
 		private void InitializeComponent()
 		{
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.LoadButton = new System.Windows.Forms.Button();
@@ -60,7 +61,7 @@ namespace Talia_Zwyciestwa
             this.LoadButton.TabIndex = 1;
             this.LoadButton.Text = "Wczytaj";
             this.LoadButton.UseVisualStyleBackColor = true;
-            this.LoadButton.Click += new EventHandler(LoadButtonClick);
+            this.LoadButton.Click += new System.EventHandler(this.LoadButtonClick);
             // 
             // panelDropDown
             // 
@@ -163,7 +164,7 @@ namespace Talia_Zwyciestwa
             this.playButton.TabIndex = 5;
             this.playButton.Text = "Graj";
             this.playButton.UseVisualStyleBackColor = true;
-            this.playButton.Click += new EventHandler(PlayButtonClick);
+            this.playButton.Click += new System.EventHandler(this.PlayButtonClick);
             // 
             // Menu
             // 
@@ -176,6 +177,7 @@ namespace Talia_Zwyciestwa
             this.Controls.Add(this.panelDropDown);
             this.Controls.Add(this.LoadButton);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Talia Zwyciestwa";
@@ -183,12 +185,16 @@ namespace Talia_Zwyciestwa
             this.panelDropDown.ResumeLayout(false);
             this.ResumeLayout(false);
 
-		}
+            this.Load += new EventHandler(Begin);
+        }
 
 
         #endregion
-
-        private void LoadButtonClick(object sender, EventArgs e)
+        private void Begin(object sender, System.EventArgs e)
+        {
+            soundPlayer.PlayLooping();
+        }
+            private void LoadButtonClick(object sender, EventArgs e)
         {
             GameHandler.Load(this);
         }

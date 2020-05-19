@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Music\Music.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Music.resx</DependentUpon>
+    </Compile>
     <Compile Include="Classes\Card Types\AttackCard.cs" />
     <Compile Include="Classes\Card Types\DefCard.cs" />
     <Compile Include="Classes\Card Types\Parry.cs" />
@@ -99,6 +104,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Assets\Music\Music.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Music.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Fight.resx">
       <DependentUpon>Fight.cs</DependentUpon>
       <SubType>Designer</SubType>
