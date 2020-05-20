@@ -11,7 +11,7 @@ namespace Talia_Zwyciestwa.Classes.Enemies_Types
     {
         public EnemyCommon()
         {
-            MaxHP = CurrentHP = 30;
+            MaxHP = CurrentHP = 1; //TODO: CHANGE THAT! DEBUG ONLY
             Str = CurrentStr = 4;
             Dex = 3;
             CurrentPO = 0;

@@ -15,12 +15,11 @@ namespace Talia_Zwyciestwa.Classes.Card_Types
             Value = 1;
             Name = "Uderzenie";
             Describtion = " Zadaj (" + dmgValue.ToString() + " + siła) obrażeń";
+            Id = 0;
         }
         override public void Effect(Player player, Enemy enemy)
         {
             enemy.GetDMG(player.CurrentStr + dmgValue);
-            //MessageBox.Show("Enemy HP: " + enemy.CurrentHP.ToString());
-            //TODO
         }
     }
 }

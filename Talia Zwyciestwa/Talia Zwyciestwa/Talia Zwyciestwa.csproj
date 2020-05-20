@@ -61,7 +61,6 @@
     <Compile Include="Classes\Enemies Types\EnemyElite.cs" />
     <Compile Include="Classes\Enemy.cs" />
     <Compile Include="Classes\Fighter.cs" />
-    <Compile Include="Classes\FightHandler.cs" />
     <Compile Include="Classes\GameHandler.cs" />
     <Compile Include="Classes\Item.cs" />
     <Compile Include="Classes\Location.cs" />

@@ -15,13 +15,12 @@ namespace Talia_Zwyciestwa.Classes.Card_Types
             Value = 1;
             Name = "Broń się";
             Describtion = "Zyskaj (" + defValue.ToString() + " + zręczność) punktów obrony";
+            Id = 1;
         }
 
         override public void Effect(Player player,Enemy enemy)
         {
             player.CurrentPO += defValue + player.CurrentDex;
-           // MessageBox.Show(Name);
-            //TODO
         }
     }
 }

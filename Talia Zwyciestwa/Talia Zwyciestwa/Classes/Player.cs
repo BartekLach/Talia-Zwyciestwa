@@ -13,7 +13,7 @@ namespace Talia_Zwyciestwa.Classes
         private int money;
         public Player()
         {
-            MaxHP = CurrentHP = 1;
+            MaxHP = CurrentHP = 100;
             Str = 0;
             Dex = CurrentDex = 0;
             power = CurrentHP = 3;

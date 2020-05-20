@@ -13,8 +13,9 @@ namespace Talia_Zwyciestwa.Classes.Card_Types
         public Parry()
         {
             Value = 2;
-            Name = "Paruj";
+            Name = "Riposta";
             Describtion = "Zadaj ( " + dmgValue.ToString() + " + siła) obrażeń i zyskaj" + dmgValue.ToString() + " + zręczność) punktów obrony";
+            Id = 2;
         }
 
         override public void Effect(Player player, Enemy enemy)
