@@ -53,7 +53,14 @@
     </Compile>
     <Compile Include="Classes\Card Types\AttackCard.cs" />
     <Compile Include="Classes\Card Types\DefCard.cs" />
+    <Compile Include="Classes\Card Types\DexElixirCard.cs" />
     <Compile Include="Classes\Card Types\Parry.cs" />
+    <Compile Include="Classes\Card Types\Steroids.cs" />
+    <Compile Include="Classes\Card Types\UpgradedAttackCard.cs" />
+    <Compile Include="Classes\Card Types\UpgradedDefCard.cs" />
+    <Compile Include="Classes\Card Types\UpgradeDexElixirCard.cs" />
+    <Compile Include="Classes\Card Types\UpgradedParryCard.cs" />
+    <Compile Include="Classes\Card Types\UpgradedSteroidsCard.cs" />
     <Compile Include="Classes\Card.cs" />
     <Compile Include="Classes\Deck.cs" />
     <Compile Include="Classes\Enemies Types\EnemyBoss.cs" />
@@ -117,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Merchant.resx">
+      <DependentUpon>Merchant.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

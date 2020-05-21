@@ -82,7 +82,7 @@ namespace Talia_Zwyciestwa.Forms
             this.Load += new System.EventHandler(this.Begin);
 
         }
-
+        #endregion/
         private void Heal(object sender, EventArgs e)
         {
             if(map.Player.Money < 100)
@@ -93,6 +93,11 @@ namespace Talia_Zwyciestwa.Forms
                 map.Player.Money -= 100;
                 map.Player.CurrentHP = map.Player.MaxHP;
             }
+        }
+
+        private void Begin(object sender, EventArgs e)
+        {
+
         }
 
         private void UpgradeCard(object sender, EventArgs e) //TEST THAT
@@ -138,12 +143,8 @@ namespace Talia_Zwyciestwa.Forms
             }
         }
 
-        private void Begin(object sender, EventArgs e)
-        {
-            
-        }
+        
 
-        #endregion
 
         private System.Windows.Forms.Button HealButton;
         private System.Windows.Forms.Button UpgradeButton;

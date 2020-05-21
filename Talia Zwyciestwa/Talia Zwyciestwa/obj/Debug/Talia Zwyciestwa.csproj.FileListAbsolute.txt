@@ -32,3 +32,4 @@ D:\Talia zwycięstwa\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Debu
 C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Debug\Talia_Zwyciestwa.Forms.Map.resources
 C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Debug\Talia_Zwyciestwa.Forms.Fight.resources
 C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Debug\Talia_Zwyciestwa.Assets.Music.Music.resources
+C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Debug\Talia_Zwyciestwa.Forms.Merchant.resources
