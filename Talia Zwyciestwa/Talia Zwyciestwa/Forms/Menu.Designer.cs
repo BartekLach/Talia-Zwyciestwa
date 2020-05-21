@@ -37,7 +37,6 @@ namespace Talia_Zwyciestwa
 		private void InitializeComponent()
 		{
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.LoadButton = new System.Windows.Forms.Button();
             this.panelDropDown = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
@@ -52,7 +51,8 @@ namespace Talia_Zwyciestwa
             // 
             // LoadButton
             // 
-            this.LoadButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("loadButton.BackgroundImage")));
+            this.LoadButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.LoadButton.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.button_background_01;
             this.LoadButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.LoadButton.FlatAppearance.BorderSize = 0;
             this.LoadButton.Location = new System.Drawing.Point(346, 565);
@@ -65,8 +65,9 @@ namespace Talia_Zwyciestwa
             // 
             // panelDropDown
             // 
+            this.panelDropDown.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panelDropDown.BackColor = System.Drawing.Color.FloralWhite;
-            this.panelDropDown.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelDropDown.BackgroundImage")));
+            this.panelDropDown.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.button_background_01;
             this.panelDropDown.Controls.Add(this.button6);
             this.panelDropDown.Controls.Add(this.button5);
             this.panelDropDown.Controls.Add(this.button4);
@@ -80,7 +81,8 @@ namespace Talia_Zwyciestwa
             // 
             // button6
             // 
-            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
+            this.button6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button6.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.button_background_01;
             this.button6.Dock = System.Windows.Forms.DockStyle.Top;
             this.button6.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button6.FlatAppearance.BorderSize = 0;
@@ -94,7 +96,8 @@ namespace Talia_Zwyciestwa
             // 
             // button5
             // 
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
+            this.button5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button5.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.button_background_01;
             this.button5.Dock = System.Windows.Forms.DockStyle.Top;
             this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button5.FlatAppearance.BorderSize = 0;
@@ -108,7 +111,8 @@ namespace Talia_Zwyciestwa
             // 
             // button4
             // 
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
+            this.button4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button4.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.button_background_01;
             this.button4.Dock = System.Windows.Forms.DockStyle.Top;
             this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button4.FlatAppearance.BorderSize = 0;
@@ -122,7 +126,8 @@ namespace Talia_Zwyciestwa
             // 
             // button3
             // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button3.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.button_background_01;
             this.button3.Dock = System.Windows.Forms.DockStyle.Top;
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button3.FlatAppearance.BorderSize = 0;
@@ -142,10 +147,11 @@ namespace Talia_Zwyciestwa
             // 
             // exitButton
             // 
-            this.exitButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exitButton.BackgroundImage")));
+            this.exitButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.exitButton.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.button_background_01;
             this.exitButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.exitButton.FlatAppearance.BorderSize = 0;
-            this.exitButton.Location = new System.Drawing.Point(1677, 954);
+            this.exitButton.Location = new System.Drawing.Point(421, 947);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(168, 62);
             this.exitButton.TabIndex = 4;
@@ -155,7 +161,8 @@ namespace Talia_Zwyciestwa
             // 
             // playButton
             // 
-            this.playButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("playButton.BackgroundImage")));
+            this.playButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.playButton.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.button_background_01;
             this.playButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.playButton.FlatAppearance.BorderSize = 0;
             this.playButton.Location = new System.Drawing.Point(346, 479);
@@ -168,10 +175,12 @@ namespace Talia_Zwyciestwa
             // 
             // Menu
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.OldLace;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1284, 1005);
+            this.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.menu_background_01;
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.playButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.panelDropDown);
@@ -182,10 +191,10 @@ namespace Talia_Zwyciestwa
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Talia Zwyciestwa";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Begin);
             this.panelDropDown.ResumeLayout(false);
             this.ResumeLayout(false);
 
-            this.Load += new EventHandler(Begin);
         }
 
 

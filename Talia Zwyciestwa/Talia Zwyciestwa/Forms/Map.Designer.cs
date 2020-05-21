@@ -77,7 +77,8 @@ namespace Talia_Zwyciestwa.Forms
             // 
             // button1
             // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button1.Image = global::Talia_Zwyciestwa.Properties.Resources.symbol_01;
             this.button1.Location = new System.Drawing.Point(775, 833);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(64, 64);
@@ -87,7 +88,8 @@ namespace Talia_Zwyciestwa.Forms
             // 
             // button2
             // 
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button2.Image = global::Talia_Zwyciestwa.Properties.Resources.symbol_02;
             this.button2.Location = new System.Drawing.Point(743, 694);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(64, 64);
@@ -97,8 +99,9 @@ namespace Talia_Zwyciestwa.Forms
             // 
             // button3
             // 
+            this.button3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button3.Enabled = false;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Image = global::Talia_Zwyciestwa.Properties.Resources.symbol_02;
             this.button3.Location = new System.Drawing.Point(884, 805);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(64, 64);
@@ -108,8 +111,9 @@ namespace Talia_Zwyciestwa.Forms
             // 
             // button4
             // 
+            this.button4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button4.Enabled = false;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Image = global::Talia_Zwyciestwa.Properties.Resources.symbol_02;
             this.button4.Location = new System.Drawing.Point(1009, 819);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(64, 64);
@@ -119,8 +123,9 @@ namespace Talia_Zwyciestwa.Forms
             // 
             // button5
             // 
+            this.button5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button5.Enabled = false;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Image = global::Talia_Zwyciestwa.Properties.Resources.symbol_01;
             this.button5.Location = new System.Drawing.Point(1120, 747);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(64, 64);
@@ -130,8 +135,9 @@ namespace Talia_Zwyciestwa.Forms
             // 
             // button6
             // 
+            this.button6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button6.Enabled = false;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.Image = global::Talia_Zwyciestwa.Properties.Resources.symbol_03;
             this.button6.Location = new System.Drawing.Point(1195, 916);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(64, 64);
@@ -141,8 +147,9 @@ namespace Talia_Zwyciestwa.Forms
             // 
             // button7
             // 
+            this.button7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button7.Enabled = false;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
+            this.button7.Image = global::Talia_Zwyciestwa.Properties.Resources.symbol_02;
             this.button7.Location = new System.Drawing.Point(1294, 644);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(64, 64);
@@ -152,8 +159,9 @@ namespace Talia_Zwyciestwa.Forms
             // 
             // button8
             // 
+            this.button8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button8.Enabled = false;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
+            this.button8.Image = global::Talia_Zwyciestwa.Properties.Resources.symbol_02;
             this.button8.Location = new System.Drawing.Point(1676, 682);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(64, 64);
@@ -163,8 +171,9 @@ namespace Talia_Zwyciestwa.Forms
             // 
             // button9
             // 
+            this.button9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button9.Enabled = false;
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
+            this.button9.Image = global::Talia_Zwyciestwa.Properties.Resources.symbol_01;
             this.button9.Location = new System.Drawing.Point(1630, 800);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(64, 64);
@@ -174,8 +183,9 @@ namespace Talia_Zwyciestwa.Forms
             // 
             // button10
             // 
+            this.button10.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button10.Enabled = false;
-            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
+            this.button10.Image = global::Talia_Zwyciestwa.Properties.Resources.symbol_03;
             this.button10.Location = new System.Drawing.Point(1684, 908);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(64, 64);
@@ -185,8 +195,9 @@ namespace Talia_Zwyciestwa.Forms
             // 
             // button11
             // 
+            this.button11.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button11.Enabled = false;
-            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
+            this.button11.Image = global::Talia_Zwyciestwa.Properties.Resources.symbol_01;
             this.button11.Location = new System.Drawing.Point(1585, 523);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(64, 64);
@@ -196,8 +207,9 @@ namespace Talia_Zwyciestwa.Forms
             // 
             // button12
             // 
+            this.button12.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button12.Enabled = false;
-            this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
+            this.button12.Image = global::Talia_Zwyciestwa.Properties.Resources.symbol_01;
             this.button12.Location = new System.Drawing.Point(1450, 446);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(64, 64);
@@ -207,8 +219,9 @@ namespace Talia_Zwyciestwa.Forms
             // 
             // button13
             // 
+            this.button13.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button13.Enabled = false;
-            this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
+            this.button13.Image = global::Talia_Zwyciestwa.Properties.Resources.symbol_01;
             this.button13.Location = new System.Drawing.Point(1726, 297);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(64, 64);
@@ -218,8 +231,9 @@ namespace Talia_Zwyciestwa.Forms
             // 
             // button14
             // 
+            this.button14.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button14.Enabled = false;
-            this.button14.Image = ((System.Drawing.Image)(resources.GetObject("button14.Image")));
+            this.button14.Image = global::Talia_Zwyciestwa.Properties.Resources.symbol_02;
             this.button14.Location = new System.Drawing.Point(1652, 386);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(64, 64);
@@ -229,8 +243,9 @@ namespace Talia_Zwyciestwa.Forms
             // 
             // button15
             // 
+            this.button15.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button15.Enabled = false;
-            this.button15.Image = ((System.Drawing.Image)(resources.GetObject("button15.Image")));
+            this.button15.Image = global::Talia_Zwyciestwa.Properties.Resources.symbol_02;
             this.button15.Location = new System.Drawing.Point(1267, 466);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(64, 64);
@@ -240,8 +255,9 @@ namespace Talia_Zwyciestwa.Forms
             // 
             // button16
             // 
+            this.button16.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button16.Enabled = false;
-            this.button16.Image = ((System.Drawing.Image)(resources.GetObject("button16.Image")));
+            this.button16.Image = global::Talia_Zwyciestwa.Properties.Resources.symbol_02;
             this.button16.Location = new System.Drawing.Point(1243, 310);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(64, 64);
@@ -251,8 +267,9 @@ namespace Talia_Zwyciestwa.Forms
             // 
             // button17
             // 
+            this.button17.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button17.Enabled = false;
-            this.button17.Image = ((System.Drawing.Image)(resources.GetObject("button17.Image")));
+            this.button17.Image = global::Talia_Zwyciestwa.Properties.Resources.symbol_01;
             this.button17.Location = new System.Drawing.Point(1057, 338);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(64, 64);
@@ -262,8 +279,9 @@ namespace Talia_Zwyciestwa.Forms
             // 
             // button18
             // 
+            this.button18.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button18.Enabled = false;
-            this.button18.Image = ((System.Drawing.Image)(resources.GetObject("button18.Image")));
+            this.button18.Image = global::Talia_Zwyciestwa.Properties.Resources.symbol_02;
             this.button18.Location = new System.Drawing.Point(850, 322);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(64, 64);
@@ -273,8 +291,9 @@ namespace Talia_Zwyciestwa.Forms
             // 
             // button19
             // 
+            this.button19.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button19.Enabled = false;
-            this.button19.Image = ((System.Drawing.Image)(resources.GetObject("button19.Image")));
+            this.button19.Image = global::Talia_Zwyciestwa.Properties.Resources.symbol_02;
             this.button19.Location = new System.Drawing.Point(1010, 480);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(64, 64);
@@ -284,8 +303,9 @@ namespace Talia_Zwyciestwa.Forms
             // 
             // button20
             // 
+            this.button20.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button20.Enabled = false;
-            this.button20.Image = ((System.Drawing.Image)(resources.GetObject("button20.Image")));
+            this.button20.Image = global::Talia_Zwyciestwa.Properties.Resources.symbol_01;
             this.button20.Location = new System.Drawing.Point(661, 249);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(64, 64);
@@ -295,8 +315,9 @@ namespace Talia_Zwyciestwa.Forms
             // 
             // button21
             // 
+            this.button21.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button21.Enabled = false;
-            this.button21.Image = ((System.Drawing.Image)(resources.GetObject("button21.Image")));
+            this.button21.Image = global::Talia_Zwyciestwa.Properties.Resources.symbol_03;
             this.button21.Location = new System.Drawing.Point(695, 379);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(64, 64);
@@ -306,8 +327,9 @@ namespace Talia_Zwyciestwa.Forms
             // 
             // button22
             // 
+            this.button22.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button22.Enabled = false;
-            this.button22.Image = ((System.Drawing.Image)(resources.GetObject("button22.Image")));
+            this.button22.Image = global::Talia_Zwyciestwa.Properties.Resources.symbol_02;
             this.button22.Location = new System.Drawing.Point(487, 240);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(64, 64);
@@ -317,8 +339,9 @@ namespace Talia_Zwyciestwa.Forms
             // 
             // button23
             // 
+            this.button23.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button23.Enabled = false;
-            this.button23.Image = ((System.Drawing.Image)(resources.GetObject("button23.Image")));
+            this.button23.Image = global::Talia_Zwyciestwa.Properties.Resources.symbol_02;
             this.button23.Location = new System.Drawing.Point(537, 398);
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(64, 64);
@@ -328,8 +351,9 @@ namespace Talia_Zwyciestwa.Forms
             // 
             // button24
             // 
+            this.button24.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button24.Enabled = false;
-            this.button24.Image = ((System.Drawing.Image)(resources.GetObject("button24.Image")));
+            this.button24.Image = global::Talia_Zwyciestwa.Properties.Resources.symbol_02;
             this.button24.Location = new System.Drawing.Point(260, 492);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(64, 64);
@@ -339,8 +363,9 @@ namespace Talia_Zwyciestwa.Forms
             // 
             // button25
             // 
+            this.button25.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button25.Enabled = false;
-            this.button25.Image = ((System.Drawing.Image)(resources.GetObject("button25.Image")));
+            this.button25.Image = global::Talia_Zwyciestwa.Properties.Resources.symbol_03;
             this.button25.Location = new System.Drawing.Point(338, 349);
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(64, 64);
@@ -350,7 +375,8 @@ namespace Talia_Zwyciestwa.Forms
             // 
             // EQButton
             // 
-            this.EQButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EQButton.BackgroundImage")));
+            this.EQButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.EQButton.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.button_background_01;
             this.EQButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.EQButton.FlatAppearance.BorderSize = 0;
             this.EQButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F);
@@ -364,7 +390,8 @@ namespace Talia_Zwyciestwa.Forms
             // 
             // button26
             // 
-            this.button26.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button26.BackgroundImage")));
+            this.button26.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button26.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.button_background_01;
             this.button26.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button26.FlatAppearance.BorderSize = 0;
             this.button26.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F);
@@ -377,10 +404,11 @@ namespace Talia_Zwyciestwa.Forms
             // 
             // Map
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1300, 1044);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.button26);
             this.Controls.Add(this.EQButton);
             this.Controls.Add(this.button25);
