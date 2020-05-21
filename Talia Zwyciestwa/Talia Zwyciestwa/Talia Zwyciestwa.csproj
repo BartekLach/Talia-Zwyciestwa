@@ -114,6 +114,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Music.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Equipment.resx">
+      <DependentUpon>Equipment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Fight.resx">
       <DependentUpon>Fight.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -153,6 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Music\battleThemeA.wav" />
+    <None Include="Resources\equipment_01.png" />
     <None Include="Resources\symbol_03.png" />
     <None Include="Resources\symbol_01.png" />
     <None Include="Resources\symbol_02.png" />
