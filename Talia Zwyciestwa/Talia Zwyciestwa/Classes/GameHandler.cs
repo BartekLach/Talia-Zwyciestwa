@@ -114,7 +114,7 @@ namespace Talia_Zwyciestwa.Classes
 
         public static void MerchantLauncher(Map map)
         {
-            Merchant merchant = new Merchant();
+            Merchant merchant = new Merchant(map);
             map.Hide();
             merchant.Show();
         }

@@ -26,7 +26,6 @@ namespace Talia_Zwyciestwa.Classes.Enemies_Types
             CurrentStr += random.Next(2);
             CurrentPO = random.Next(3, 6) + CurrentDex;
             CurrentDex += random.Next(2);
-
         }
     }
 }

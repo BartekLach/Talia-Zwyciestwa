@@ -11,6 +11,7 @@ namespace Talia_Zwyciestwa.Forms
         public Menu menu;
         private Player player;
         private Deck deck;
+        public bool bossFight = false;
 
         
         /// <summary>
@@ -245,8 +246,8 @@ namespace Talia_Zwyciestwa.Forms
             // 
             this.button15.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button15.Enabled = false;
-            this.button15.Image = global::Talia_Zwyciestwa.Properties.Resources.symbol_02;
             this.button15.Location = new System.Drawing.Point(1267, 466);
+            this.button15.Image = global::Talia_Zwyciestwa.Properties.Resources.symbol_03;
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(64, 64);
             this.button15.TabIndex = 14;
@@ -448,132 +449,187 @@ namespace Talia_Zwyciestwa.Forms
 
         private void button25Clicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            button25.Enabled = false;
+            button24.Enabled = true;
+
+            GameHandler.MerchantLauncher(this);
+
         }
 
         private void button24Clicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            
+            button24.Enabled = false;
+            bossFight = true;
+            GameHandler.FightEngager(this, new EnemyBoss());
         }
 
         private void button23Clicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            button23.Enabled = false;
+            button25.Enabled = true;
+
+            GameHandler.FightEngager(this, new EnemyCommon());
         }
 
         private void button22Clicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            button22.Enabled = false;
+            button25.Enabled = true;
+
+            GameHandler.FightEngager(this, new EnemyCommon());
         }
 
         private void button21Clicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            button20.Enabled = false;
+            button21.Enabled = false;
+            button23.Enabled = true;
+
+            GameHandler.MerchantLauncher(this);
         }
 
         private void button20Clicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            button22.Enabled = true;
+            button20.Enabled = false;
+            button21.Enabled = false;
+            GameHandler.RandomEvent(this);
         }
 
         private void button19Clicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            button19.Enabled = false;
+            GameHandler.MerchantLauncher(this);
         }
 
         private void button18Clicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            button18.Enabled = false;
+            button19.Enabled = false;
+            button20.Enabled = true;
+            button21.Enabled = true;
+            GameHandler.FightEngager(this, new EnemyCommon());
+
         }
 
         private void button17Clicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            button19.Enabled = true;
+            button18.Enabled = true;
+            button17.Enabled = false;
+            GameHandler.RandomEvent(this);
         }
 
         private void button16Clicked(object sender, EventArgs e)
         {
+            button16.Enabled = false;
+            button17.Enabled = true;
             GameHandler.FightEngager(this, new EnemyElite());
         }
 
         private void button15Clicked(object sender, EventArgs e)
         {
-            GameHandler.FightEngager(this, new EnemyCommon());
+            button15.Enabled = false;
+            GameHandler.MerchantLauncher(this);
         }
 
         private void button14Clicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            button13.Enabled = true;
+            button14.Enabled = false;
+            GameHandler.FightEngager(this, new EnemyCommon());
         }
 
         private void button13Clicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            button13.Enabled = false;
+            GameHandler.RandomEvent(this);
         }
 
         private void button12Clicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            button12.Enabled = false;
+            button15.Enabled = true;
+            button16.Enabled = true;
+            button13.Enabled = false;
+            button14.Enabled = false;
+            GameHandler.RandomEvent(this);
         }
 
         private void button11Clicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            button9.Enabled = false;
+            button10.Enabled = false;
+            button11.Enabled = false;
+            button14.Enabled = true;
+            button12.Enabled = true;
+            GameHandler.RandomEvent(this);
         }
 
         private void button10Clicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            button10.Enabled = false;
+            GameHandler.MerchantLauncher(this);
         }
 
         private void button9Clicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            button9.Enabled = false;
+            button10.Enabled = true;
+            GameHandler.RandomEvent(this);
         }
 
         private void button8Clicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            button8.Enabled = false;
+            button9.Enabled = true;
+            button11.Enabled = true;
+            GameHandler.FightEngager(this, new EnemyElite());
         }
 
         private void button7Clicked(object sender, EventArgs e)
         {
+            button6.Enabled = false;
+            button7.Enabled = false;
+            button8.Enabled = true;
             GameHandler.FightEngager(this, new EnemyCommon());
         }
 
         private void button6Clicked(object sender, EventArgs e)
         {
+            button6.Enabled = false;
             GameHandler.MerchantLauncher(this);
         }
 
         private void button5Clicked(object sender, EventArgs e)
         {
+            button5.Enabled = false;
+            button6.Enabled = true;
+            button7.Enabled = true;
             GameHandler.RandomEvent(this);
         }
 
         private void button4Clicked(object sender, EventArgs e)
         {
+            button4.Enabled = false;
+            button5.Enabled = true;
             GameHandler.FightEngager(this, new EnemyCommon());
         }
 
         private void button3Clicked(object sender, EventArgs e)
         {
             button1.Enabled = false;
-            button1.BackColor = Color.Gray;
-            button2.BackColor = Color.Blue;
             button2.Enabled = false;
-            button3.Enabled = true;
-            button3.BackColor = Color.Black;
+            button3.Enabled = false;
+            button4.Enabled = true;
             GameHandler.FightEngager(this, new EnemyCommon());
         }
         private void button2Clicked(object sender, EventArgs e)
         {
             button1.Enabled = false;
-            button1.BackColor = Color.Gray;
-            button2.BackColor = Color.Blue;
             button2.Enabled = false;
             button3.Enabled = true;
-            button3.BackColor = Color.Black;
             GameHandler.FightEngager(this, new EnemyCommon());
         }
 

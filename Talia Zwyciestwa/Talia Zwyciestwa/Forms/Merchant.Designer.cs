@@ -8,7 +8,7 @@ namespace Talia_Zwyciestwa.Forms
 {
     partial class Merchant
     {
-        private Random random;
+        private Random random = new Random();
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -32,6 +32,7 @@ namespace Talia_Zwyciestwa.Forms
         public Merchant(Map m)
         {
             map = m;
+            InitializeComponent();
         }
 
         #region Windows Form Designer generated code
@@ -44,6 +45,7 @@ namespace Talia_Zwyciestwa.Forms
         {
             this.HealButton = new System.Windows.Forms.Button();
             this.UpgradeButton = new System.Windows.Forms.Button();
+            this.ExitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // HealButton
@@ -54,7 +56,7 @@ namespace Talia_Zwyciestwa.Forms
             this.HealButton.TabIndex = 0;
             this.HealButton.Text = "Ulecz (100g)";
             this.HealButton.UseVisualStyleBackColor = true;
-            this.HealButton.Click += new System.EventHandler(Heal);
+            this.HealButton.Click += new System.EventHandler(this.Heal);
             // 
             // UpgradeButton
             // 
@@ -64,13 +66,24 @@ namespace Talia_Zwyciestwa.Forms
             this.UpgradeButton.TabIndex = 1;
             this.UpgradeButton.Text = "Ulepsz losową kartę (150g)";
             this.UpgradeButton.UseVisualStyleBackColor = true;
-            this.UpgradeButton.Click += new System.EventHandler(UpgradeCard);
+            this.UpgradeButton.Click += new System.EventHandler(this.UpgradeCard);
+            // 
+            // ExitButton
+            // 
+            this.ExitButton.Location = new System.Drawing.Point(213, 442);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(75, 23);
+            this.ExitButton.TabIndex = 2;
+            this.ExitButton.Text = "Wyjdź";
+            this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.Click += new System.EventHandler(this.Exit);
             // 
             // Merchant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1284, 1005);
+            this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.UpgradeButton);
             this.Controls.Add(this.HealButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -78,9 +91,15 @@ namespace Talia_Zwyciestwa.Forms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Handlarz";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.ResumeLayout(false);
             this.Load += new System.EventHandler(this.Begin);
+            this.ResumeLayout(false);
 
+        }
+
+        private void Exit(object sender, EventArgs e)
+        {
+            this.Close();
+            map.Show();
         }
         #endregion/
         private void Heal(object sender, EventArgs e)
@@ -110,27 +129,27 @@ namespace Talia_Zwyciestwa.Forms
             {
                 for(int i = 0; i < map.Deck.Cards.Count; i++)
                 {
-                    if (map.Deck.Cards[i].Id >= 5)
+                    if (map.Deck.Cards[i].Id <= 4 )
                         indexes.Add(i);
                 }
                 if (indexes.Count != 0)
                 {
                     int index = random.Next(0, indexes.Count-1);
-                    switch (map.Deck.Cards[indexes[index]].Value)
+                    switch (map.Deck.Cards[indexes[index]].Value) //FIX THAT
                         {
-                        case 1:
+                        case 0:
                             map.Deck.Cards.Add(new UpgradedAttackCard());
                             break;
-                        case 2:
+                        case 1:
                             map.Deck.Cards.Add(new UpgradedDefCard());
                             break;
-                        case 3:
+                        case 2:
                             map.Deck.Cards.Add(new UpgradedParryCard());
                             break;
-                        case 4:
+                        case 3:
                             map.Deck.Cards.Add(new UpgradedSteroidsCard());
                             break;
-                        case 5:
+                        case 4:
                             map.Deck.Cards.Add(new UpgradeDexElixirCard());
                             break;
                     }
@@ -142,11 +161,8 @@ namespace Talia_Zwyciestwa.Forms
                     MessageBox.Show("Nie masz kart do ulepszenia");
             }
         }
-
-        
-
-
         private System.Windows.Forms.Button HealButton;
         private System.Windows.Forms.Button UpgradeButton;
+        private Button ExitButton;
     }
 }

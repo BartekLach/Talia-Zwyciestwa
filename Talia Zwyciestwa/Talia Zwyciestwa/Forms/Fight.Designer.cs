@@ -230,10 +230,23 @@ namespace Talia_Zwyciestwa.Forms
                 hand[v].Effect(player, enemy);
                 if(enemy.CurrentHP<=0)
                 {
-                    MessageBox.Show("Wygrałeś!!!");
+                    ClearHand();
+                    TrashToHand();
+                    if (map.bossFight)
+                    {
+                        MessageBox.Show("Uratowałeś świat");
+                        map.menu.Show();
+                        map.Close();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Wygrałeś walkę!!!");
+                        map.Show();
+                        this.Close();
+                    }
                     //TODO: reward
-                    map.Show();
-                    this.Close();
+                    
                 }
                 trash.Add(hand[v]);
                 hand[v] = null;
