@@ -10,11 +10,31 @@ using System.Windows.Forms;
 
 namespace Talia_Zwyciestwa.Forms
 {
-    public partial class Equipment : Form
+    public partial class equipment : Form
     {
-        public Equipment()
+        public equipment()
         {
             InitializeComponent();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

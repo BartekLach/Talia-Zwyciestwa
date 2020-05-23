@@ -156,6 +156,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Music\battleThemeA.wav" />
+    <None Include="Resources\shield_02.png" />
+    <None Include="Resources\shield_01.png" />
+    <None Include="Resources\weapon_03.png" />
+    <None Include="Resources\weapon_02.png" />
+    <None Include="Resources\weapon_01.png" />
+    <None Include="Resources\helmet_02.png" />
+    <None Include="Resources\helmet_01.png" />
+    <None Include="Resources\armor_03.png" />
+    <None Include="Resources\armor_02.png" />
+    <None Include="Resources\armor_01.png" />
+    <None Include="Resources\map_01.png" />
     <None Include="Resources\equipment_01.png" />
     <None Include="Resources\symbol_03.png" />
     <None Include="Resources\symbol_01.png" />

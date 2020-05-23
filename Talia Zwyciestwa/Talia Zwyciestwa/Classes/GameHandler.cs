@@ -47,7 +47,7 @@ namespace Talia_Zwyciestwa.Classes
         }
         public static void ShowEQ(Map map)
         {
-            Equipment equipment = new Equipment();
+            equipment equipment = new equipment();
             map.Hide();
             equipment.Show();
         }

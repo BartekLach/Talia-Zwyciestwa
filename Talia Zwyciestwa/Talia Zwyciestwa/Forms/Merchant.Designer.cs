@@ -50,7 +50,7 @@ namespace Talia_Zwyciestwa.Forms
             // 
             // HealButton
             // 
-            this.HealButton.Location = new System.Drawing.Point(141, 364);
+            this.HealButton.Location = new System.Drawing.Point(141, 322);
             this.HealButton.Name = "HealButton";
             this.HealButton.Size = new System.Drawing.Size(75, 23);
             this.HealButton.TabIndex = 0;
@@ -60,7 +60,7 @@ namespace Talia_Zwyciestwa.Forms
             // 
             // UpgradeButton
             // 
-            this.UpgradeButton.Location = new System.Drawing.Point(268, 359);
+            this.UpgradeButton.Location = new System.Drawing.Point(268, 317);
             this.UpgradeButton.Name = "UpgradeButton";
             this.UpgradeButton.Size = new System.Drawing.Size(152, 33);
             this.UpgradeButton.TabIndex = 1;
@@ -70,7 +70,7 @@ namespace Talia_Zwyciestwa.Forms
             // 
             // ExitButton
             // 
-            this.ExitButton.Location = new System.Drawing.Point(213, 442);
+            this.ExitButton.Location = new System.Drawing.Point(213, 400);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(75, 23);
             this.ExitButton.TabIndex = 2;
@@ -80,9 +80,8 @@ namespace Talia_Zwyciestwa.Forms
             // 
             // Merchant
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1284, 1005);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.UpgradeButton);
             this.Controls.Add(this.HealButton);
@@ -90,7 +89,6 @@ namespace Talia_Zwyciestwa.Forms
             this.Name = "Merchant";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Handlarz";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Begin);
             this.ResumeLayout(false);
 
