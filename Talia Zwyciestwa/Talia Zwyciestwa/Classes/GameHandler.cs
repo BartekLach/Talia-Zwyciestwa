@@ -47,7 +47,7 @@ namespace Talia_Zwyciestwa.Classes
         }
         public static void ShowEQ(Map map)
         {
-            equipment equipment = new equipment();
+            Equipment equipment = new Equipment(map);
             map.Hide();
             equipment.Show();
         }
@@ -82,7 +82,9 @@ namespace Talia_Zwyciestwa.Classes
                 }else // [0-15)
                 {
                     MessageBox.Show("Znalazłeś przy drodze skarb!");
-                    //Rewards.SmallReward(map); TODO
+                    int reward = Rewards.SmallReward();
+                    MessageBox.Show("Zawierał on " + reward + " sztuk złota");
+                    map.Player.Gold += reward;
                 }
 
             }
@@ -107,7 +109,9 @@ namespace Talia_Zwyciestwa.Classes
                 else // [0-10)
                 {
                     MessageBox.Show("Znalazłeś przy drodze skarb!");
-                    //Rewards.SmallReward(map); TODO
+                    int reward = Rewards.SmallReward();
+                    MessageBox.Show("Zawierał on " + reward + " sztuk złota");
+                    map.Player.Gold += reward;
                 }
             }
         }

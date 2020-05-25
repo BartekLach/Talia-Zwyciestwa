@@ -1,7 +1,11 @@
-﻿namespace Talia_Zwyciestwa.Forms
+﻿using System;
+using System.Drawing;
+
+namespace Talia_Zwyciestwa.Forms
 {
-    partial class equipment
+    partial class Equipment
     {
+        private Map map;
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -19,7 +23,87 @@
             }
             base.Dispose(disposing);
         }
+        public Equipment(Map m)
+        {
+            map = m;
+            InitializeComponent();
 
+            DexValue.Text = map.Player.Dex.ToString();
+            StrValue.Text = map.Player.Str.ToString();
+            MaxHPValue.Text = map.Player.MaxHP.ToString();
+            CurrentHPValue.Text = map.Player.CurrentHP.ToString();
+            GoldValue.Text = map.Player.Gold.ToString();
+
+            if (!map.Player.UnlockedHelmets[0])
+                button1.Enabled = false;
+            if (!map.Player.UnlockedHelmets[1])
+                button2.Enabled = false;
+
+            if (!map.Player.UnlockedArmors[0])
+                button4.Enabled = false;
+            if (!map.Player.UnlockedArmors[1])
+                button3.Enabled = false;
+            if (!map.Player.UnlockedArmors[2])
+                button6.Enabled = false;
+
+            if (!map.Player.UnlockedShields[0])
+                button7.Enabled = false;
+            if (!map.Player.UnlockedShields[1])
+                button5.Enabled = false;
+
+            if (!map.Player.UnlockedWeapons[0])
+                button10.Enabled = false;
+            if (!map.Player.UnlockedWeapons[1])
+                button9.Enabled = false;
+            if (!map.Player.UnlockedWeapons[2])
+                button8.Enabled = false;
+
+            switch (map.Player.WornHelmet)
+            {
+                case 1:
+                    button1.BackColor = Color.DarkGreen;
+                    break;
+                case 2:
+                    button2.BackColor = Color.DarkGreen;
+                    break;
+            }
+
+            switch (map.Player.WornArmor)
+            {
+                case 1:
+                    button4.BackColor = Color.DarkGreen;
+                    break;
+                case 2:
+                    button3.BackColor = Color.DarkGreen;
+                    break;
+                case 3:
+                    button6.BackColor = Color.DarkGreen;
+                    break;
+            }
+
+            switch (map.Player.WornShield)
+            {
+                case 1:
+                    button7.BackColor = Color.DarkGreen;
+                    break;
+                case 2:
+                    button5.BackColor = Color.DarkGreen;
+                    break;
+            }
+
+            switch (map.Player.WornWeapon)
+            {
+                case 1:
+                    button10.BackColor = Color.DarkGreen;
+                    break;
+                case 2:
+                    button9.BackColor = Color.DarkGreen;
+                    break;
+                case 3:
+                    button8.BackColor = Color.DarkGreen;
+                    break;
+            }
+        }
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -48,11 +132,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.DexValue = new System.Windows.Forms.Label();
+            this.StrValue = new System.Windows.Forms.Label();
+            this.MaxHPValue = new System.Windows.Forms.Label();
+            this.CurrentHPValue = new System.Windows.Forms.Label();
+            this.GoldValue = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button26
@@ -68,6 +152,7 @@
             this.button26.TabIndex = 27;
             this.button26.Text = "Cofnij";
             this.button26.UseVisualStyleBackColor = true;
+            this.button26.Click += new System.EventHandler(this.button26_Click);
             // 
             // label1
             // 
@@ -122,6 +207,7 @@
             this.button1.Size = new System.Drawing.Size(64, 64);
             this.button1.TabIndex = 38;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -132,6 +218,7 @@
             this.button2.Size = new System.Drawing.Size(64, 64);
             this.button2.TabIndex = 39;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -142,6 +229,7 @@
             this.button3.Size = new System.Drawing.Size(64, 64);
             this.button3.TabIndex = 41;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -152,6 +240,7 @@
             this.button4.Size = new System.Drawing.Size(64, 64);
             this.button4.TabIndex = 40;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button6
             // 
@@ -162,6 +251,7 @@
             this.button6.Size = new System.Drawing.Size(64, 64);
             this.button6.TabIndex = 42;
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -172,6 +262,7 @@
             this.button5.Size = new System.Drawing.Size(64, 64);
             this.button5.TabIndex = 44;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button7
             // 
@@ -182,6 +273,7 @@
             this.button7.Size = new System.Drawing.Size(64, 64);
             this.button7.TabIndex = 43;
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -192,6 +284,7 @@
             this.button8.Size = new System.Drawing.Size(64, 64);
             this.button8.TabIndex = 47;
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -202,6 +295,7 @@
             this.button9.Size = new System.Drawing.Size(64, 64);
             this.button9.TabIndex = 46;
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
@@ -212,6 +306,7 @@
             this.button10.Size = new System.Drawing.Size(64, 64);
             this.button10.TabIndex = 45;
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // label5
             // 
@@ -271,58 +366,69 @@
             this.label9.TabIndex = 52;
             this.label9.Text = "Złoto:";
             // 
-            // textBox1
+            // DexValue
             // 
-            this.textBox1.Location = new System.Drawing.Point(1097, 177);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 53;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.DexValue.AutoSize = true;
+            this.DexValue.BackColor = System.Drawing.Color.Transparent;
+            this.DexValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.DexValue.Location = new System.Drawing.Point(1091, 170);
+            this.DexValue.Name = "DexValue";
+            this.DexValue.Size = new System.Drawing.Size(0, 31);
+            this.DexValue.TabIndex = 58;
+            this.DexValue.Click += new System.EventHandler(this.DexValue_Click);
             // 
-            // textBox2
+            // StrValue
             // 
-            this.textBox2.Location = new System.Drawing.Point(1097, 220);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 54;
+            this.StrValue.AutoSize = true;
+            this.StrValue.BackColor = System.Drawing.Color.Transparent;
+            this.StrValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.StrValue.Location = new System.Drawing.Point(1091, 211);
+            this.StrValue.Name = "StrValue";
+            this.StrValue.Size = new System.Drawing.Size(0, 31);
+            this.StrValue.TabIndex = 59;
             // 
-            // textBox3
+            // MaxHPValue
             // 
-            this.textBox3.Location = new System.Drawing.Point(1097, 261);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 55;
+            this.MaxHPValue.AutoSize = true;
+            this.MaxHPValue.BackColor = System.Drawing.Color.Transparent;
+            this.MaxHPValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.MaxHPValue.Location = new System.Drawing.Point(1091, 252);
+            this.MaxHPValue.Name = "MaxHPValue";
+            this.MaxHPValue.Size = new System.Drawing.Size(0, 31);
+            this.MaxHPValue.TabIndex = 60;
+            this.MaxHPValue.Click += new System.EventHandler(this.label11_Click);
             // 
-            // textBox4
+            // CurrentHPValue
             // 
-            this.textBox4.Location = new System.Drawing.Point(1097, 304);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 56;
+            this.CurrentHPValue.AutoSize = true;
+            this.CurrentHPValue.BackColor = System.Drawing.Color.Transparent;
+            this.CurrentHPValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.CurrentHPValue.Location = new System.Drawing.Point(1091, 295);
+            this.CurrentHPValue.Name = "CurrentHPValue";
+            this.CurrentHPValue.Size = new System.Drawing.Size(0, 31);
+            this.CurrentHPValue.TabIndex = 61;
             // 
-            // textBox5
+            // GoldValue
             // 
-            this.textBox5.Location = new System.Drawing.Point(1097, 376);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 57;
+            this.GoldValue.AutoSize = true;
+            this.GoldValue.BackColor = System.Drawing.Color.Transparent;
+            this.GoldValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.GoldValue.Location = new System.Drawing.Point(1091, 368);
+            this.GoldValue.Name = "GoldValue";
+            this.GoldValue.Size = new System.Drawing.Size(0, 31);
+            this.GoldValue.TabIndex = 62;
             // 
-            // equipment
+            // Equipment
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.equipment_01;
             this.ClientSize = new System.Drawing.Size(1280, 720);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.GoldValue);
+            this.Controls.Add(this.CurrentHPValue);
+            this.Controls.Add(this.MaxHPValue);
+            this.Controls.Add(this.StrValue);
+            this.Controls.Add(this.DexValue);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -345,15 +451,17 @@
             this.Controls.Add(this.button26);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "equipment";
+            this.Name = "Equipment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Equipment";
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
-
         #endregion
+
+
+
 
         private System.Windows.Forms.Button button26;
         private System.Windows.Forms.Label label1;
@@ -375,10 +483,10 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label DexValue;
+        private System.Windows.Forms.Label StrValue;
+        private System.Windows.Forms.Label MaxHPValue;
+        private System.Windows.Forms.Label CurrentHPValue;
+        private System.Windows.Forms.Label GoldValue;
     }
 }

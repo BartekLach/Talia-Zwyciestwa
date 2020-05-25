@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using Talia_Zwyciestwa.Classes;
 using Talia_Zwyciestwa.Classes.Enemies_Types;
-
-
+using Talia_Zwyciestwa.Classes.Items.Armors;
+using Talia_Zwyciestwa.Classes.Items.Helmets;
+using Talia_Zwyciestwa.Classes.Items.Shields;
+using Talia_Zwyciestwa.Classes.Items.Weapons;
 
 namespace Talia_Zwyciestwa.Forms
 {
@@ -160,6 +162,9 @@ namespace Talia_Zwyciestwa.Forms
             CardButtons[4] = Card5;
 
             currentPower = player.Power;
+            player.CurrentStr = player.Str;
+            player.CurrentDex = player.Dex;
+            player.CurrentPO = 0;
 
             for (int i = 0; i < 5; i++)
             {
@@ -183,7 +188,6 @@ namespace Talia_Zwyciestwa.Forms
             }
             else
             {
-                //MessageBox.Show(player.CurrentHP.ToString());
                 currentPower = player.Power;
                 ClearHand();
                 FillHand();
@@ -227,7 +231,7 @@ namespace Talia_Zwyciestwa.Forms
                 if(enemy.CurrentHP<=0)
                 {
                     ClearHand();
-                    TrashToHand();
+                    TrashToDeck();
                     if (map.bossFight)
                     {
                         MessageBox.Show("Uratowałeś świat");
@@ -238,11 +242,73 @@ namespace Talia_Zwyciestwa.Forms
                     else
                     {
                         MessageBox.Show("Wygrałeś walkę!!!");
+                       
                         map.Show();
                         this.Close();
                     }
-                    //TODO: reward
+                    int reward;
+                    if (enemy.GetType().Name.ToString() == "EnemyCommon")
+                    {
+                        reward = Rewards.SmallReward();
+                        MessageBox.Show("Gratulację. Znalazłeś " + reward.ToString() + " sztuk złota");
+                        player.Gold += reward;
+                    }
+
+                    else if((enemy.GetType().Name.ToString() == "EnemyElite"))
+                    {
+                        reward = Rewards.BigReward();
+                        MessageBox.Show("Gratulację. Znalazłeś " + reward.ToString() + " sztuk złota");
+                        player.Gold += reward;
+                    }
+
                     
+                    switch (map.getEQ)
+                    {
+                        case 0:
+                            if(!map.isEQGained[map.getEQ])
+                            {
+                                MessageBox.Show("Ponnadto znalazłeś lekki pancerz i zakładasz go na siebie");
+                                map.Player.WornArmor = 1;
+                                map.Player.UnlockedArmors[0] = true;
+                                map.Player.ChangeArmor(new LightArmor());
+                                map.isEQGained[map.getEQ] = true;
+                            }
+                            break;
+                        case 1:
+                            if (!map.isEQGained[map.getEQ])
+                            {
+                                MessageBox.Show("Ponnadto znalazłeś lekką broń i zaczynasz jej używać");
+                                map.Player.WornWeapon = 1;
+                                map.Player.UnlockedWeapons[0] = true;
+                                map.Player.ChangeWeapon(new LightWeapon());
+                                map.isEQGained[map.getEQ] = true;
+                            }
+                            break;
+                        case 2:
+                            if (!map.isEQGained[map.getEQ])
+                            {
+                                MessageBox.Show("Ponnadto znalazłeś tarczę zakładasz ją");
+                                map.Player.WornShield = 1;
+                                map.Player.UnlockedShields[0] = true;
+                                map.Player.ChangeShield(new LightShield());
+                                map.isEQGained[map.getEQ] = true;
+                            }
+                            
+                            break;
+                        case 3:
+                            if (!map.isEQGained[map.getEQ])
+                            {
+                                MessageBox.Show("Ponnadto znalazłeś hełm i zakładasz go na siebie");
+                                map.Player.UnlockedHelmets[0] = true;
+                                map.Player.WornHelmet = 1;
+                                map.Player.ChangeHelmet(new LightHelmet());
+                                map.isEQGained[map.getEQ] = true;
+                            }
+                           
+                            break;
+                    }
+
+
                 }
                 trash.Add(hand[v]);
                 hand[v] = null;
@@ -259,7 +325,7 @@ namespace Talia_Zwyciestwa.Forms
             {
                 if(deck.Count==0)
                 {
-                    TrashToHand(); 
+                    TrashToDeck(); 
                 }
                 hand[i] = deck[0];
                 deck.RemoveAt(0);
@@ -268,7 +334,7 @@ namespace Talia_Zwyciestwa.Forms
                 toolTips[i].SetToolTip(CardButtons[i], hand[i].Describtion);
             }
         }
-        private void TrashToHand()
+        private void TrashToDeck()
         {
             foreach (Card card in trash)
             {

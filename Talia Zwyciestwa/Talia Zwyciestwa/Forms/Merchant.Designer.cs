@@ -46,6 +46,10 @@ namespace Talia_Zwyciestwa.Forms
             this.HealButton = new System.Windows.Forms.Button();
             this.UpgradeButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
+            this.UpgradeShieldButton = new System.Windows.Forms.Button();
+            this.UpgradeWeaponButton = new System.Windows.Forms.Button();
+            this.UpgradeArmorButton = new System.Windows.Forms.Button();
+            this.UpgradeHelmetButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // HealButton
@@ -78,10 +82,50 @@ namespace Talia_Zwyciestwa.Forms
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.Exit);
             // 
+            // UpgradeShieldButton
+            // 
+            this.UpgradeShieldButton.Location = new System.Drawing.Point(453, 385);
+            this.UpgradeShieldButton.Name = "UpgradeShieldButton";
+            this.UpgradeShieldButton.Size = new System.Drawing.Size(191, 23);
+            this.UpgradeShieldButton.TabIndex = 3;
+            this.UpgradeShieldButton.UseVisualStyleBackColor = true;
+            this.UpgradeShieldButton.Click += new System.EventHandler(this.UpgradeShieldButton_Click);
+            // 
+            // UpgradeWeaponButton
+            // 
+            this.UpgradeWeaponButton.Location = new System.Drawing.Point(453, 414);
+            this.UpgradeWeaponButton.Name = "UpgradeWeaponButton";
+            this.UpgradeWeaponButton.Size = new System.Drawing.Size(191, 23);
+            this.UpgradeWeaponButton.TabIndex = 4;
+            this.UpgradeWeaponButton.UseVisualStyleBackColor = true;
+            this.UpgradeWeaponButton.Click += new System.EventHandler(this.UpgradeWeaponButton_Click);
+            // 
+            // UpgradeArmorButton
+            // 
+            this.UpgradeArmorButton.Location = new System.Drawing.Point(453, 356);
+            this.UpgradeArmorButton.Name = "UpgradeArmorButton";
+            this.UpgradeArmorButton.Size = new System.Drawing.Size(191, 23);
+            this.UpgradeArmorButton.TabIndex = 5;
+            this.UpgradeArmorButton.UseVisualStyleBackColor = true;
+            this.UpgradeArmorButton.Click += new System.EventHandler(this.UpgradeArmorButton_Click);
+            // 
+            // UpgradeHelmetButton
+            // 
+            this.UpgradeHelmetButton.Location = new System.Drawing.Point(453, 327);
+            this.UpgradeHelmetButton.Name = "UpgradeHelmetButton";
+            this.UpgradeHelmetButton.Size = new System.Drawing.Size(191, 23);
+            this.UpgradeHelmetButton.TabIndex = 6;
+            this.UpgradeHelmetButton.UseVisualStyleBackColor = true;
+            this.UpgradeHelmetButton.Click += new System.EventHandler(this.UpgradeHelmetButton_Click);
+            // 
             // Merchant
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.UpgradeHelmetButton);
+            this.Controls.Add(this.UpgradeArmorButton);
+            this.Controls.Add(this.UpgradeWeaponButton);
+            this.Controls.Add(this.UpgradeShieldButton);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.UpgradeButton);
             this.Controls.Add(this.HealButton);
@@ -102,24 +146,46 @@ namespace Talia_Zwyciestwa.Forms
         #endregion/
         private void Heal(object sender, EventArgs e)
         {
-            if(map.Player.Money < 100)
+            if(map.Player.Gold < 100)
             {
                 MessageBox.Show("Nie stać cię!");
             }else
             {
-                map.Player.Money -= 100;
+                map.Player.Gold -= 100;
                 map.Player.CurrentHP = map.Player.MaxHP;
             }
         }
 
         private void Begin(object sender, EventArgs e)
         {
+            if (!map.Player.UnlockedArmors[0])
+                UpgradeArmorButton.Hide();
+            else
+                UpgradeArmorButton.Text = "Ulepsz zbroję (150 sztuk złota)";
 
+            if (!map.Player.UnlockedWeapons[0])
+                UpgradeWeaponButton.Hide();
+            else
+                UpgradeWeaponButton.Text = "Ulepsz broń (150 sztuk złota)";
+
+            if (!map.Player.UnlockedShields[0])
+                UpgradeShieldButton.Hide();
+            else
+                UpgradeShieldButton.Text = "Ulepsz tarczę (150 sztuk złota)";
+            if (!map.Player.UnlockedHelmets[0])
+                UpgradeHelmetButton.Hide();
+            else
+                UpgradeHelmetButton.Text = "Ulepsz hełm (180 sztuk złota)";
+
+            if (map.Player.UnlockedArmors[2])
+                UpgradeArmorButton.Text = "Ulepsz zbroję (250 sztuk złota)";
+            if (map.Player.UnlockedWeapons[2])
+                UpgradeWeaponButton.Text = "Ulepsz broń (250 sztuk złota)";
         }
 
         private void UpgradeCard(object sender, EventArgs e) //TEST THAT
         {
-            if (map.Player.Money < 150)
+            if (map.Player.Gold < 150)
             {
                 MessageBox.Show("Nie stać cię!");
             }
@@ -152,7 +218,7 @@ namespace Talia_Zwyciestwa.Forms
                             break;
                     }
                     map.Deck.Cards.RemoveAt(indexes[index]);
-                    map.Player.Money -= 150;
+                    map.Player.Gold -= 150;
                     MessageBox.Show("Twoja nowa karta: " + map.Deck.Cards[map.Deck.Cards.Count - 1].Name.ToString() + "/n Opis: " + map.Deck.Cards[map.Deck.Cards.Count - 1].Describtion.ToString() + "/n Wartość: " + map.Deck.Cards[map.Deck.Cards.Count - 1].Value.ToString());
                 }
                 else
@@ -162,5 +228,9 @@ namespace Talia_Zwyciestwa.Forms
         private System.Windows.Forms.Button HealButton;
         private System.Windows.Forms.Button UpgradeButton;
         private Button ExitButton;
+        private Button UpgradeShieldButton;
+        private Button UpgradeWeaponButton;
+        private Button UpgradeArmorButton;
+        private Button UpgradeHelmetButton;
     }
 }

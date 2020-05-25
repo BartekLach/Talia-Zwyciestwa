@@ -12,6 +12,8 @@ namespace Talia_Zwyciestwa.Forms
         private Player player;
         private Deck deck;
         public bool bossFight = false;
+        public int getEQ = -1;
+        public bool[] isEQGained = new bool[4];
 
         
         /// <summary>
@@ -520,8 +522,10 @@ namespace Talia_Zwyciestwa.Forms
 
         private void button16Clicked(object sender, EventArgs e)
         {
+            button15.Enabled = false;
             button16.Enabled = false;
             button17.Enabled = true;
+            getEQ++;
             GameHandler.FightEngager(this, new EnemyElite());
         }
 
@@ -582,6 +586,7 @@ namespace Talia_Zwyciestwa.Forms
             button8.Enabled = false;
             button9.Enabled = true;
             button11.Enabled = true;
+            getEQ++;
             GameHandler.FightEngager(this, new EnemyElite());
         }
 
@@ -590,6 +595,7 @@ namespace Talia_Zwyciestwa.Forms
             button6.Enabled = false;
             button7.Enabled = false;
             button8.Enabled = true;
+            getEQ++;
             GameHandler.FightEngager(this, new EnemyCommon());
         }
 
@@ -620,7 +626,9 @@ namespace Talia_Zwyciestwa.Forms
             button2.Enabled = false;
             button3.Enabled = false;
             button4.Enabled = true;
+            getEQ++;
             GameHandler.FightEngager(this, new EnemyCommon());
+
         }
         private void button2Clicked(object sender, EventArgs e)
         {
@@ -633,10 +641,8 @@ namespace Talia_Zwyciestwa.Forms
         private void button1Clicked(object sender, EventArgs e)
         {
             button2.Enabled = false;
-            button2.BackColor = Color.Gray;
             button1.Enabled = false;
             button3.Enabled = true;
-            button3.BackColor = Color.Black;
             GameHandler.RandomEvent(this);
         }
 
@@ -644,7 +650,10 @@ namespace Talia_Zwyciestwa.Forms
         {
             deck = new Deck();
             player = new Player();
-        
+            for (int i = 0; i < 4; i++)
+            {
+                isEQGained[i] = false;
+            }
         }
 
         

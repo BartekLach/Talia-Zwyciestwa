@@ -9,3 +9,7 @@ C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciest
 C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Release\Talia Zwyciestwa.csproj.CoreCompileInputs.cache
 C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Release\Talia Zwyciestwa.exe
 C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Release\Talia Zwyciestwa.pdb
+C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Release\Talia_Zwyciestwa.Assets.Music.Music.resources
+C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Release\Talia_Zwyciestwa.Forms.Equipment.resources
+C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Release\Talia_Zwyciestwa.Forms.Fight.resources
+C:\Users\Sheamus\Desktop\studia zdalne\Inżynieria oprogramowania\Talia-Zwyciestwa\Talia Zwyciestwa\Talia Zwyciestwa\obj\Release\Talia_Zwyciestwa.Forms.Merchant.resources

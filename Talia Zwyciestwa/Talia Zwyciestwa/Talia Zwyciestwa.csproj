@@ -70,8 +70,23 @@
     <Compile Include="Classes\Fighter.cs" />
     <Compile Include="Classes\GameHandler.cs" />
     <Compile Include="Classes\Item.cs" />
+    <Compile Include="Classes\Items\Armors\Armor.cs" />
+    <Compile Include="Classes\Items\Armors\HeavyArmor.cs" />
+    <Compile Include="Classes\Items\Armors\LightArmor.cs" />
+    <Compile Include="Classes\Items\Armors\MediumArmor.cs" />
+    <Compile Include="Classes\Items\Helmets\HeavyHelmet.cs" />
+    <Compile Include="Classes\Items\Helmets\Helmet.cs" />
+    <Compile Include="Classes\Items\Helmets\LightHelmet.cs" />
+    <Compile Include="Classes\Items\Shields\HeavyShield.cs" />
+    <Compile Include="Classes\Items\Shields\LightShield.cs" />
+    <Compile Include="Classes\Items\Shields\Shield.cs" />
+    <Compile Include="Classes\Items\Weapons\HeavyWeapon.cs" />
+    <Compile Include="Classes\Items\Weapons\LightWeapon.cs" />
+    <Compile Include="Classes\Items\Weapons\MediumWeapon.cs" />
+    <Compile Include="Classes\Items\Weapons\Weapon.cs" />
     <Compile Include="Classes\Location.cs" />
     <Compile Include="Classes\Player.cs" />
+    <Compile Include="Classes\Rewards.cs" />
     <Compile Include="Forms\Equipment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,12 +116,6 @@
     </Compile>
     <Compile Include="Forms\Merchant.Designer.cs">
       <DependentUpon>Merchant.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\RewardsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\RewardsForm.Designer.cs">
-      <DependentUpon>RewardsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
