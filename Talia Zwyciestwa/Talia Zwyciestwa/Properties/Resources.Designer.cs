@@ -103,6 +103,16 @@ namespace Talia_Zwyciestwa.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap button_background_02 {
+            get {
+                object obj = ResourceManager.GetObject("button_background_02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap equipment_01 {
             get {
                 object obj = ResourceManager.GetObject("equipment_01", resourceCulture);
@@ -146,6 +156,16 @@ namespace Talia_Zwyciestwa.Properties {
         internal static System.Drawing.Bitmap menu_background_01 {
             get {
                 object obj = ResourceManager.GetObject("menu_background_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap merchant_01 {
+            get {
+                object obj = ResourceManager.GetObject("merchant_01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
