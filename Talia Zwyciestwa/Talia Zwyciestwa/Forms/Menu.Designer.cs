@@ -39,6 +39,7 @@ namespace Talia_Zwyciestwa
             this.LoadButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
             this.playButton = new System.Windows.Forms.Button();
+            this.ContinueButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LoadButton
@@ -47,7 +48,7 @@ namespace Talia_Zwyciestwa
             this.LoadButton.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.button_background_01;
             this.LoadButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.LoadButton.FlatAppearance.BorderSize = 0;
-            this.LoadButton.Location = new System.Drawing.Point(180, 404);
+            this.LoadButton.Location = new System.Drawing.Point(180, 469);
             this.LoadButton.Name = "LoadButton";
             this.LoadButton.Size = new System.Drawing.Size(308, 78);
             this.LoadButton.TabIndex = 1;
@@ -67,7 +68,7 @@ namespace Talia_Zwyciestwa
             this.exitButton.TabIndex = 4;
             this.exitButton.Text = "Zamknij";
             this.exitButton.UseVisualStyleBackColor = true;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            this.exitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // playButton
             // 
@@ -75,13 +76,28 @@ namespace Talia_Zwyciestwa
             this.playButton.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.button_background_01;
             this.playButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.playButton.FlatAppearance.BorderSize = 0;
-            this.playButton.Location = new System.Drawing.Point(180, 320);
+            this.playButton.Location = new System.Drawing.Point(180, 385);
             this.playButton.Name = "playButton";
             this.playButton.Size = new System.Drawing.Size(308, 78);
             this.playButton.TabIndex = 5;
-            this.playButton.Text = "Graj";
+            this.playButton.Text = "Nowa gra";
             this.playButton.UseVisualStyleBackColor = true;
             this.playButton.Click += new System.EventHandler(this.PlayButtonClick);
+            // 
+            // ContinueButton
+            // 
+            this.ContinueButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ContinueButton.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.button_background_01;
+            this.ContinueButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.ContinueButton.FlatAppearance.BorderSize = 0;
+            this.ContinueButton.Location = new System.Drawing.Point(180, 301);
+            this.ContinueButton.Name = "ContinueButton";
+            this.ContinueButton.Size = new System.Drawing.Size(308, 78);
+            this.ContinueButton.TabIndex = 6;
+            this.ContinueButton.Text = "Kontynuuj";
+            this.ContinueButton.UseVisualStyleBackColor = true;
+            this.ContinueButton.Click += new System.EventHandler(this.ContinueButton_Click);
+            this.ContinueButton.Hide();
             // 
             // Menu
             // 
@@ -90,6 +106,7 @@ namespace Talia_Zwyciestwa
             this.BackColor = System.Drawing.Color.OldLace;
             this.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.menu_background_01;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.ContinueButton);
             this.Controls.Add(this.playButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.LoadButton);
@@ -110,7 +127,7 @@ namespace Talia_Zwyciestwa
         {
             soundPlayer.PlayLooping();
         }
-            private void LoadButtonClick(object sender, EventArgs e)
+        private void LoadButtonClick(object sender, EventArgs e)
         {
             GameHandler.Load(this);
         }
@@ -122,8 +139,7 @@ namespace Talia_Zwyciestwa
         private System.Windows.Forms.Button LoadButton;
 		private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Button playButton;
-
-
+        private Button ContinueButton;
     }
 }
 

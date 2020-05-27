@@ -23,7 +23,7 @@ namespace Talia_Zwyciestwa.Classes
             {
                 Cards.Add(new DexElixirCard());
                 Cards.Add(new SteroidsCard());
-                Cards.Add(new Parry());
+                Cards.Add(new ParryCard());
             }
         }
         public void Write()

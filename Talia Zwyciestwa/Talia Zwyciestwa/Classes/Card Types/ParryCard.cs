@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Talia_Zwyciestwa.Classes.Card_Types
 {
-    class Parry : Card
+    class ParryCard : Card
     {
         private int defValue = 4;
         private int dmgValue = 4;
-        public Parry()
+        public ParryCard()
         {
             Value = 2;
             Name = "Riposta";

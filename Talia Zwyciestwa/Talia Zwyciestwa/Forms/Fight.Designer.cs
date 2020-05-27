@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Windows.Forms;
 using Talia_Zwyciestwa.Classes;
 using Talia_Zwyciestwa.Classes.Enemies_Types;
@@ -181,7 +182,9 @@ namespace Talia_Zwyciestwa.Forms
             enemy.MakeTurn(player);
             if(player.CurrentHP<=0)
             {
-                MessageBox.Show("Przegałeś!!!");
+                MessageBox.Show("Przegałeś!!! Twój zapis gry zostaje usunięty");
+                File.Delete("save.txt");
+                map.menu.HideContinueButton(map);
                 map.menu.Show();
                 map.Close();
                 this.Close();
@@ -234,7 +237,9 @@ namespace Talia_Zwyciestwa.Forms
                     TrashToDeck();
                     if (map.BossFight)
                     {
-                        MessageBox.Show("Uratowałeś świat");
+                        MessageBox.Show("Uratowałeś świat! Twój zapis zostaje usunięty");
+                        File.Delete("save.txt");
+                        map.menu.HideContinueButton(map);
                         map.menu.Show();
                         map.Close();
                         this.Close();
