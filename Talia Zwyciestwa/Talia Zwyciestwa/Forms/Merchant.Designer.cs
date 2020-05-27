@@ -52,6 +52,7 @@ namespace Talia_Zwyciestwa.Forms
             this.UpgradeHelmetButton = new System.Windows.Forms.Button();
             this.GoldValue = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.GoldLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // HealButton
@@ -62,7 +63,7 @@ namespace Talia_Zwyciestwa.Forms
             this.HealButton.Name = "HealButton";
             this.HealButton.Size = new System.Drawing.Size(91, 33);
             this.HealButton.TabIndex = 0;
-            this.HealButton.Text = "Ulecz (100g)";
+            this.HealButton.Text = "Ulecz (100)";
             this.HealButton.UseVisualStyleBackColor = true;
             this.HealButton.Click += new System.EventHandler(this.Heal);
             // 
@@ -74,7 +75,7 @@ namespace Talia_Zwyciestwa.Forms
             this.UpgradeButton.Name = "UpgradeButton";
             this.UpgradeButton.Size = new System.Drawing.Size(152, 33);
             this.UpgradeButton.TabIndex = 1;
-            this.UpgradeButton.Text = "Ulepsz losową kartę (150g)";
+            this.UpgradeButton.Text = "Ulepsz losową kartę (150)";
             this.UpgradeButton.UseVisualStyleBackColor = true;
             this.UpgradeButton.Click += new System.EventHandler(this.UpgradeCard);
             // 
@@ -95,9 +96,9 @@ namespace Talia_Zwyciestwa.Forms
             // 
             this.UpgradeShieldButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.UpgradeShieldButton.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.button_background_02;
-            this.UpgradeShieldButton.Location = new System.Drawing.Point(456, 385);
+            this.UpgradeShieldButton.Location = new System.Drawing.Point(489, 385);
             this.UpgradeShieldButton.Name = "UpgradeShieldButton";
-            this.UpgradeShieldButton.Size = new System.Drawing.Size(191, 23);
+            this.UpgradeShieldButton.Size = new System.Drawing.Size(127, 23);
             this.UpgradeShieldButton.TabIndex = 3;
             this.UpgradeShieldButton.UseVisualStyleBackColor = true;
             this.UpgradeShieldButton.Click += new System.EventHandler(this.UpgradeShieldButton_Click);
@@ -106,9 +107,9 @@ namespace Talia_Zwyciestwa.Forms
             // 
             this.UpgradeWeaponButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.UpgradeWeaponButton.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.button_background_02;
-            this.UpgradeWeaponButton.Location = new System.Drawing.Point(456, 414);
+            this.UpgradeWeaponButton.Location = new System.Drawing.Point(489, 414);
             this.UpgradeWeaponButton.Name = "UpgradeWeaponButton";
-            this.UpgradeWeaponButton.Size = new System.Drawing.Size(191, 23);
+            this.UpgradeWeaponButton.Size = new System.Drawing.Size(127, 23);
             this.UpgradeWeaponButton.TabIndex = 4;
             this.UpgradeWeaponButton.UseVisualStyleBackColor = true;
             this.UpgradeWeaponButton.Click += new System.EventHandler(this.UpgradeWeaponButton_Click);
@@ -117,9 +118,9 @@ namespace Talia_Zwyciestwa.Forms
             // 
             this.UpgradeArmorButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.UpgradeArmorButton.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.button_background_02;
-            this.UpgradeArmorButton.Location = new System.Drawing.Point(456, 356);
+            this.UpgradeArmorButton.Location = new System.Drawing.Point(489, 356);
             this.UpgradeArmorButton.Name = "UpgradeArmorButton";
-            this.UpgradeArmorButton.Size = new System.Drawing.Size(191, 23);
+            this.UpgradeArmorButton.Size = new System.Drawing.Size(127, 23);
             this.UpgradeArmorButton.TabIndex = 5;
             this.UpgradeArmorButton.UseVisualStyleBackColor = true;
             this.UpgradeArmorButton.Click += new System.EventHandler(this.UpgradeArmorButton_Click);
@@ -128,9 +129,9 @@ namespace Talia_Zwyciestwa.Forms
             // 
             this.UpgradeHelmetButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.UpgradeHelmetButton.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.button_background_02;
-            this.UpgradeHelmetButton.Location = new System.Drawing.Point(456, 327);
+            this.UpgradeHelmetButton.Location = new System.Drawing.Point(489, 327);
             this.UpgradeHelmetButton.Name = "UpgradeHelmetButton";
-            this.UpgradeHelmetButton.Size = new System.Drawing.Size(191, 23);
+            this.UpgradeHelmetButton.Size = new System.Drawing.Size(127, 23);
             this.UpgradeHelmetButton.TabIndex = 6;
             this.UpgradeHelmetButton.UseVisualStyleBackColor = true;
             this.UpgradeHelmetButton.Click += new System.EventHandler(this.UpgradeHelmetButton_Click);
@@ -156,12 +157,23 @@ namespace Talia_Zwyciestwa.Forms
             this.label9.TabIndex = 63;
             this.label9.Text = "Złoto:";
             // 
+            // GoldLabel
+            // 
+            this.GoldLabel.AutoSize = true;
+            this.GoldLabel.BackColor = System.Drawing.Color.Transparent;
+            this.GoldLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.GoldLabel.Location = new System.Drawing.Point(433, 482);
+            this.GoldLabel.Name = "GoldLabel";
+            this.GoldLabel.Size = new System.Drawing.Size(0, 31);
+            this.GoldLabel.TabIndex = 65;
+            // 
             // Merchant
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.merchant_01;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.GoldLabel);
             this.Controls.Add(this.GoldValue);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.UpgradeHelmetButton);
@@ -197,6 +209,7 @@ namespace Talia_Zwyciestwa.Forms
             {
                 map.Player.Gold -= 100;
                 map.Player.CurrentHP = map.Player.MaxHP;
+                RefreshGold();
             }
         }
 
@@ -205,26 +218,32 @@ namespace Talia_Zwyciestwa.Forms
             if (!map.Player.UnlockedArmors[0])
                 UpgradeArmorButton.Hide();
             else
-                UpgradeArmorButton.Text = "Ulepsz zbroję (150 sztuk złota)";
+                UpgradeArmorButton.Text = "Ulepsz zbroję (150)";
 
             if (!map.Player.UnlockedWeapons[0])
                 UpgradeWeaponButton.Hide();
             else
-                UpgradeWeaponButton.Text = "Ulepsz broń (150 sztuk złota)";
+                UpgradeWeaponButton.Text = "Ulepsz broń (150)";
 
             if (!map.Player.UnlockedShields[0])
                 UpgradeShieldButton.Hide();
             else
-                UpgradeShieldButton.Text = "Ulepsz tarczę (150 sztuk złota)";
+                UpgradeShieldButton.Text = "Ulepsz tarczę (150)";
             if (!map.Player.UnlockedHelmets[0])
                 UpgradeHelmetButton.Hide();
             else
-                UpgradeHelmetButton.Text = "Ulepsz hełm (180 sztuk złota)";
+                UpgradeHelmetButton.Text = "Ulepsz hełm (180)";
 
             if (map.Player.UnlockedArmors[2])
-                UpgradeArmorButton.Text = "Ulepsz zbroję (250 sztuk złota)";
+                UpgradeArmorButton.Text = "Ulepsz zbroję (250";
             if (map.Player.UnlockedWeapons[2])
-                UpgradeWeaponButton.Text = "Ulepsz broń (250 sztuk złota)";
+                UpgradeWeaponButton.Text = "Ulepsz broń (250)";
+            RefreshGold();
+        }
+
+        private void RefreshGold()
+        {
+            GoldLabel.Text = map.Player.Gold.ToString();
         }
 
         private void UpgradeCard(object sender, EventArgs e) //TEST THAT
@@ -243,7 +262,11 @@ namespace Talia_Zwyciestwa.Forms
                 if (indexes.Count != 0)
                 {
                     int index = random.Next(0, indexes.Count-1);
-                    switch (map.Deck.Cards[indexes[index]].Value) //FIX THAT
+                    //MessageBox.Show(indexes.Count.ToString());
+                    //MessageBox.Show(indexes[index].ToString() + " " + map.Deck.Cards[indexes[index]]);
+                    int id = map.Deck.Cards[indexes[index]].Id;
+                    map.Deck.Cards.RemoveAt(indexes[index]);
+                    switch (id)
                         {
                         case 0:
                             map.Deck.Cards.Add(new UpgradedAttackCard());
@@ -261,9 +284,11 @@ namespace Talia_Zwyciestwa.Forms
                             map.Deck.Cards.Add(new UpgradeDexElixirCard());
                             break;
                     }
-                    map.Deck.Cards.RemoveAt(indexes[index]);
                     map.Player.Gold -= 150;
-                    MessageBox.Show("Twoja nowa karta: " + map.Deck.Cards[map.Deck.Cards.Count - 1].Name.ToString() + "/n Opis: " + map.Deck.Cards[map.Deck.Cards.Count - 1].Describtion.ToString() + "/n Wartość: " + map.Deck.Cards[map.Deck.Cards.Count - 1].Value.ToString());
+                    MessageBox.Show("Twoja nowa karta: " + map.Deck.Cards[map.Deck.Cards.Count - 1].Name.ToString() + " Opis: " + map.Deck.Cards[map.Deck.Cards.Count - 1].Describtion.ToString() + " Wartość: " + map.Deck.Cards[map.Deck.Cards.Count - 1].Value.ToString());
+                    RefreshGold();
+                    map.Deck.Write();
+                    indexes.Clear();
                 }
                 else
                     MessageBox.Show("Nie masz kart do ulepszenia");
@@ -278,5 +303,6 @@ namespace Talia_Zwyciestwa.Forms
         private Button UpgradeHelmetButton;
         private Label GoldValue;
         private Label label9;
+        private Label GoldLabel;
     }
 }

@@ -137,6 +137,7 @@ namespace Talia_Zwyciestwa.Forms
             this.MaxHPValue = new System.Windows.Forms.Label();
             this.CurrentHPValue = new System.Windows.Forms.Label();
             this.GoldValue = new System.Windows.Forms.Label();
+            this.button11 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button26
@@ -418,12 +419,28 @@ namespace Talia_Zwyciestwa.Forms
             this.GoldValue.Size = new System.Drawing.Size(0, 31);
             this.GoldValue.TabIndex = 62;
             // 
+            // button11
+            // 
+            this.button11.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button11.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.button_background_01;
+            this.button11.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F);
+            this.button11.Location = new System.Drawing.Point(854, 432);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(364, 64);
+            this.button11.TabIndex = 63;
+            this.button11.Text = "Pokaż talię";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
             // Equipment
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.equipment_01;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.button11);
             this.Controls.Add(this.GoldValue);
             this.Controls.Add(this.CurrentHPValue);
             this.Controls.Add(this.MaxHPValue);
@@ -488,5 +505,6 @@ namespace Talia_Zwyciestwa.Forms
         private System.Windows.Forms.Label MaxHPValue;
         private System.Windows.Forms.Label CurrentHPValue;
         private System.Windows.Forms.Label GoldValue;
+        private System.Windows.Forms.Button button11;
     }
 }

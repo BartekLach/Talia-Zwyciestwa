@@ -8,12 +8,12 @@ namespace Talia_Zwyciestwa.Classes.Card_Types
 {
     class UpgradedParryCard : Card
     {
-            private int defValue = 4;
-            private int dmgValue = 4;
+        private int defValue = 7;
+            private int dmgValue = 7;
             public UpgradedParryCard()
             {
                 Value = 1;
-                Name = "Riposta";
+                Name = "Riposta+";
                 Describtion = "Zadaj ( " + dmgValue.ToString() + " + siła) obrażeń i zyskaj" + dmgValue.ToString() + " + zręczność) punktów obrony";
                 Id = 7;
             }

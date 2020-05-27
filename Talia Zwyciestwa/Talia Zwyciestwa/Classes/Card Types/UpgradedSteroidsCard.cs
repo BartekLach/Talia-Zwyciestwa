@@ -8,11 +8,11 @@ namespace Talia_Zwyciestwa.Classes.Card_Types
 {
     public class UpgradedSteroidsCard : Card
     {
-        private int strValue = 2;
+        private int strValue = 3;
         public UpgradedSteroidsCard()
         {
-            Value = 2;
-            Name = "Sterydy";
+            Value = 1;
+            Name = "Sterydy+";
             Describtion = " Zyskaj " + strValue.ToString() + " punktów siły do końca walki";
             Id = 8;
         }

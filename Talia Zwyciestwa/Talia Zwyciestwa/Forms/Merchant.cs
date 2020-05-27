@@ -31,7 +31,9 @@ namespace Talia_Zwyciestwa.Forms
                 map.Player.ChangeHelmet(new HeavyHelmet());
                 map.Player.WornHelmet = 2;
                 UpgradeHelmetButton.Hide();
-            }else
+                RefreshGold();
+            }
+            else
                 MessageBox.Show("Nie stać Cię");
         }
 
@@ -46,7 +48,9 @@ namespace Talia_Zwyciestwa.Forms
                     map.Player.WornArmor = 3;
                     map.Player.ChangeArmor(new HeavyArmor());
                     UpgradeArmorButton.Hide();
-                }else
+                    RefreshGold();
+                }
+                else
                     MessageBox.Show("Nie stać Cię");
             }
             else if (map.Player.Gold >= 150)
@@ -55,8 +59,10 @@ namespace Talia_Zwyciestwa.Forms
                 map.Player.Gold -= 150;
                 map.Player.WornArmor = 2;
                 map.Player.ChangeArmor(new MediumArmor());
-                UpgradeArmorButton.Text = "Ulepsz Zbroję (250 sztuk złota)";
-            }else
+                UpgradeArmorButton.Text = "Ulepsz Zbroję (250)";
+                RefreshGold();
+            }
+            else
                 MessageBox.Show("Nie stać Cię");
 
         }
@@ -69,8 +75,10 @@ namespace Talia_Zwyciestwa.Forms
                 map.Player.UnlockedShields[1] = true;
                 map.Player.WornShield = 2;
                 map.Player.ChangeShield(new HeavyShield());
+                RefreshGold();
 
-            }else
+            }
+            else
                 MessageBox.Show("Nie stać Cię");
         }
 
@@ -85,7 +93,9 @@ namespace Talia_Zwyciestwa.Forms
                     map.Player.WornWeapon = 3;
                     map.Player.ChangeWeapon(new HeavyWeapon());
                     UpgradeWeaponButton.Hide();
-                }else
+                    RefreshGold();
+                }
+                else
                     MessageBox.Show("Nie stać Cię");
             }
             else if(map.Player.Gold >= 150)
@@ -94,8 +104,10 @@ namespace Talia_Zwyciestwa.Forms
                 map.Player.Gold -= 150;
                 map.Player.WornWeapon = 2;
                 map.Player.ChangeWeapon(new MediumWeapon());
-                UpgradeWeaponButton.Text = "Ulepsz Broń (250 sztuk złota)";
-            }else
+                UpgradeWeaponButton.Text = "Ulepsz Broń (250)";
+                RefreshGold();
+            }
+            else
                 MessageBox.Show("Nie stać Cię");
         }
     }

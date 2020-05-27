@@ -232,7 +232,7 @@ namespace Talia_Zwyciestwa.Forms
                 {
                     ClearHand();
                     TrashToDeck();
-                    if (map.bossFight)
+                    if (map.BossFight)
                     {
                         MessageBox.Show("Uratowałeś świat");
                         map.menu.Show();
@@ -262,47 +262,47 @@ namespace Talia_Zwyciestwa.Forms
                     }
 
                     
-                    switch (map.getEQ)
+                    switch (map.GetEQ)
                     {
                         case 0:
-                            if(!map.isEQGained[map.getEQ])
+                            if(!map.IsEQGained[map.GetEQ])
                             {
                                 MessageBox.Show("Ponnadto znalazłeś lekki pancerz i zakładasz go na siebie");
                                 map.Player.WornArmor = 1;
                                 map.Player.UnlockedArmors[0] = true;
                                 map.Player.ChangeArmor(new LightArmor());
-                                map.isEQGained[map.getEQ] = true;
+                                map.IsEQGained[map.GetEQ] = true;
                             }
                             break;
                         case 1:
-                            if (!map.isEQGained[map.getEQ])
+                            if (!map.IsEQGained[map.GetEQ])
                             {
                                 MessageBox.Show("Ponnadto znalazłeś lekką broń i zaczynasz jej używać");
                                 map.Player.WornWeapon = 1;
                                 map.Player.UnlockedWeapons[0] = true;
                                 map.Player.ChangeWeapon(new LightWeapon());
-                                map.isEQGained[map.getEQ] = true;
+                                map.IsEQGained[map.GetEQ] = true;
                             }
                             break;
                         case 2:
-                            if (!map.isEQGained[map.getEQ])
+                            if (!map.IsEQGained[map.GetEQ])
                             {
                                 MessageBox.Show("Ponnadto znalazłeś tarczę zakładasz ją");
                                 map.Player.WornShield = 1;
                                 map.Player.UnlockedShields[0] = true;
                                 map.Player.ChangeShield(new LightShield());
-                                map.isEQGained[map.getEQ] = true;
+                                map.IsEQGained[map.GetEQ] = true;
                             }
                             
                             break;
                         case 3:
-                            if (!map.isEQGained[map.getEQ])
+                            if (!map.IsEQGained[map.GetEQ])
                             {
                                 MessageBox.Show("Ponnadto znalazłeś hełm i zakładasz go na siebie");
                                 map.Player.UnlockedHelmets[0] = true;
                                 map.Player.WornHelmet = 1;
                                 map.Player.ChangeHelmet(new LightHelmet());
-                                map.isEQGained[map.getEQ] = true;
+                                map.IsEQGained[map.GetEQ] = true;
                             }
                            
                             break;

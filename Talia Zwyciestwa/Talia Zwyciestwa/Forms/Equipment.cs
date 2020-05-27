@@ -201,5 +201,10 @@ namespace Talia_Zwyciestwa.Forms
             DexValue.Text = map.Player.Dex.ToString();
             StrValue.Text = map.Player.Str.ToString();
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            map.Deck.Write();
+        }
     }
 }

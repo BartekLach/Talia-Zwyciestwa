@@ -25,15 +25,43 @@ namespace Talia_Zwyciestwa.Classes
                 list[n] = value;
             }
         }
+
+        internal static void SaveToFile(Map map)
+        {
+
+            StreamWriter sw = new StreamWriter("save.txt");
+
+            sw.WriteLine(map.Player.Gold.ToString() + ';' + map.Player.CurrentHP.ToString());
+            
+            for(int i = 0; i < 2;i++)
+            {
+                sw.Write(map.Player.UnlockedHelmets[i].ToString() + ';');
+                sw.Write(map.Player.UnlockedArmors[i].ToString() + ';');
+                sw.Write(map.Player.UnlockedShields[i].ToString() + ';');
+                sw.Write(map.Player.UnlockedWeapons[i].ToString() + ';');
+            }
+            sw.Write(map.Player.UnlockedArmors[2].ToString()+';');
+            sw.Write(map.Player.UnlockedWeapons[2].ToString() + '\n');
+
+            sw.Write(map.Player.WornHelmet.ToString() + ';' + map.Player.WornArmor.ToString() + ';' + map.Player.WornShield.ToString() + ';' + map.Player.WornWeapon.ToString() + '\n');
+
+
+            foreach (Card card in map.Deck.Cards)
+            {
+                sw.Write(card.Id.ToString() + ';');
+            }
+            sw.Write('\n');
+
+            sw.WriteLine(map.BossFight.ToString() + ';' + map.GetEQ.ToString() +';'+ map.IsEQGained[0].ToString() + ';' + map.IsEQGained[1].ToString() + ';' + map.IsEQGained[2].ToString() + ';' + map.IsEQGained[3].ToString() + '\n');
+
+            sw.Close();
+        }
+
         public static void Load(Menu menu)
         {
-            if (menu is null)
-            {
-                throw new ArgumentNullException(nameof(menu));
-            }
-
             if (File.Exists("save.txt"))
             {
+                string[] lines = File.ReadAllLines("save.txt");
                 //TODO
             }
             else

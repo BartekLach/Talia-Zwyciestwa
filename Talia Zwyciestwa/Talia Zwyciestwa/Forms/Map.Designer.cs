@@ -11,9 +11,9 @@ namespace Talia_Zwyciestwa.Forms
         public Menu menu;
         private Player player;
         private Deck deck;
-        public bool bossFight = false;
-        public int getEQ = -1;
-        public bool[] isEQGained = new bool[4];
+        private bool bossFight = false;
+        private int getEQ = -1;
+        private bool[] isEQGained = new bool[4];
 
         
         /// <summary>
@@ -75,6 +75,7 @@ namespace Talia_Zwyciestwa.Forms
             this.button25 = new System.Windows.Forms.Button();
             this.EQButton = new System.Windows.Forms.Button();
             this.button26 = new System.Windows.Forms.Button();
+            this.SaveButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -404,12 +405,28 @@ namespace Talia_Zwyciestwa.Forms
             this.button26.Text = "Cofnij";
             this.button26.UseVisualStyleBackColor = true;
             // 
+            // SaveButton
+            // 
+            this.SaveButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.SaveButton.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.button_background_01;
+            this.SaveButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.SaveButton.FlatAppearance.BorderSize = 0;
+            this.SaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F);
+            this.SaveButton.Location = new System.Drawing.Point(935, 42);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(308, 78);
+            this.SaveButton.TabIndex = 27;
+            this.SaveButton.Text = "Zapisz";
+            this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            // 
             // Map
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.map_01;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.button26);
             this.Controls.Add(this.EQButton);
             this.Controls.Add(this.button25);
@@ -459,7 +476,7 @@ namespace Talia_Zwyciestwa.Forms
         private void button24Clicked(object sender, EventArgs e)
         {
             button24.Enabled = false;
-            bossFight = true;
+            BossFight = true;
             GameHandler.FightEngager(this, new EnemyBoss());
         }
 
@@ -525,7 +542,7 @@ namespace Talia_Zwyciestwa.Forms
             button15.Enabled = false;
             button16.Enabled = false;
             button17.Enabled = true;
-            getEQ++;
+            GetEQ++;
             GameHandler.FightEngager(this, new EnemyElite());
         }
 
@@ -586,7 +603,7 @@ namespace Talia_Zwyciestwa.Forms
             button8.Enabled = false;
             button9.Enabled = true;
             button11.Enabled = true;
-            getEQ++;
+            GetEQ++;
             GameHandler.FightEngager(this, new EnemyElite());
         }
 
@@ -595,7 +612,7 @@ namespace Talia_Zwyciestwa.Forms
             button6.Enabled = false;
             button7.Enabled = false;
             button8.Enabled = true;
-            getEQ++;
+            GetEQ++;
             GameHandler.FightEngager(this, new EnemyCommon());
         }
 
@@ -626,7 +643,7 @@ namespace Talia_Zwyciestwa.Forms
             button2.Enabled = false;
             button3.Enabled = false;
             button4.Enabled = true;
-            getEQ++;
+            GetEQ++;
             GameHandler.FightEngager(this, new EnemyCommon());
 
         }
@@ -652,7 +669,7 @@ namespace Talia_Zwyciestwa.Forms
             player = new Player();
             for (int i = 0; i < 4; i++)
             {
-                isEQGained[i] = false;
+                IsEQGained[i] = false;
             }
         }
 
@@ -690,8 +707,12 @@ namespace Talia_Zwyciestwa.Forms
         private System.Windows.Forms.Button button25;
         private System.Windows.Forms.Button EQButton;
         private System.Windows.Forms.Button button26;
-  
+        private Button SaveButton;
+
         internal Deck Deck { get => deck; set => deck = value; }
         internal Player Player { get => player; set => player = value; }
+        public bool BossFight { get => bossFight; set => bossFight = value; }
+        public int GetEQ { get => getEQ; set => getEQ = value; }
+        public bool[] IsEQGained { get => isEQGained; set => isEQGained = value; }
     }
 }
