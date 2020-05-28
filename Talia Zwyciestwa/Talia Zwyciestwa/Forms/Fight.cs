@@ -182,7 +182,17 @@ namespace Talia_Zwyciestwa.Forms
 
         private void RefreshLabels()
         {
-            //TODO
+            //Player:
+            PlayerDexValue.Text = player.CurrentDex.ToString();
+            PlayerStrValue.Text = player.CurrentStr.ToString();
+            PlayerPowerValue.Text = currentPower.ToString();
+            PlayerHPValue.Text = player.CurrentHP.ToString();
+            PlayerPOValue.Text = player.CurrentPO.ToString();
+            //enemy:
+            EnemyPOValue.Text = enemy.CurrentPO.ToString();
+            EnemyDexValue.Text = enemy.CurrentDex.ToString();
+            EnemyStrValue.Text = enemy.CurrentStr.ToString();
+            EnemyHPValue.Text = enemy.CurrentHP.ToString();
         }
 
         private void EndTurnClicked(object sender, EventArgs e)
@@ -242,5 +252,9 @@ namespace Talia_Zwyciestwa.Forms
             }
         }
 
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

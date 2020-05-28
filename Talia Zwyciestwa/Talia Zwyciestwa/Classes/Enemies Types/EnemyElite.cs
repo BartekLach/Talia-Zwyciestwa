@@ -21,9 +21,9 @@ namespace Talia_Zwyciestwa.Classes.Enemies_Types
         override public void MakeTurn(Player player)
         {
             Random random = new Random();
-            player.GetDMG(random.Next(5, 7) + CurrentStr);
+            player.GetDMG(random.Next(4, 6) + CurrentStr);
             CurrentStr += random.Next(3);
-            CurrentPO = random.Next(5, 7) + CurrentDex;
+            CurrentPO = random.Next(4, 6) + CurrentDex;
             CurrentDex += random.Next(3);
         }
     }

@@ -39,7 +39,7 @@ namespace Talia_Zwyciestwa.Classes
             Dex = CurrentDex = 0;
             power = 3;
             CurrentPO = 0;
-            gold =  50;
+            gold =  150;
             for(int i=0;i<2; i++)
             {
                 unlockedShields[i] = false;

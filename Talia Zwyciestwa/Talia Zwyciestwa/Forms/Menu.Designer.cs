@@ -41,6 +41,7 @@ namespace Talia_Zwyciestwa
             this.exitButton = new System.Windows.Forms.Button();
             this.playButton = new System.Windows.Forms.Button();
             this.ContinueButton = new System.Windows.Forms.Button();
+            this.HelpButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LoadButton
@@ -63,7 +64,7 @@ namespace Talia_Zwyciestwa
             this.exitButton.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.button_background_01;
             this.exitButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.exitButton.FlatAppearance.BorderSize = 0;
-            this.exitButton.Location = new System.Drawing.Point(251, 586);
+            this.exitButton.Location = new System.Drawing.Point(246, 637);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(168, 62);
             this.exitButton.TabIndex = 4;
@@ -99,6 +100,20 @@ namespace Talia_Zwyciestwa
             this.ContinueButton.UseVisualStyleBackColor = true;
             this.ContinueButton.Click += new System.EventHandler(this.ContinueButton_Click);
             // 
+            // HelpButton
+            // 
+            this.HelpButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.HelpButton.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.button_background_01;
+            this.HelpButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.HelpButton.FlatAppearance.BorderSize = 0;
+            this.HelpButton.Location = new System.Drawing.Point(180, 553);
+            this.HelpButton.Name = "HelpButton";
+            this.HelpButton.Size = new System.Drawing.Size(308, 78);
+            this.HelpButton.TabIndex = 7;
+            this.HelpButton.Text = "Pomoc";
+            this.HelpButton.UseVisualStyleBackColor = true;
+            this.HelpButton.Click += new System.EventHandler(this.HelpButton_Click);
+            // 
             // Menu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -106,6 +121,7 @@ namespace Talia_Zwyciestwa
             this.BackColor = System.Drawing.Color.OldLace;
             this.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.menu_background_01;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.HelpButton);
             this.Controls.Add(this.ContinueButton);
             this.Controls.Add(this.playButton);
             this.Controls.Add(this.exitButton);
@@ -129,6 +145,7 @@ namespace Talia_Zwyciestwa
 		private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Button playButton;
         private Button ContinueButton;
+        private Button HelpButton;
     }
 }
 
