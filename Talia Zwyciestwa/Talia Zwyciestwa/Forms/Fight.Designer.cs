@@ -54,6 +54,7 @@ namespace Talia_Zwyciestwa.Forms
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fight));
             this.Card1 = new System.Windows.Forms.Button();
             this.Card2 = new System.Windows.Forms.Button();
             this.Card3 = new System.Windows.Forms.Button();
@@ -256,6 +257,7 @@ namespace Talia_Zwyciestwa.Forms
             this.Controls.Add(this.Card1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Fight";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
