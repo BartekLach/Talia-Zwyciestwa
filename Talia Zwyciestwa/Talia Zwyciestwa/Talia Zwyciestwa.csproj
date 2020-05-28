@@ -165,6 +165,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Music\battleThemeA.wav" />
+    <None Include="Resources\fight_01.png" />
     <None Include="Resources\button_background_02.png" />
     <None Include="Resources\merchant_01.png" />
     <None Include="Resources\shield_02.png" />
