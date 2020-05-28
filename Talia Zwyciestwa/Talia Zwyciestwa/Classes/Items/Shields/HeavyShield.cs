@@ -8,10 +8,12 @@ namespace Talia_Zwyciestwa.Classes.Items.Shields
 {
     public class HeavyShield : Shield
     {
+        public static int Def = 5;
+        public static int Str = 2;
         public HeavyShield()
         {
-            Def = 5;
-            Str = 2;
+            DefValue = Def;
+            StrValue = Str;
         }
     }
 }

@@ -8,10 +8,10 @@ namespace Talia_Zwyciestwa.Classes.Items.Armors
 {
     abstract public class Armor
     {
-        private int def;
-        private int str;
+        private int defValue;
+        private int strValue;
 
-        public int Def { get => def; set => def = value; }
-        public int Str { get => str; set => str = value; }
+        public int DefValue { get => defValue; set => defValue = value; }
+        public int StrValue { get => strValue; set => strValue = value; }
     }
 }

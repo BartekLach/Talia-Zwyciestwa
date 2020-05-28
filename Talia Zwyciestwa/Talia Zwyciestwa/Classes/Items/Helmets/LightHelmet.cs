@@ -8,10 +8,12 @@ namespace Talia_Zwyciestwa.Classes.Items.Helmets
 {
     public class LightHelmet : Helmet
     {
+        public static int Def = 2;
+        public static int Str = 2;
         public LightHelmet()
         {
-            Def = 2;
-            Str = 2;
+            DefValue = Def;
+            StrValue = Str;
         }
     }
 }

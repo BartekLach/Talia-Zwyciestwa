@@ -13,7 +13,6 @@ namespace Talia_Zwyciestwa.Forms
 {
     public partial class Map : Form
     {
-        private bool isGameOn;
         public Map()
         {
             InitializeComponent();

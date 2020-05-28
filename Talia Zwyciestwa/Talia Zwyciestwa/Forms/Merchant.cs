@@ -60,6 +60,7 @@ namespace Talia_Zwyciestwa.Forms
                 map.Player.WornArmor = 2;
                 map.Player.ChangeArmor(new MediumArmor());
                 UpgradeArmorButton.Text = "Ulepsz Zbroję (250)";
+                ArmorUpgradeToolTip.SetToolTip(UpgradeArmorButton, HeavyArmor.Def.ToString() + " zręczności, " + HeavyArmor.Str.ToString() + " siły");
                 RefreshGold();
             }
             else
@@ -76,7 +77,7 @@ namespace Talia_Zwyciestwa.Forms
                 map.Player.WornShield = 2;
                 map.Player.ChangeShield(new HeavyShield());
                 RefreshGold();
-
+                UpgradeShieldButton.Hide();
             }
             else
                 MessageBox.Show("Nie stać Cię");
@@ -105,6 +106,7 @@ namespace Talia_Zwyciestwa.Forms
                 map.Player.WornWeapon = 2;
                 map.Player.ChangeWeapon(new MediumWeapon());
                 UpgradeWeaponButton.Text = "Ulepsz Broń (250)";
+                WeaponUpgradeToolTip.SetToolTip(UpgradeWeaponButton, HeavyWeapon.Def.ToString() + " zręczności, " + HeavyWeapon.Str.ToString() + " siły");
                 RefreshGold();
             }
             else

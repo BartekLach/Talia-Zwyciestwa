@@ -54,47 +54,47 @@ namespace Talia_Zwyciestwa.Classes
         {
             if (weaponSlot != null)
             {
-                Dex -= weaponSlot.Def;
-                Str -= weaponSlot.Str;
+                Dex -= weaponSlot.DefValue;
+                Str -= weaponSlot.StrValue;
             }
             weaponSlot = weapon;
-            Dex += weapon.Def;
-            Str += weapon.Str;
+            Dex += weapon.DefValue;
+            Str += weapon.StrValue;
         }
         public void ChangeHelmet(Helmet helmet)
         {
             if (helmetSlot != null)
             {
-                Dex -= helmetSlot.Def;
-                Str -= helmetSlot.Str;
+                Dex -= helmetSlot.DefValue;
+                Str -= helmetSlot.StrValue;
             }
             helmetSlot = helmet;
-            Dex += helmet.Def;
-            Str += helmet.Str;
+            Dex += helmet.DefValue;
+            Str += helmet.StrValue;
 
         }
         public void ChangeShield(Shield shield)
         {
             if (shieldSlot != null)
             {
-                Dex -= shieldSlot.Def;
-                Str -= shieldSlot.Str;
+                Dex -= shieldSlot.DefValue;
+                Str -= shieldSlot.StrValue;
             }
 
             shieldSlot = shield;
-            Dex += shield.Def;
-            Str += shield.Str;
+            Dex += shield.DefValue;
+            Str += shield.StrValue;
         }
         public void ChangeArmor(Armor armor)
         {
             if (armorSlot != null)
             {
-                Dex -= armorSlot.Def;
-                Str -= armorSlot.Str;
+                Dex -= armorSlot.DefValue;
+                Str -= armorSlot.StrValue;
             }
             armorSlot = armor;
-            Dex += armor.Def;
-            Str += armor.Str;
+            Dex += armor.DefValue;
+            Str += armor.StrValue;
 
         }
         public int Power { get => power; set => power = value; }

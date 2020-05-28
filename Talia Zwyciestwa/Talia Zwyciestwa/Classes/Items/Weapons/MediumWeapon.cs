@@ -8,10 +8,12 @@ namespace Talia_Zwyciestwa.Classes.Items.Weapons
 {
     public class MediumWeapon : Weapon
     {
+        public static int Def = -3;
+        public static int Str = 7;
         public MediumWeapon()
         {
-            Def = -4;
-            Str = 7;
+            DefValue = Def;
+            StrValue = Str;
         }
     }
 }

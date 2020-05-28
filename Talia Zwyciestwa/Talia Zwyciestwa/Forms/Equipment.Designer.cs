@@ -1,5 +1,9 @@
 ﻿using System;
 using System.Drawing;
+using Talia_Zwyciestwa.Classes.Items.Armors;
+using Talia_Zwyciestwa.Classes.Items.Helmets;
+using Talia_Zwyciestwa.Classes.Items.Shields;
+using Talia_Zwyciestwa.Classes.Items.Weapons;
 
 namespace Talia_Zwyciestwa.Forms
 {
@@ -35,74 +39,85 @@ namespace Talia_Zwyciestwa.Forms
             GoldValue.Text = map.Player.Gold.ToString();
 
             if (!map.Player.UnlockedHelmets[0])
-                button1.Enabled = false;
+                LightHelmetButton.Enabled = false;
             if (!map.Player.UnlockedHelmets[1])
-                button2.Enabled = false;
+                HeavyHelmetButton.Enabled = false;
 
             if (!map.Player.UnlockedArmors[0])
-                button4.Enabled = false;
+                LightArmorButton.Enabled = false;
             if (!map.Player.UnlockedArmors[1])
-                button3.Enabled = false;
+                MediumArmorButton.Enabled = false;
             if (!map.Player.UnlockedArmors[2])
-                button6.Enabled = false;
+                HeavyArmorButton.Enabled = false;
 
             if (!map.Player.UnlockedShields[0])
-                button7.Enabled = false;
+                LightShieldButton.Enabled = false;
             if (!map.Player.UnlockedShields[1])
-                button5.Enabled = false;
+                HeavyShieldButton.Enabled = false;
 
             if (!map.Player.UnlockedWeapons[0])
-                button10.Enabled = false;
+                LightWeaponButton.Enabled = false;
             if (!map.Player.UnlockedWeapons[1])
-                button9.Enabled = false;
+                MediumWeaponButton.Enabled = false;
             if (!map.Player.UnlockedWeapons[2])
-                button8.Enabled = false;
+                HeavyWeaponButton.Enabled = false;
 
             switch (map.Player.WornHelmet)
             {
                 case 1:
-                    button1.BackColor = Color.DarkGreen;
+                    LightHelmetButton.BackColor = Color.DarkGreen;
                     break;
                 case 2:
-                    button2.BackColor = Color.DarkGreen;
+                    HeavyHelmetButton.BackColor = Color.DarkGreen;
                     break;
             }
 
             switch (map.Player.WornArmor)
             {
                 case 1:
-                    button4.BackColor = Color.DarkGreen;
+                    LightArmorButton.BackColor = Color.DarkGreen;
                     break;
                 case 2:
-                    button3.BackColor = Color.DarkGreen;
+                    MediumArmorButton.BackColor = Color.DarkGreen;
                     break;
                 case 3:
-                    button6.BackColor = Color.DarkGreen;
+                    HeavyArmorButton.BackColor = Color.DarkGreen;
                     break;
             }
 
             switch (map.Player.WornShield)
             {
                 case 1:
-                    button7.BackColor = Color.DarkGreen;
+                    LightShieldButton.BackColor = Color.DarkGreen;
                     break;
                 case 2:
-                    button5.BackColor = Color.DarkGreen;
+                    HeavyShieldButton.BackColor = Color.DarkGreen;
                     break;
             }
 
             switch (map.Player.WornWeapon)
             {
                 case 1:
-                    button10.BackColor = Color.DarkGreen;
+                    LightWeaponButton.BackColor = Color.DarkGreen;
                     break;
                 case 2:
-                    button9.BackColor = Color.DarkGreen;
+                    MediumWeaponButton.BackColor = Color.DarkGreen;
                     break;
                 case 3:
-                    button8.BackColor = Color.DarkGreen;
+                    HeavyWeaponButton.BackColor = Color.DarkGreen;
                     break;
             }
+
+            LightHelmetToolTip.SetToolTip(LightHelmetButton, LightHelmet.Def.ToString() + " zręczności, " + LightHelmet.Str.ToString() + " siły");
+            HeavyHelmetToolTip.SetToolTip(HeavyHelmetButton, HeavyHelmet.Def.ToString() + " zręczności, " + HeavyHelmet.Str.ToString() + " siły");
+            LightArmorToolTip.SetToolTip(LightArmorButton, LightArmor.Def.ToString() + " zręczności, " + LightArmor.Str.ToString() + " siły");
+            MediumArmorToolTip.SetToolTip(MediumArmorButton, MediumArmor.Def.ToString() + " zręczności, " + MediumArmor.Str.ToString() + " siły");
+            HeavyArmorToolTip.SetToolTip(HeavyArmorButton, HeavyArmor.Def.ToString() + " zręczności, " + HeavyArmor.Str.ToString() + " siły");
+            LightShieldToolTip.SetToolTip(LightShieldButton, LightShield.Def.ToString() + " zręczności, " + LightShield.Str.ToString() + " siły");
+            HeavyShieldToolTip.SetToolTip(HeavyShieldButton, HeavyShield.Def.ToString() + " zręczności, " + HeavyShield.Str.ToString() + " siły");
+            LightWeaponToolTip.SetToolTip(LightWeaponButton, LightWeapon.Def.ToString() + " zręczności, " + LightWeapon.Str.ToString() + " siły");
+            MediumWeaponToolTip.SetToolTip(MediumWeaponButton, MediumWeapon.Def.ToString() + " zręczności, " + MediumWeapon.Str.ToString() + " siły");
+            HeavyWeaponToolTip.SetToolTip(HeavyWeaponButton, HeavyWeapon.Def.ToString() + " zręczności, " + HeavyWeapon.Str.ToString() + " siły");
         }
         #region Windows Form Designer generated code
 
@@ -112,21 +127,22 @@ namespace Talia_Zwyciestwa.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button26 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.LightHelmetButton = new System.Windows.Forms.Button();
+            this.HeavyHelmetButton = new System.Windows.Forms.Button();
+            this.MediumArmorButton = new System.Windows.Forms.Button();
+            this.LightArmorButton = new System.Windows.Forms.Button();
+            this.HeavyArmorButton = new System.Windows.Forms.Button();
+            this.HeavyShieldButton = new System.Windows.Forms.Button();
+            this.LightShieldButton = new System.Windows.Forms.Button();
+            this.HeavyWeaponButton = new System.Windows.Forms.Button();
+            this.MediumWeaponButton = new System.Windows.Forms.Button();
+            this.LightWeaponButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -138,6 +154,16 @@ namespace Talia_Zwyciestwa.Forms
             this.CurrentHPValue = new System.Windows.Forms.Label();
             this.GoldValue = new System.Windows.Forms.Label();
             this.button11 = new System.Windows.Forms.Button();
+            this.LightHelmetToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.HeavyHelmetToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.LightArmorToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.MediumArmorToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.HeavyArmorToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.LightShieldToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.HeavyShieldToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.MediumWeaponToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.HeavyWeaponToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.LightWeaponToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // button26
@@ -199,115 +225,115 @@ namespace Talia_Zwyciestwa.Forms
             this.label4.TabIndex = 37;
             this.label4.Text = "Broń";
             // 
-            // button1
+            // LightHelmetButton
             // 
-            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button1.Image = global::Talia_Zwyciestwa.Properties.Resources.helmet_01;
-            this.button1.Location = new System.Drawing.Point(175, 206);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(64, 64);
-            this.button1.TabIndex = 38;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.LightHelmetButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.LightHelmetButton.Image = global::Talia_Zwyciestwa.Properties.Resources.helmet_01;
+            this.LightHelmetButton.Location = new System.Drawing.Point(175, 206);
+            this.LightHelmetButton.Name = "LightHelmetButton";
+            this.LightHelmetButton.Size = new System.Drawing.Size(64, 64);
+            this.LightHelmetButton.TabIndex = 38;
+            this.LightHelmetButton.UseVisualStyleBackColor = true;
+            this.LightHelmetButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // HeavyHelmetButton
             // 
-            this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button2.Image = global::Talia_Zwyciestwa.Properties.Resources.helmet_02;
-            this.button2.Location = new System.Drawing.Point(245, 206);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(64, 64);
-            this.button2.TabIndex = 39;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.HeavyHelmetButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.HeavyHelmetButton.Image = global::Talia_Zwyciestwa.Properties.Resources.helmet_02;
+            this.HeavyHelmetButton.Location = new System.Drawing.Point(245, 206);
+            this.HeavyHelmetButton.Name = "HeavyHelmetButton";
+            this.HeavyHelmetButton.Size = new System.Drawing.Size(64, 64);
+            this.HeavyHelmetButton.TabIndex = 39;
+            this.HeavyHelmetButton.UseVisualStyleBackColor = true;
+            this.HeavyHelmetButton.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // MediumArmorButton
             // 
-            this.button3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button3.Image = global::Talia_Zwyciestwa.Properties.Resources.armor_02;
-            this.button3.Location = new System.Drawing.Point(210, 315);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(64, 64);
-            this.button3.TabIndex = 41;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.MediumArmorButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.MediumArmorButton.Image = global::Talia_Zwyciestwa.Properties.Resources.armor_02;
+            this.MediumArmorButton.Location = new System.Drawing.Point(210, 315);
+            this.MediumArmorButton.Name = "MediumArmorButton";
+            this.MediumArmorButton.Size = new System.Drawing.Size(64, 64);
+            this.MediumArmorButton.TabIndex = 41;
+            this.MediumArmorButton.UseVisualStyleBackColor = true;
+            this.MediumArmorButton.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // LightArmorButton
             // 
-            this.button4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button4.Image = global::Talia_Zwyciestwa.Properties.Resources.armor_01;
-            this.button4.Location = new System.Drawing.Point(140, 315);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(64, 64);
-            this.button4.TabIndex = 40;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.LightArmorButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.LightArmorButton.Image = global::Talia_Zwyciestwa.Properties.Resources.armor_01;
+            this.LightArmorButton.Location = new System.Drawing.Point(140, 315);
+            this.LightArmorButton.Name = "LightArmorButton";
+            this.LightArmorButton.Size = new System.Drawing.Size(64, 64);
+            this.LightArmorButton.TabIndex = 40;
+            this.LightArmorButton.UseVisualStyleBackColor = true;
+            this.LightArmorButton.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button6
+            // HeavyArmorButton
             // 
-            this.button6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button6.Image = global::Talia_Zwyciestwa.Properties.Resources.armor_03;
-            this.button6.Location = new System.Drawing.Point(280, 315);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(64, 64);
-            this.button6.TabIndex = 42;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.HeavyArmorButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.HeavyArmorButton.Image = global::Talia_Zwyciestwa.Properties.Resources.armor_03;
+            this.HeavyArmorButton.Location = new System.Drawing.Point(280, 315);
+            this.HeavyArmorButton.Name = "HeavyArmorButton";
+            this.HeavyArmorButton.Size = new System.Drawing.Size(64, 64);
+            this.HeavyArmorButton.TabIndex = 42;
+            this.HeavyArmorButton.UseVisualStyleBackColor = true;
+            this.HeavyArmorButton.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button5
+            // HeavyShieldButton
             // 
-            this.button5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button5.Image = global::Talia_Zwyciestwa.Properties.Resources.shield_02;
-            this.button5.Location = new System.Drawing.Point(245, 432);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(64, 64);
-            this.button5.TabIndex = 44;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.HeavyShieldButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.HeavyShieldButton.Image = global::Talia_Zwyciestwa.Properties.Resources.shield_02;
+            this.HeavyShieldButton.Location = new System.Drawing.Point(245, 432);
+            this.HeavyShieldButton.Name = "HeavyShieldButton";
+            this.HeavyShieldButton.Size = new System.Drawing.Size(64, 64);
+            this.HeavyShieldButton.TabIndex = 44;
+            this.HeavyShieldButton.UseVisualStyleBackColor = true;
+            this.HeavyShieldButton.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button7
+            // LightShieldButton
             // 
-            this.button7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button7.Image = global::Talia_Zwyciestwa.Properties.Resources.shield_01;
-            this.button7.Location = new System.Drawing.Point(175, 432);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(64, 64);
-            this.button7.TabIndex = 43;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.LightShieldButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.LightShieldButton.Image = global::Talia_Zwyciestwa.Properties.Resources.shield_01;
+            this.LightShieldButton.Location = new System.Drawing.Point(175, 432);
+            this.LightShieldButton.Name = "LightShieldButton";
+            this.LightShieldButton.Size = new System.Drawing.Size(64, 64);
+            this.LightShieldButton.TabIndex = 43;
+            this.LightShieldButton.UseVisualStyleBackColor = true;
+            this.LightShieldButton.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button8
+            // HeavyWeaponButton
             // 
-            this.button8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button8.Image = global::Talia_Zwyciestwa.Properties.Resources.weapon_03;
-            this.button8.Location = new System.Drawing.Point(280, 548);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(64, 64);
-            this.button8.TabIndex = 47;
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.HeavyWeaponButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.HeavyWeaponButton.Image = global::Talia_Zwyciestwa.Properties.Resources.weapon_03;
+            this.HeavyWeaponButton.Location = new System.Drawing.Point(280, 548);
+            this.HeavyWeaponButton.Name = "HeavyWeaponButton";
+            this.HeavyWeaponButton.Size = new System.Drawing.Size(64, 64);
+            this.HeavyWeaponButton.TabIndex = 47;
+            this.HeavyWeaponButton.UseVisualStyleBackColor = true;
+            this.HeavyWeaponButton.Click += new System.EventHandler(this.button8_Click);
             // 
-            // button9
+            // MediumWeaponButton
             // 
-            this.button9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button9.Image = global::Talia_Zwyciestwa.Properties.Resources.weapon_02;
-            this.button9.Location = new System.Drawing.Point(210, 548);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(64, 64);
-            this.button9.TabIndex = 46;
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.MediumWeaponButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.MediumWeaponButton.Image = global::Talia_Zwyciestwa.Properties.Resources.weapon_02;
+            this.MediumWeaponButton.Location = new System.Drawing.Point(210, 548);
+            this.MediumWeaponButton.Name = "MediumWeaponButton";
+            this.MediumWeaponButton.Size = new System.Drawing.Size(64, 64);
+            this.MediumWeaponButton.TabIndex = 46;
+            this.MediumWeaponButton.UseVisualStyleBackColor = true;
+            this.MediumWeaponButton.Click += new System.EventHandler(this.button9_Click);
             // 
-            // button10
+            // LightWeaponButton
             // 
-            this.button10.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button10.Image = global::Talia_Zwyciestwa.Properties.Resources.weapon_01;
-            this.button10.Location = new System.Drawing.Point(140, 548);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(64, 64);
-            this.button10.TabIndex = 45;
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.LightWeaponButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.LightWeaponButton.Image = global::Talia_Zwyciestwa.Properties.Resources.weapon_01;
+            this.LightWeaponButton.Location = new System.Drawing.Point(140, 548);
+            this.LightWeaponButton.Name = "LightWeaponButton";
+            this.LightWeaponButton.Size = new System.Drawing.Size(64, 64);
+            this.LightWeaponButton.TabIndex = 45;
+            this.LightWeaponButton.UseVisualStyleBackColor = true;
+            this.LightWeaponButton.Click += new System.EventHandler(this.button10_Click);
             // 
             // label5
             // 
@@ -451,16 +477,16 @@ namespace Talia_Zwyciestwa.Forms
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.HeavyWeaponButton);
+            this.Controls.Add(this.MediumWeaponButton);
+            this.Controls.Add(this.LightWeaponButton);
+            this.Controls.Add(this.HeavyShieldButton);
+            this.Controls.Add(this.LightShieldButton);
+            this.Controls.Add(this.HeavyArmorButton);
+            this.Controls.Add(this.MediumArmorButton);
+            this.Controls.Add(this.LightArmorButton);
+            this.Controls.Add(this.HeavyHelmetButton);
+            this.Controls.Add(this.LightHelmetButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -485,16 +511,16 @@ namespace Talia_Zwyciestwa.Forms
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button LightHelmetButton;
+        private System.Windows.Forms.Button HeavyHelmetButton;
+        private System.Windows.Forms.Button MediumArmorButton;
+        private System.Windows.Forms.Button LightArmorButton;
+        private System.Windows.Forms.Button HeavyArmorButton;
+        private System.Windows.Forms.Button HeavyShieldButton;
+        private System.Windows.Forms.Button LightShieldButton;
+        private System.Windows.Forms.Button HeavyWeaponButton;
+        private System.Windows.Forms.Button MediumWeaponButton;
+        private System.Windows.Forms.Button LightWeaponButton;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
@@ -506,5 +532,15 @@ namespace Talia_Zwyciestwa.Forms
         private System.Windows.Forms.Label CurrentHPValue;
         private System.Windows.Forms.Label GoldValue;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.ToolTip LightHelmetToolTip;
+        private System.Windows.Forms.ToolTip HeavyHelmetToolTip;
+        private System.Windows.Forms.ToolTip LightArmorToolTip;
+        private System.Windows.Forms.ToolTip MediumArmorToolTip;
+        private System.Windows.Forms.ToolTip HeavyArmorToolTip;
+        private System.Windows.Forms.ToolTip LightShieldToolTip;
+        private System.Windows.Forms.ToolTip HeavyShieldToolTip;
+        private System.Windows.Forms.ToolTip MediumWeaponToolTip;
+        private System.Windows.Forms.ToolTip HeavyWeaponToolTip;
+        private System.Windows.Forms.ToolTip LightWeaponToolTip;
     }
 }

@@ -8,10 +8,12 @@ namespace Talia_Zwyciestwa.Classes.Items.Armors
 {
     public class HeavyArmor :Armor
     {
+        public static int Def = 9;
+        public static int Str = -3;
         public HeavyArmor()
         {
-            Def = 8;
-            Str = -3;
+            DefValue = Def;
+            StrValue = Str;
         }
     }
 }

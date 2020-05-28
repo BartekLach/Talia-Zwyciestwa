@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using Talia_Zwyciestwa.Classes;
 using Talia_Zwyciestwa.Classes.Card_Types;
+using Talia_Zwyciestwa.Classes.Items.Armors;
+using Talia_Zwyciestwa.Classes.Items.Helmets;
+using Talia_Zwyciestwa.Classes.Items.Shields;
+using Talia_Zwyciestwa.Classes.Items.Weapons;
 
 namespace Talia_Zwyciestwa.Forms
 {
@@ -43,6 +47,7 @@ namespace Talia_Zwyciestwa.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.HealButton = new System.Windows.Forms.Button();
             this.UpgradeButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
@@ -53,6 +58,10 @@ namespace Talia_Zwyciestwa.Forms
             this.GoldValue = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.GoldLabel = new System.Windows.Forms.Label();
+            this.HelmetUpgradeToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.ArmorUpgradeToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.ShieldUpgradeToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.WeaponUpgradeToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // HealButton
@@ -202,7 +211,11 @@ namespace Talia_Zwyciestwa.Forms
         #endregion/
         private void Heal(object sender, EventArgs e)
         {
-            if(map.Player.Gold < 100)
+            if(map.Player.MaxHP == map.Player.CurrentHP)
+            {
+                MessageBox.Show("Jesteś w pełni zdrowy!");
+            }
+            else if(map.Player.Gold < 100)
             {
                 MessageBox.Show("Nie stać cię!");
             }else
@@ -217,27 +230,49 @@ namespace Talia_Zwyciestwa.Forms
         {
             if (!map.Player.UnlockedArmors[0])
                 UpgradeArmorButton.Hide();
-            else
+            else if (map.Player.UnlockedArmors[2])
+            {
+                UpgradeArmorButton.Text = "Ulepsz zbroję (250)";
+                ArmorUpgradeToolTip.SetToolTip(UpgradeArmorButton, HeavyArmor.Def.ToString() + " zręczności, " + HeavyArmor.Str.ToString() + " siły");
+            }else
+            {
                 UpgradeArmorButton.Text = "Ulepsz zbroję (150)";
+                ArmorUpgradeToolTip.SetToolTip(UpgradeArmorButton, MediumArmor.Def.ToString() + " zręczności, " + MediumArmor.Str.ToString() + " siły");
+            }
+
 
             if (!map.Player.UnlockedWeapons[0])
                 UpgradeWeaponButton.Hide();
-            else
+            else if (map.Player.UnlockedWeapons[2])
+            {
+                WeaponUpgradeToolTip.SetToolTip(UpgradeWeaponButton, HeavyWeapon.Def.ToString() + " zręczności, " + HeavyWeapon.Str.ToString() + " siły");
+                UpgradeWeaponButton.Text = "Ulepsz broń (250)";
+            }else
+            {
                 UpgradeWeaponButton.Text = "Ulepsz broń (150)";
+                WeaponUpgradeToolTip.SetToolTip(UpgradeWeaponButton, MediumWeapon.Def.ToString() + " zręczności, " + MediumWeapon.Str.ToString() + " siły");
+            }
+
 
             if (!map.Player.UnlockedShields[0])
                 UpgradeShieldButton.Hide();
             else
+            {
+                ShieldUpgradeToolTip.SetToolTip(UpgradeShieldButton, HeavyShield.Def.ToString() + " zręczności, " + HeavyShield.Str.ToString() + " siły");
                 UpgradeShieldButton.Text = "Ulepsz tarczę (150)";
+
+            }
+
             if (!map.Player.UnlockedHelmets[0])
                 UpgradeHelmetButton.Hide();
             else
+            {
+                HelmetUpgradeToolTip.SetToolTip(UpgradeHelmetButton, HeavyHelmet.Def.ToString() + " zręczności, " + HeavyHelmet.Str.ToString() + " siły");
                 UpgradeHelmetButton.Text = "Ulepsz hełm (180)";
+            }
 
-            if (map.Player.UnlockedArmors[2])
-                UpgradeArmorButton.Text = "Ulepsz zbroję (250";
-            if (map.Player.UnlockedWeapons[2])
-                UpgradeWeaponButton.Text = "Ulepsz broń (250)";
+           
+           
             RefreshGold();
         }
 
@@ -246,7 +281,7 @@ namespace Talia_Zwyciestwa.Forms
             GoldLabel.Text = map.Player.Gold.ToString();
         }
 
-        private void UpgradeCard(object sender, EventArgs e) //TEST THAT
+        private void UpgradeCard(object sender, EventArgs e)
         {
             if (map.Player.Gold < 150)
             {
@@ -262,8 +297,6 @@ namespace Talia_Zwyciestwa.Forms
                 if (indexes.Count != 0)
                 {
                     int index = random.Next(0, indexes.Count-1);
-                    //MessageBox.Show(indexes.Count.ToString());
-                    //MessageBox.Show(indexes[index].ToString() + " " + map.Deck.Cards[indexes[index]]);
                     int id = map.Deck.Cards[indexes[index]].Id;
                     map.Deck.Cards.RemoveAt(indexes[index]);
                     switch (id)
@@ -304,5 +337,9 @@ namespace Talia_Zwyciestwa.Forms
         private Label GoldValue;
         private Label label9;
         private Label GoldLabel;
+        private ToolTip HelmetUpgradeToolTip;
+        private ToolTip ArmorUpgradeToolTip;
+        private ToolTip ShieldUpgradeToolTip;
+        private ToolTip WeaponUpgradeToolTip;
     }
 }

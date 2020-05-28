@@ -8,10 +8,12 @@ namespace Talia_Zwyciestwa.Classes.Items.Armors
 {
     public class MediumArmor : Armor
     {
+        public static int Def = 6;
+        public static int Str = -1;
         public MediumArmor()
         {
-            Def = 7;
-            Str = -1;
+            DefValue = Def;
+            StrValue = Str;
         }
     }
 }

@@ -13,7 +13,6 @@ namespace Talia_Zwyciestwa.Forms
         private Deck deck;
         private bool bossFight = false;
         private int getEQ = -1;
-        private bool isGameON = true;
         private bool[] isEQGained = new bool[4];
 
         

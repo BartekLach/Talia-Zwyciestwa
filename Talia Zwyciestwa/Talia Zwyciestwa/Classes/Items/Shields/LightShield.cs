@@ -8,10 +8,12 @@ namespace Talia_Zwyciestwa.Classes.Items.Shields
 {
     public class LightShield : Shield
     {
+        public static int Def = 3;
+        public static int Str = 1;
         public LightShield()
         {
-            Def = 3;
-            Str = 1;
+            DefValue = 3;
+            StrValue = 1;
         }
     }
 }

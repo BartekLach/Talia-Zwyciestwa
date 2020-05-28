@@ -8,10 +8,12 @@ namespace Talia_Zwyciestwa.Classes.Items.Armors
 {
     public class LightArmor : Armor
     {
+        public static int Def = 4;
+        public static int Str = 1;
         public LightArmor()
         {
-            Str = 0;
-            Def = 4;
+            DefValue = Def;
+            StrValue = Str;
         }
     }
 }

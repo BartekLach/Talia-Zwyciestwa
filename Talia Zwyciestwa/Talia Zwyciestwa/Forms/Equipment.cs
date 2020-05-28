@@ -69,17 +69,17 @@ namespace Talia_Zwyciestwa.Forms
 
         private void AcquireHelmet(int v)
         {
-            button1.BackColor = Color.White;
-            button2.BackColor = Color.White;
+            LightHelmetButton.BackColor = Color.White;
+            HeavyHelmetButton.BackColor = Color.White;
             switch(v)
             {
                 case 1:
                     map.Player.ChangeHelmet(new LightHelmet());
-                    button1.BackColor = Color.DarkGreen;
+                    LightHelmetButton.BackColor = Color.DarkGreen;
                     break;
                 case 2:
                     map.Player.ChangeHelmet(new HeavyHelmet());
-                    button2.BackColor = Color.DarkGreen;
+                    HeavyHelmetButton.BackColor = Color.DarkGreen;
                     break;
             }
             RefreshLabels();
@@ -104,23 +104,23 @@ namespace Talia_Zwyciestwa.Forms
 
         private void AcquireArmor(int v)
         {
-            button4.BackColor = Color.White;
-            button3.BackColor = Color.White;
-            button6.BackColor = Color.White;
+            LightArmorButton.BackColor = Color.White;
+            MediumArmorButton.BackColor = Color.White;
+            HeavyArmorButton.BackColor = Color.White;
 
             switch (v)
             {
                 case 1:
                     map.Player.ChangeArmor(new LightArmor());
-                    button4.BackColor = Color.DarkGreen;
+                    LightArmorButton.BackColor = Color.DarkGreen;
                     break;
                 case 2:
                     map.Player.ChangeArmor(new MediumArmor());
-                    button3.BackColor = Color.DarkGreen;
+                    MediumArmorButton.BackColor = Color.DarkGreen;
                     break;
                 case 3:
                     map.Player.ChangeArmor(new HeavyArmor());
-                    button6.BackColor = Color.DarkGreen;
+                    HeavyArmorButton.BackColor = Color.DarkGreen;
                     break;
             }
             RefreshLabels();
@@ -140,17 +140,17 @@ namespace Talia_Zwyciestwa.Forms
 
         private void AcquireShield(int v)
         {
-            button7.BackColor = Color.White;
-            button5.BackColor = Color.White;
+            LightShieldButton.BackColor = Color.White;
+            HeavyShieldButton.BackColor = Color.White;
             switch (v)
             {
                 case 1:
                     map.Player.ChangeShield(new LightShield());
-                    button7.BackColor = Color.DarkGreen;
+                    LightShieldButton.BackColor = Color.DarkGreen;
                     break;
                 case 2:
                     map.Player.ChangeShield(new HeavyShield());
-                    button5.BackColor = Color.DarkGreen;
+                    HeavyShieldButton.BackColor = Color.DarkGreen;
                     break;
             }
             RefreshLabels();
@@ -175,22 +175,22 @@ namespace Talia_Zwyciestwa.Forms
 
         private void AcquireWeapon(int v)
         {
-            button10.BackColor = Color.White;
-            button9.BackColor = Color.White;
-            button8.BackColor = Color.White;
+            LightWeaponButton.BackColor = Color.White;
+            MediumWeaponButton.BackColor = Color.White;
+            HeavyWeaponButton.BackColor = Color.White;
             switch (v)
             {
                 case 1:
                     map.Player.ChangeWeapon(new LightWeapon());
-                    button10.BackColor = Color.DarkGreen;
+                    LightWeaponButton.BackColor = Color.DarkGreen;
                     break;
                 case 2:
                     map.Player.ChangeWeapon(new MediumWeapon());
-                    button9.BackColor = Color.DarkGreen;
+                    MediumWeaponButton.BackColor = Color.DarkGreen;
                     break;
                 case 3:
                     map.Player.ChangeWeapon(new HeavyWeapon());
-                    button8.BackColor = Color.DarkGreen;
+                    HeavyWeaponButton.BackColor = Color.DarkGreen;
                     break;
             }
             RefreshLabels();
@@ -205,6 +205,11 @@ namespace Talia_Zwyciestwa.Forms
         private void button11_Click(object sender, EventArgs e)
         {
             map.Deck.Write();
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
         }
     }
 }
