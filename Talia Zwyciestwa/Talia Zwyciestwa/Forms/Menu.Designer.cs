@@ -9,7 +9,7 @@ namespace Talia_Zwyciestwa
 {
 	partial class Menu
 	{
-        private SoundPlayer soundPlayer = new SoundPlayer(Music.battleThemeA);
+
 		/// <summary>
 		/// Wymagana zmienna projektanta.
 		/// </summary>
@@ -123,19 +123,7 @@ namespace Talia_Zwyciestwa
 
 
         #endregion
-        private void Begin(object sender, System.EventArgs e)
-        {
-            soundPlayer.PlayLooping();
-        }
-        private void LoadButtonClick(object sender, EventArgs e)
-        {
-            GameHandler.Load(this);
-        }
 
-        private void PlayButtonClick(object sender, EventArgs e)
-        {
-            GameHandler.Play(this);
-        }
         private System.Windows.Forms.Button LoadButton;
 		private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Button playButton;

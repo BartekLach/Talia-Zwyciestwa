@@ -12,14 +12,12 @@ namespace Talia_Zwyciestwa.Forms
 {
     partial class Merchant
     {
-        private Random random = new Random();
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private Map map;
-        private System.ComponentModel.IContainer components = null;
 
-        private List<int> indexes = new List<int>();
+        private System.ComponentModel.IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -33,11 +31,7 @@ namespace Talia_Zwyciestwa.Forms
             }
             base.Dispose(disposing);
         }
-        public Merchant(Map m)
-        {
-            map = m;
-            InitializeComponent();
-        }
+
 
         #region Windows Form Designer generated code
 
@@ -197,7 +191,6 @@ namespace Talia_Zwyciestwa.Forms
             this.Name = "Merchant";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Handlarz";
-            this.Load += new System.EventHandler(this.Begin);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,124 +202,7 @@ namespace Talia_Zwyciestwa.Forms
             map.Show();
         }
         #endregion/
-        private void Heal(object sender, EventArgs e)
-        {
-            if(map.Player.MaxHP == map.Player.CurrentHP)
-            {
-                MessageBox.Show("Jesteś w pełni zdrowy!");
-            }
-            else if(map.Player.Gold < 100)
-            {
-                MessageBox.Show("Nie stać cię!");
-            }else
-            {
-                map.Player.Gold -= 100;
-                map.Player.CurrentHP = map.Player.MaxHP;
-                RefreshGold();
-            }
-        }
 
-        private void Begin(object sender, EventArgs e)
-        {
-            if (!map.Player.UnlockedArmors[0])
-                UpgradeArmorButton.Hide();
-            else if (map.Player.UnlockedArmors[2])
-            {
-                UpgradeArmorButton.Text = "Ulepsz zbroję (250)";
-                ArmorUpgradeToolTip.SetToolTip(UpgradeArmorButton, HeavyArmor.Def.ToString() + " zręczności, " + HeavyArmor.Str.ToString() + " siły");
-            }else
-            {
-                UpgradeArmorButton.Text = "Ulepsz zbroję (150)";
-                ArmorUpgradeToolTip.SetToolTip(UpgradeArmorButton, MediumArmor.Def.ToString() + " zręczności, " + MediumArmor.Str.ToString() + " siły");
-            }
-
-
-            if (!map.Player.UnlockedWeapons[0])
-                UpgradeWeaponButton.Hide();
-            else if (map.Player.UnlockedWeapons[2])
-            {
-                WeaponUpgradeToolTip.SetToolTip(UpgradeWeaponButton, HeavyWeapon.Def.ToString() + " zręczności, " + HeavyWeapon.Str.ToString() + " siły");
-                UpgradeWeaponButton.Text = "Ulepsz broń (250)";
-            }else
-            {
-                UpgradeWeaponButton.Text = "Ulepsz broń (150)";
-                WeaponUpgradeToolTip.SetToolTip(UpgradeWeaponButton, MediumWeapon.Def.ToString() + " zręczności, " + MediumWeapon.Str.ToString() + " siły");
-            }
-
-
-            if (!map.Player.UnlockedShields[0])
-                UpgradeShieldButton.Hide();
-            else
-            {
-                ShieldUpgradeToolTip.SetToolTip(UpgradeShieldButton, HeavyShield.Def.ToString() + " zręczności, " + HeavyShield.Str.ToString() + " siły");
-                UpgradeShieldButton.Text = "Ulepsz tarczę (150)";
-
-            }
-
-            if (!map.Player.UnlockedHelmets[0])
-                UpgradeHelmetButton.Hide();
-            else
-            {
-                HelmetUpgradeToolTip.SetToolTip(UpgradeHelmetButton, HeavyHelmet.Def.ToString() + " zręczności, " + HeavyHelmet.Str.ToString() + " siły");
-                UpgradeHelmetButton.Text = "Ulepsz hełm (180)";
-            }
-
-           
-           
-            RefreshGold();
-        }
-
-        private void RefreshGold()
-        {
-            GoldLabel.Text = map.Player.Gold.ToString();
-        }
-
-        private void UpgradeCard(object sender, EventArgs e)
-        {
-            if (map.Player.Gold < 150)
-            {
-                MessageBox.Show("Nie stać cię!");
-            }
-            else
-            {
-                for(int i = 0; i < map.Deck.Cards.Count; i++)
-                {
-                    if (map.Deck.Cards[i].Id <= 4 )
-                        indexes.Add(i);
-                }
-                if (indexes.Count != 0)
-                {
-                    int index = random.Next(0, indexes.Count-1);
-                    int id = map.Deck.Cards[indexes[index]].Id;
-                    map.Deck.Cards.RemoveAt(indexes[index]);
-                    switch (id)
-                        {
-                        case 0:
-                            map.Deck.Cards.Add(new UpgradedAttackCard());
-                            break;
-                        case 1:
-                            map.Deck.Cards.Add(new UpgradedDefCard());
-                            break;
-                        case 2:
-                            map.Deck.Cards.Add(new UpgradedParryCard());
-                            break;
-                        case 3:
-                            map.Deck.Cards.Add(new UpgradedSteroidsCard());
-                            break;
-                        case 4:
-                            map.Deck.Cards.Add(new UpgradeDexElixirCard());
-                            break;
-                    }
-                    map.Player.Gold -= 150;
-                    MessageBox.Show("Twoja nowa karta: " + map.Deck.Cards[map.Deck.Cards.Count - 1].Name.ToString() + " Opis: " + map.Deck.Cards[map.Deck.Cards.Count - 1].Describtion.ToString() + " Wartość: " + map.Deck.Cards[map.Deck.Cards.Count - 1].Value.ToString());
-                    RefreshGold();
-                    map.Deck.Write();
-                    indexes.Clear();
-                }
-                else
-                    MessageBox.Show("Nie masz kart do ulepszenia");
-            }
-        }
         private System.Windows.Forms.Button HealButton;
         private System.Windows.Forms.Button UpgradeButton;
         private Button ExitButton;

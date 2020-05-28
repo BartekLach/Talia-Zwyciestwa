@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Talia_Zwyciestwa.Forms;
+using Talia_Zwyciestwa.Assets.Music;
+using Talia_Zwyciestwa.Classes;
+using System.Media;
 
 namespace Talia_Zwyciestwa
 {
@@ -15,6 +18,7 @@ namespace Talia_Zwyciestwa
 	{
 		private bool isGameOn = false;
 		private Map map;
+		private SoundPlayer soundPlayer = new SoundPlayer(Music.battleThemeA);
 		public Menu()
 		{
 			InitializeComponent();
@@ -40,6 +44,19 @@ namespace Talia_Zwyciestwa
 		{
 			this.Hide();
 			map.Show();
+		}
+		private void Begin(object sender, System.EventArgs e)
+		{
+			soundPlayer.PlayLooping();
+		}
+		private void LoadButtonClick(object sender, EventArgs e)
+		{
+			GameHandler.Load(this);
+		}
+
+		private void PlayButtonClick(object sender, EventArgs e)
+		{
+			GameHandler.Play(this);
 		}
 	}
 }

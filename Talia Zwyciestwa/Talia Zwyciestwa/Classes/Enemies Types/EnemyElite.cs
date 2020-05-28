@@ -10,7 +10,7 @@ namespace Talia_Zwyciestwa.Classes.Enemies_Types
     {
         public EnemyElite()
         {
-            MaxHP = CurrentHP = 1; //TODO: CHANGE THAT! DEBUG ONLY
+            MaxHP = CurrentHP = 90; //TODO: CHANGE THAT! DEBUG ONLY
             Str = CurrentStr = 6;
             Dex = CurrentDex = 5;
             CurrentPO = 0;

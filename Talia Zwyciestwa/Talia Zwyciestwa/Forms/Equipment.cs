@@ -16,10 +16,7 @@ namespace Talia_Zwyciestwa.Forms
 {
     public partial class Equipment : Form
     {
-        public Equipment()
-        {
-            InitializeComponent();
-        }
+        private Map map;
 
         private void label5_Click(object sender, EventArgs e)
         {
@@ -210,6 +207,98 @@ namespace Talia_Zwyciestwa.Forms
         private void toolTip1_Popup(object sender, PopupEventArgs e)
         {
 
+        }
+        public Equipment(Map m)
+        {
+            map = m;
+            InitializeComponent();
+
+            DexValue.Text = map.Player.Dex.ToString();
+            StrValue.Text = map.Player.Str.ToString();
+            MaxHPValue.Text = map.Player.MaxHP.ToString();
+            CurrentHPValue.Text = map.Player.CurrentHP.ToString();
+            GoldValue.Text = map.Player.Gold.ToString();
+
+            if (!map.Player.UnlockedHelmets[0])
+                LightHelmetButton.Enabled = false;
+            if (!map.Player.UnlockedHelmets[1])
+                HeavyHelmetButton.Enabled = false;
+
+            if (!map.Player.UnlockedArmors[0])
+                LightArmorButton.Enabled = false;
+            if (!map.Player.UnlockedArmors[1])
+                MediumArmorButton.Enabled = false;
+            if (!map.Player.UnlockedArmors[2])
+                HeavyArmorButton.Enabled = false;
+
+            if (!map.Player.UnlockedShields[0])
+                LightShieldButton.Enabled = false;
+            if (!map.Player.UnlockedShields[1])
+                HeavyShieldButton.Enabled = false;
+
+            if (!map.Player.UnlockedWeapons[0])
+                LightWeaponButton.Enabled = false;
+            if (!map.Player.UnlockedWeapons[1])
+                MediumWeaponButton.Enabled = false;
+            if (!map.Player.UnlockedWeapons[2])
+                HeavyWeaponButton.Enabled = false;
+
+            switch (map.Player.WornHelmet)
+            {
+                case 1:
+                    LightHelmetButton.BackColor = Color.DarkGreen;
+                    break;
+                case 2:
+                    HeavyHelmetButton.BackColor = Color.DarkGreen;
+                    break;
+            }
+
+            switch (map.Player.WornArmor)
+            {
+                case 1:
+                    LightArmorButton.BackColor = Color.DarkGreen;
+                    break;
+                case 2:
+                    MediumArmorButton.BackColor = Color.DarkGreen;
+                    break;
+                case 3:
+                    HeavyArmorButton.BackColor = Color.DarkGreen;
+                    break;
+            }
+
+            switch (map.Player.WornShield)
+            {
+                case 1:
+                    LightShieldButton.BackColor = Color.DarkGreen;
+                    break;
+                case 2:
+                    HeavyShieldButton.BackColor = Color.DarkGreen;
+                    break;
+            }
+
+            switch (map.Player.WornWeapon)
+            {
+                case 1:
+                    LightWeaponButton.BackColor = Color.DarkGreen;
+                    break;
+                case 2:
+                    MediumWeaponButton.BackColor = Color.DarkGreen;
+                    break;
+                case 3:
+                    HeavyWeaponButton.BackColor = Color.DarkGreen;
+                    break;
+            }
+
+            LightHelmetToolTip.SetToolTip(LightHelmetButton, LightHelmet.Def.ToString() + " zręczności, " + LightHelmet.Str.ToString() + " siły");
+            HeavyHelmetToolTip.SetToolTip(HeavyHelmetButton, HeavyHelmet.Def.ToString() + " zręczności, " + HeavyHelmet.Str.ToString() + " siły");
+            LightArmorToolTip.SetToolTip(LightArmorButton, LightArmor.Def.ToString() + " zręczności, " + LightArmor.Str.ToString() + " siły");
+            MediumArmorToolTip.SetToolTip(MediumArmorButton, MediumArmor.Def.ToString() + " zręczności, " + MediumArmor.Str.ToString() + " siły");
+            HeavyArmorToolTip.SetToolTip(HeavyArmorButton, HeavyArmor.Def.ToString() + " zręczności, " + HeavyArmor.Str.ToString() + " siły");
+            LightShieldToolTip.SetToolTip(LightShieldButton, LightShield.Def.ToString() + " zręczności, " + LightShield.Str.ToString() + " siły");
+            HeavyShieldToolTip.SetToolTip(HeavyShieldButton, HeavyShield.Def.ToString() + " zręczności, " + HeavyShield.Str.ToString() + " siły");
+            LightWeaponToolTip.SetToolTip(LightWeaponButton, LightWeapon.Def.ToString() + " zręczności, " + LightWeapon.Str.ToString() + " siły");
+            MediumWeaponToolTip.SetToolTip(MediumWeaponButton, MediumWeapon.Def.ToString() + " zręczności, " + MediumWeapon.Str.ToString() + " siły");
+            HeavyWeaponToolTip.SetToolTip(HeavyWeaponButton, HeavyWeapon.Def.ToString() + " zręczności, " + HeavyWeapon.Str.ToString() + " siły");
         }
     }
 }
