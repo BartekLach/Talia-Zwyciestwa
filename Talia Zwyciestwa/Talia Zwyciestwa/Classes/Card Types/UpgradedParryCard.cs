@@ -13,7 +13,7 @@ namespace Talia_Zwyciestwa.Classes.Card_Types
             public UpgradedParryCard()
             {
                 Value = 1;
-                Name = "Riposta+";
+                Name = "Riposta +";
                 Describtion = "Zadaj ( " + dmgValue.ToString() + " + siła) obrażeń i zyskaj" + dmgValue.ToString() + " + zręczność) punktów obrony";
                 Id = 7;
             }

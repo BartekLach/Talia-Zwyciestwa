@@ -12,7 +12,7 @@ namespace Talia_Zwyciestwa.Classes.Card_Types
         public UpgradeDexElixirCard()
         {
             Value = 1;
-            Name = "Eliksir zręczności+";
+            Name = "Eliksir zręczności +";
             Describtion = " Zyskaj " + dexValue.ToString() + " punktów zręczności do końca walki";
             Id = 9;
         }

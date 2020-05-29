@@ -93,6 +93,26 @@ namespace Talia_Zwyciestwa.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Broń_się {
+            get {
+                object obj = ResourceManager.GetObject("Broń się", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Broń_się__ {
+            get {
+                object obj = ResourceManager.GetObject("Broń się +", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap button_background_01 {
             get {
                 object obj = ResourceManager.GetObject("button_background_01", resourceCulture);
@@ -106,6 +126,26 @@ namespace Talia_Zwyciestwa.Properties {
         internal static System.Drawing.Bitmap button_background_02 {
             get {
                 object obj = ResourceManager.GetObject("button_background_02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Eliksir_zręczności {
+            get {
+                object obj = ResourceManager.GetObject("Eliksir zręczności", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Eliksir_zręczności__ {
+            get {
+                object obj = ResourceManager.GetObject("Eliksir zręczności +", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,6 +223,26 @@ namespace Talia_Zwyciestwa.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Riposta {
+            get {
+                object obj = ResourceManager.GetObject("Riposta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Riposta__ {
+            get {
+                object obj = ResourceManager.GetObject("Riposta +", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap shield_01 {
             get {
                 object obj = ResourceManager.GetObject("shield_01", resourceCulture);
@@ -196,6 +256,26 @@ namespace Talia_Zwyciestwa.Properties {
         internal static System.Drawing.Bitmap shield_02 {
             get {
                 object obj = ResourceManager.GetObject("shield_02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sterydy {
+            get {
+                object obj = ResourceManager.GetObject("Sterydy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sterydy__ {
+            get {
+                object obj = ResourceManager.GetObject("Sterydy +", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -226,6 +306,26 @@ namespace Talia_Zwyciestwa.Properties {
         internal static System.Drawing.Bitmap symbol_03 {
             get {
                 object obj = ResourceManager.GetObject("symbol_03", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Uderzenie {
+            get {
+                object obj = ResourceManager.GetObject("Uderzenie", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Uderzenie__ {
+            get {
+                object obj = ResourceManager.GetObject("Uderzenie +", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

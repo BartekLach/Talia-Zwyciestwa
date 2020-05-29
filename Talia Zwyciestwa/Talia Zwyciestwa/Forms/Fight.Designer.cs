@@ -88,7 +88,6 @@ namespace Talia_Zwyciestwa.Forms
             this.Card1.Name = "Card1";
             this.Card1.Size = new System.Drawing.Size(112, 229);
             this.Card1.TabIndex = 0;
-            this.Card1.Text = "button1";
             this.Card1.UseVisualStyleBackColor = true;
             this.Card1.Click += new System.EventHandler(this.Card1Picked);
             // 
@@ -98,7 +97,6 @@ namespace Talia_Zwyciestwa.Forms
             this.Card2.Name = "Card2";
             this.Card2.Size = new System.Drawing.Size(112, 229);
             this.Card2.TabIndex = 0;
-            this.Card2.Text = "button1";
             this.Card2.UseVisualStyleBackColor = true;
             this.Card2.Click += new System.EventHandler(this.Card2Picked);
             // 
@@ -108,7 +106,6 @@ namespace Talia_Zwyciestwa.Forms
             this.Card3.Name = "Card3";
             this.Card3.Size = new System.Drawing.Size(112, 229);
             this.Card3.TabIndex = 0;
-            this.Card3.Text = "button1";
             this.Card3.UseVisualStyleBackColor = true;
             this.Card3.Click += new System.EventHandler(this.Card3Picked);
             // 
@@ -118,7 +115,6 @@ namespace Talia_Zwyciestwa.Forms
             this.Card4.Name = "Card4";
             this.Card4.Size = new System.Drawing.Size(112, 229);
             this.Card4.TabIndex = 0;
-            this.Card4.Text = "button1";
             this.Card4.UseVisualStyleBackColor = true;
             this.Card4.Click += new System.EventHandler(this.Card4Picked);
             // 
@@ -128,7 +124,6 @@ namespace Talia_Zwyciestwa.Forms
             this.Card5.Name = "Card5";
             this.Card5.Size = new System.Drawing.Size(112, 229);
             this.Card5.TabIndex = 0;
-            this.Card5.Text = "button1";
             this.Card5.UseVisualStyleBackColor = true;
             this.Card5.Click += new System.EventHandler(this.Card5Picked);
             // 

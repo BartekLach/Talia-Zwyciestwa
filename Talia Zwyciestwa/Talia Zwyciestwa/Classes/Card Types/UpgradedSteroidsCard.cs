@@ -12,7 +12,7 @@ namespace Talia_Zwyciestwa.Classes.Card_Types
         public UpgradedSteroidsCard()
         {
             Value = 1;
-            Name = "Sterydy+";
+            Name = "Sterydy +";
             Describtion = " Zyskaj " + strValue.ToString() + " punktów siły do końca walki";
             Id = 8;
         }

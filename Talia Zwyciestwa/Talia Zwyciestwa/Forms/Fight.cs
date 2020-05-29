@@ -226,7 +226,7 @@ namespace Talia_Zwyciestwa.Forms
                 }
                 hand[i] = deck[0];
                 deck.RemoveAt(0);
-                CardButtons[i].Text = hand[i].Name;
+                CardButtons[i].BackgroundImage = (Image)Properties.Resources.ResourceManager.GetObject(hand[i].Name);
                 CardButtons[i].Show();
                 toolTips[i].SetToolTip(CardButtons[i], hand[i].Describtion);
             }

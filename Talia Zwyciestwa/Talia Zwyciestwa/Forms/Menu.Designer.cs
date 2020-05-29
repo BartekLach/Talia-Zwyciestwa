@@ -50,7 +50,7 @@ namespace Talia_Zwyciestwa
             this.LoadButton.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.button_background_01;
             this.LoadButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.LoadButton.FlatAppearance.BorderSize = 0;
-            this.LoadButton.Location = new System.Drawing.Point(180, 469);
+            this.LoadButton.Location = new System.Drawing.Point(180, 453);
             this.LoadButton.Name = "LoadButton";
             this.LoadButton.Size = new System.Drawing.Size(308, 78);
             this.LoadButton.TabIndex = 1;
@@ -64,9 +64,9 @@ namespace Talia_Zwyciestwa
             this.exitButton.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.button_background_01;
             this.exitButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.exitButton.FlatAppearance.BorderSize = 0;
-            this.exitButton.Location = new System.Drawing.Point(246, 637);
+            this.exitButton.Location = new System.Drawing.Point(180, 622);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(168, 62);
+            this.exitButton.Size = new System.Drawing.Size(308, 78);
             this.exitButton.TabIndex = 4;
             this.exitButton.Text = "Zamknij";
             this.exitButton.UseVisualStyleBackColor = true;
@@ -78,7 +78,7 @@ namespace Talia_Zwyciestwa
             this.playButton.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.button_background_01;
             this.playButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.playButton.FlatAppearance.BorderSize = 0;
-            this.playButton.Location = new System.Drawing.Point(180, 385);
+            this.playButton.Location = new System.Drawing.Point(180, 369);
             this.playButton.Name = "playButton";
             this.playButton.Size = new System.Drawing.Size(308, 78);
             this.playButton.TabIndex = 5;
@@ -92,7 +92,7 @@ namespace Talia_Zwyciestwa
             this.ContinueButton.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.button_background_01;
             this.ContinueButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.ContinueButton.FlatAppearance.BorderSize = 0;
-            this.ContinueButton.Location = new System.Drawing.Point(180, 301);
+            this.ContinueButton.Location = new System.Drawing.Point(180, 285);
             this.ContinueButton.Name = "ContinueButton";
             this.ContinueButton.Size = new System.Drawing.Size(308, 78);
             this.ContinueButton.TabIndex = 6;
@@ -106,7 +106,7 @@ namespace Talia_Zwyciestwa
             this.HelpButton.BackgroundImage = global::Talia_Zwyciestwa.Properties.Resources.button_background_01;
             this.HelpButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.HelpButton.FlatAppearance.BorderSize = 0;
-            this.HelpButton.Location = new System.Drawing.Point(180, 553);
+            this.HelpButton.Location = new System.Drawing.Point(180, 537);
             this.HelpButton.Name = "HelpButton";
             this.HelpButton.Size = new System.Drawing.Size(308, 78);
             this.HelpButton.TabIndex = 7;

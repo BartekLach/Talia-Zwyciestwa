@@ -12,7 +12,7 @@ namespace Talia_Zwyciestwa.Classes.Card_Types
         public UpgradedDefCard()
         {
             Value = 1;
-            Name = "Broń się";
+            Name = "Broń się +";
             Describtion = "Zyskaj (" + defValue.ToString() + " + zręczność) punktów obrony";
             Id = 6;
         }
