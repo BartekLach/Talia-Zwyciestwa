@@ -27,7 +27,7 @@ namespace Talia_Zwyciestwa.Classes.Enemies_Types
             CurrentPO = random.Next(2, 5) + CurrentDex;
             CurrentDex += random.Next(2);
 
-            if (random.Next(101) < 20)//20%
+            if (random.Next(101) < 20 && CurrentHP < MaxHP / 10)//20%
                 CurrentHP += MaxHP / 10;
 
         } 
