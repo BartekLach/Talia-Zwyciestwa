@@ -10,10 +10,10 @@ namespace Talia_Zwyciestwa.Classes.Enemies_Types
     {
         public EnemyElite()
         {
-            MaxHP = CurrentHP = 90; //TODO: CHANGE THAT! DEBUG ONLY
+            MaxHP = CurrentHP = 110;
             Str = CurrentStr = 6;
             Dex = CurrentDex = 5;
-            CurrentPO = 0;
+            CurrentPO = 10;
         }
 
 
@@ -25,6 +25,10 @@ namespace Talia_Zwyciestwa.Classes.Enemies_Types
             CurrentStr += random.Next(3);
             CurrentPO = random.Next(4, 6) + CurrentDex;
             CurrentDex += random.Next(3);
+
+            if (random.Next(101) < 20 && CurrentHP < MaxHP/10)//20%
+                CurrentHP += MaxHP/10;
+
         }
     }
 }

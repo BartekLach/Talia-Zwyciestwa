@@ -8,7 +8,7 @@ namespace Talia_Zwyciestwa.Classes.Card_Types
 {
     public class UpgradedAttackCard : Card
     {
-        private int dmgValue = 7;
+        private int dmgValue = 9;
         public UpgradedAttackCard()
         {
             Value = 1;

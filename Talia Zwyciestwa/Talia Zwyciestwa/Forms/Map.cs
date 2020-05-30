@@ -18,7 +18,7 @@ namespace Talia_Zwyciestwa.Forms
         private Player player;
         private Deck deck;
         private bool bossFight = false;
-        private int getEQ = -1;
+        private int getEQ = 1;
         private bool[] isEQGained = new bool[4];
         public Map(Menu m)
         {
@@ -69,7 +69,7 @@ namespace Talia_Zwyciestwa.Forms
             button23.Enabled = false;
             button25.Enabled = true;
 
-            GameHandler.FightEngager(this, new EnemyCommon());
+            GameHandler.FightEngager(this, new EnemyElite());
         }
 
         private void button22Clicked(object sender, EventArgs e)
@@ -77,7 +77,7 @@ namespace Talia_Zwyciestwa.Forms
             button22.Enabled = false;
             button25.Enabled = true;
 
-            GameHandler.FightEngager(this, new EnemyCommon());
+            GameHandler.FightEngager(this, new EnemyElite());
         }
 
         private void button21Clicked(object sender, EventArgs e)
@@ -94,7 +94,7 @@ namespace Talia_Zwyciestwa.Forms
             button22.Enabled = true;
             button20.Enabled = false;
             button21.Enabled = false;
-            GameHandler.RandomEvent(this);
+            GameHandler.RandomHardEvent(this);
         }
 
         private void button19Clicked(object sender, EventArgs e)
@@ -109,7 +109,7 @@ namespace Talia_Zwyciestwa.Forms
             button19.Enabled = false;
             button20.Enabled = true;
             button21.Enabled = true;
-            GameHandler.FightEngager(this, new EnemyCommon());
+            GameHandler.FightEngager(this, new EnemyElite());
 
         }
 
@@ -118,7 +118,7 @@ namespace Talia_Zwyciestwa.Forms
             button19.Enabled = true;
             button18.Enabled = true;
             button17.Enabled = false;
-            GameHandler.RandomEvent(this);
+            GameHandler.RandomHardEvent(this);
         }
 
         private void button16Clicked(object sender, EventArgs e)
@@ -166,7 +166,7 @@ namespace Talia_Zwyciestwa.Forms
             button11.Enabled = false;
             button14.Enabled = true;
             button12.Enabled = true;
-            GameHandler.RandomEvent(this);
+            GameHandler.RandomHardEvent(this);
         }
 
         private void button10Clicked(object sender, EventArgs e)
@@ -187,7 +187,7 @@ namespace Talia_Zwyciestwa.Forms
             button8.Enabled = false;
             button9.Enabled = true;
             button11.Enabled = true;
-            GetEQ++;
+            //GetEQ++;
             GameHandler.FightEngager(this, new EnemyElite());
         }
 
@@ -227,7 +227,7 @@ namespace Talia_Zwyciestwa.Forms
             button2.Enabled = false;
             button3.Enabled = false;
             button4.Enabled = true;
-            GetEQ++;
+            //GetEQ++;
             GameHandler.FightEngager(this, new EnemyCommon());
 
         }

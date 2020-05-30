@@ -14,7 +14,7 @@ namespace Talia_Zwyciestwa.Classes.Card_Types
         {
             Value = 1;
             Name = "Broń się";
-            Describtion = "Zyskaj (" + defValue.ToString() + " + zręczność) punktów obrony";
+            Describtion = "Zyskaj ( " + defValue.ToString() + " + zręczność) punktów obrony";
             Id = 1;
         }
 

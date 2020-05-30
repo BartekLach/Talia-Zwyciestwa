@@ -18,6 +18,16 @@ namespace Talia_Zwyciestwa.Forms
 {
     public partial class Fight : Form
     {
+        private Map map;
+        private Button[] CardButtons;
+        private ToolTip[] toolTips = new ToolTip[5];
+        private Player player;
+        private Enemy enemy;
+        private Card[] hand = new Card[5];
+        private List<Card> trash = new List<Card>();
+        private List<Card> deck;
+        private int currentPower;
+
         public Fight(Map m, Enemy e)
         {
             enemy = e;
@@ -125,30 +135,30 @@ namespace Talia_Zwyciestwa.Forms
 
                     switch (map.GetEQ)
                     {
-                        case 0:
-                            if (!map.IsEQGained[map.GetEQ])
-                            {
-                                MessageBox.Show("Ponnadto znalazłeś lekki pancerz i zakładasz go na siebie");
-                                map.Player.WornArmor = 1;
-                                map.Player.UnlockedArmors[0] = true;
-                                map.Player.ChangeArmor(new LightArmor());
-                                map.IsEQGained[map.GetEQ] = true;
-                            }
-                            break;
-                        case 1:
-                            if (!map.IsEQGained[map.GetEQ])
-                            {
-                                MessageBox.Show("Ponnadto znalazłeś lekką broń i zaczynasz jej używać");
-                                map.Player.WornWeapon = 1;
-                                map.Player.UnlockedWeapons[0] = true;
-                                map.Player.ChangeWeapon(new LightWeapon());
-                                map.IsEQGained[map.GetEQ] = true;
-                            }
-                            break;
+                        //case 0:
+                        //    if (!map.IsEQGained[map.GetEQ])
+                        //    {
+                        //        MessageBox.Show("Ponnadto znalazłeś lekki pancerz i zakładasz go na siebie");
+                        //        map.Player.WornArmor = 1;
+                        //        map.Player.UnlockedArmors[0] = true;
+                        //        map.Player.ChangeArmor(new LightArmor());
+                        //        map.IsEQGained[map.GetEQ] = true;
+                        //    }
+                        //    break;
+                        //case 1:
+                        //    if (!map.IsEQGained[map.GetEQ])
+                        //    {
+                        //        MessageBox.Show("Ponnadto znalazłeś lekką broń i zaczynasz jej używać");
+                        //        map.Player.WornWeapon = 1;
+                        //        map.Player.UnlockedWeapons[0] = true;
+                        //        map.Player.ChangeWeapon(new LightWeapon());
+                        //        map.IsEQGained[map.GetEQ] = true;
+                        //    }
+                        //    break;
                         case 2:
                             if (!map.IsEQGained[map.GetEQ])
                             {
-                                MessageBox.Show("Ponnadto znalazłeś tarczę zakładasz ją");
+                                MessageBox.Show("Ponadto znalazłeś tarczę zakładasz ją");
                                 map.Player.WornShield = 1;
                                 map.Player.UnlockedShields[0] = true;
                                 map.Player.ChangeShield(new LightShield());
@@ -159,7 +169,7 @@ namespace Talia_Zwyciestwa.Forms
                         case 3:
                             if (!map.IsEQGained[map.GetEQ])
                             {
-                                MessageBox.Show("Ponnadto znalazłeś hełm i zakładasz go na siebie");
+                                MessageBox.Show("Ponadto znalazłeś hełm i zakładasz go na siebie");
                                 map.Player.UnlockedHelmets[0] = true;
                                 map.Player.WornHelmet = 1;
                                 map.Player.ChangeHelmet(new LightHelmet());
@@ -211,6 +221,7 @@ namespace Talia_Zwyciestwa.Forms
             else
             {
                 currentPower = player.Power;
+                PlayerPowerValue.Text = player.Power.ToString();
                 ClearHand();
                 FillHand();
             }

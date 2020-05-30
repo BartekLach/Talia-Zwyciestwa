@@ -67,7 +67,9 @@ namespace Talia_Zwyciestwa
 				"Zagrywanie kart: Podczas walki będziesz mieć do wyboru 5 kart wylosowanych z Twojej talii, zagranie każdej karty kosztuje Cię manę. Koszt karty jest oznaczony cyferką natomiast aktualną manę znajdziesz w swoich statystykach podczas walki" + "\n" + "\n" +
 				"Punkty obrony: Podczas przyjmowania przez postać obrażeń punkty obrony są pomniejszone o punkty obrażeń. Jeśli punkty obrony spadną poniżej 0 to liczba punktów życia zostaje pomniejszona o tyle ile punkty obrony spadły poniżej 0 a następnie punkty obrony wracają do 0." +"\n" + "\n" +
 				"Ekwipunek: Możesz tam zobaczyć aktualne punkty życia, zgromadzone złoto, swoją talię kart i dysponować swoim ekwipunkiem" +"\n" + "\n" +
-				"" );
+				"Statystyki bohater: \n Siła - znacząco wpływa na liczbę zadawanych obrażeń \n zręczność - znacząco wpływa na ilość zdobywanych punktów obrony \n Punkty obrony - Chronią przed obrażeniami \n Punkty zdrowia - Wskazują ile jeszcze punktów obrażeń możesz przyjąć \n  " + "\n" +
+				"Przeciwnik w walce: Przeciwnik w każdej swojej turze może zwiększyć swoje statystyki i zadać obrażenia. Uważaj, przeciwnik będzie rósł w siłę wraz z upływającym czasem." + "\n" + "\n" +
+				"" +"");
 
 		}
 	}

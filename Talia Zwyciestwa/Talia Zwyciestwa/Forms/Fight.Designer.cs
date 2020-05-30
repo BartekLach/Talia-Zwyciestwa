@@ -16,15 +16,7 @@ namespace Talia_Zwyciestwa.Forms
     partial class Fight
     {
 
-        private Map map;
-        private Button[] CardButtons;
-        private ToolTip[] toolTips = new ToolTip[5];
-        private Player player;
-        private Enemy enemy;
-        private Card[] hand = new Card[5];
-        private List<Card> trash = new List<Card>();
-        private List<Card> deck;
-        private int currentPower;
+
 
 
         /// <summary>

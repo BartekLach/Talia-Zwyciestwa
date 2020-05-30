@@ -49,6 +49,16 @@ namespace Talia_Zwyciestwa.Classes
             }
             unlockedArmors[2] = false;
             unlockedWeapons[2] = false;
+
+            // Starting eq:
+            unlockedArmors[0] = true;
+            unlockedWeapons[0] = true;
+
+            ChangeArmor(new LightArmor());
+            ChangeWeapon(new LightWeapon());
+
+            wornArmor = 1;
+            wornWeapon = 1;
         }
         public void ChangeWeapon(Weapon weapon)
         {

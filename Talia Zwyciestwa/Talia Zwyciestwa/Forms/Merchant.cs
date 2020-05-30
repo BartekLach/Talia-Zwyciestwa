@@ -26,12 +26,15 @@ namespace Talia_Zwyciestwa.Forms
         {
             map = m;
             InitializeComponent();
-            if (!map.Player.UnlockedArmors[0])
+
+            if (!map.Player.UnlockedArmors[0] || map.Player.UnlockedArmors[2])
                 UpgradeArmorButton.Hide();
-            else if (map.Player.UnlockedArmors[2])
+
+            if (map.Player.UnlockedArmors[1])
             {
                 UpgradeArmorButton.Text = "Ulepsz zbroję (250)";
                 ArmorUpgradeToolTip.SetToolTip(UpgradeArmorButton, HeavyArmor.Def.ToString() + " zręczności, " + HeavyArmor.Str.ToString() + " siły");
+
             }
             else
             {
@@ -40,12 +43,15 @@ namespace Talia_Zwyciestwa.Forms
             }
 
 
-            if (!map.Player.UnlockedWeapons[0])
+            if (!map.Player.UnlockedWeapons[0] || map.Player.UnlockedWeapons[2])
                 UpgradeWeaponButton.Hide();
-            else if (map.Player.UnlockedWeapons[2])
+
+            if (map.Player.UnlockedWeapons[1])
             {
+
                 WeaponUpgradeToolTip.SetToolTip(UpgradeWeaponButton, HeavyWeapon.Def.ToString() + " zręczności, " + HeavyWeapon.Str.ToString() + " siły");
                 UpgradeWeaponButton.Text = "Ulepsz broń (250)";
+
             }
             else
             {
@@ -54,16 +60,15 @@ namespace Talia_Zwyciestwa.Forms
             }
 
 
-            if (!map.Player.UnlockedShields[0])
+            if (!map.Player.UnlockedShields[0] || map.Player.UnlockedShields[1])
                 UpgradeShieldButton.Hide();
             else
             {
                 ShieldUpgradeToolTip.SetToolTip(UpgradeShieldButton, HeavyShield.Def.ToString() + " zręczności, " + HeavyShield.Str.ToString() + " siły");
                 UpgradeShieldButton.Text = "Ulepsz tarczę (150)";
-
             }
 
-            if (!map.Player.UnlockedHelmets[0])
+            if (!map.Player.UnlockedHelmets[0] || map.Player.UnlockedHelmets[1])
                 UpgradeHelmetButton.Hide();
             else
             {

@@ -69,7 +69,6 @@
     <Compile Include="Classes\Enemy.cs" />
     <Compile Include="Classes\Fighter.cs" />
     <Compile Include="Classes\GameHandler.cs" />
-    <Compile Include="Classes\Item.cs" />
     <Compile Include="Classes\Items\Armors\Armor.cs" />
     <Compile Include="Classes\Items\Armors\HeavyArmor.cs" />
     <Compile Include="Classes\Items\Armors\LightArmor.cs" />

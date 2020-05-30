@@ -8,7 +8,7 @@ namespace Talia_Zwyciestwa.Classes.Card_Types
 {
     class UpgradedDefCard : Card
     {
-        private int defValue = 7;
+        private int defValue = 9;
         public UpgradedDefCard()
         {
             Value = 1;
@@ -18,7 +18,7 @@ namespace Talia_Zwyciestwa.Classes.Card_Types
         }
         override public void Effect(Player player, Enemy enemy)
         {
-            player.CurrentPO += defValue;
+            player.CurrentPO += defValue + player.CurrentDex;
         }
     }
 }

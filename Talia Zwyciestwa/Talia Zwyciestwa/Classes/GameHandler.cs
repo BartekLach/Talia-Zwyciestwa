@@ -304,40 +304,40 @@ namespace Talia_Zwyciestwa.Classes
 
         public static void RandomEvent(Map map)
         {
-            if(map.Player.CurrentHP<map.Player.MaxHP / 2) //Jeśli życie gracza jest poniżej 50% zwiększamy szansę na odpoczynek
-            {
-                int randomNumber = rng.Next(0, 100);
-                if (randomNumber > 50) // (50-100]
-                {
-                    Rest(map);
-                }
-                else if (randomNumber <= 50 && randomNumber > 30) // (30 - 50]
-                {
-                    MerchantLauncher(map);
-                }
-                else if (randomNumber <= 30 && randomNumber > 15) // (15-30]
-                {
-                    FightEngager(map, new EnemyCommon()); ;
-                }else // [0-15)
-                {
-                    MessageBox.Show("Znalazłeś przy drodze skarb!");
-                    int reward = Rewards.SmallReward();
-                    MessageBox.Show("Zawierał on " + reward + " sztuk złota");
-                    map.Player.Gold += reward;
-                }
-
-            }
-            else
-            {
+            //if(map.Player.CurrentHP<map.Player.MaxHP / 2) //Jeśli życie gracza jest poniżej 50% zwiększamy szansę na odpoczynek
+            //{
+            //    int randomNumber = rng.Next(0, 100);
+            //    if (randomNumber > 50) // (50-100]
+            //    {
+            //        Rest(map);
+            //    }
+            //    else if (randomNumber <= 50 && randomNumber > 30) // (30 - 50]
+            //    {
+            //        MerchantLauncher(map);
+            //    }
+            //    else if (randomNumber <= 30 && randomNumber > 15) // (15-30]
+            //    {
+            //        FightEngager(map, new EnemyCommon()); ;
+            //    }
+            //    else // [0-15)
+            //    {
+            //        MessageBox.Show("Znalazłeś przy drodze skarb!");
+            //        int reward = Rewards.SmallReward();
+            //        MessageBox.Show("Zawierał on " + reward + " sztuk złota");
+            //        map.Player.Gold += reward;
+            //    }
+            //}
+            //else
+            //{
                 int randomNumber = rng.Next(0,100);
                 if(randomNumber == 100)
                 {
                     FightEngager(map, new EnemyElite()); // Peszek!
-                }else if(randomNumber>=70 && randomNumber <100) // (70-100)
+                }else if(randomNumber>=70 && randomNumber <100) // [70-100)
                 {
                     FightEngager(map, new EnemyCommon());
                 }
-                else if(randomNumber <70 && randomNumber >= 40) // [40-70)
+                else if(randomNumber >= 40 && randomNumber < 70) // [40-70)
                 {
                     Rest(map);
                 }
@@ -352,6 +352,29 @@ namespace Talia_Zwyciestwa.Classes
                     MessageBox.Show("Zawierał on " + reward + " sztuk złota");
                     map.Player.Gold += reward;
                 }
+            //}
+        }
+        public static void RandomHardEvent(Map map)
+        {
+            int randomNumber = rng.Next(0, 100);
+            if (randomNumber >= 60 && randomNumber <= 100) // [60-100] - 40%
+            {
+                FightEngager(map, new EnemyElite());
+            }
+            else if (randomNumber >= 40 && randomNumber < 60) // [40-60) - 20%
+            {
+                Rest(map);
+            }
+            else if (randomNumber < 40 && randomNumber >= 10) // [10-40) - 30%
+            {
+                MerchantLauncher(map);
+            }
+            else // [0-10) - 10%
+            {
+                MessageBox.Show("Znalazłeś przy drodze skarb!");
+                int reward = Rewards.BigReward();
+                MessageBox.Show("Zawierał on " + reward + " sztuk złota");
+                map.Player.Gold += reward;
             }
         }
 

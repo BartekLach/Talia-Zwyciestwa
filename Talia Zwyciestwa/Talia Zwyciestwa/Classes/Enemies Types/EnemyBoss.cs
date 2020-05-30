@@ -10,10 +10,10 @@ namespace Talia_Zwyciestwa.Classes.Enemies_Types
     {
         public EnemyBoss()
         {
-            MaxHP = CurrentHP = 150;
+            MaxHP = CurrentHP = 250;
             Str = CurrentStr = 9;
             Dex = CurrentDex = 9;
-            CurrentPO = 0;
+            CurrentPO = 15;
         }
 
 
@@ -21,10 +21,14 @@ namespace Talia_Zwyciestwa.Classes.Enemies_Types
         override public void MakeTurn(Player player)
         {
             Random random = new Random();
-            player.GetDMG(random.Next(6, 9) + CurrentStr);
-            CurrentStr += random.Next(3);
-            CurrentPO = random.Next(6, 9) + CurrentDex;
-            CurrentDex += random.Next(3);
+            player.GetDMG(random.Next(7, 10) + CurrentStr);
+            CurrentStr += random.Next(4);
+            CurrentPO = random.Next(7, 10) + CurrentDex;
+            CurrentDex += random.Next(4);
+
+            if (random.Next(101) < 20)//20%
+                CurrentHP += MaxHP / 10;
+
         }
     }
 }
