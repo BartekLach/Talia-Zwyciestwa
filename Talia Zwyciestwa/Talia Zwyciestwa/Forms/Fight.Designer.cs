@@ -189,7 +189,7 @@ namespace Talia_Zwyciestwa.Forms
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(913, 180);
+            this.label3.Location = new System.Drawing.Point(913, 224);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 31);
             this.label3.TabIndex = 59;
@@ -200,7 +200,7 @@ namespace Talia_Zwyciestwa.Forms
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(913, 137);
+            this.label4.Location = new System.Drawing.Point(913, 136);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 31);
             this.label4.TabIndex = 58;
@@ -211,7 +211,7 @@ namespace Talia_Zwyciestwa.Forms
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.Location = new System.Drawing.Point(913, 92);
+            this.label7.Location = new System.Drawing.Point(913, 91);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(149, 31);
             this.label7.TabIndex = 57;
@@ -278,7 +278,7 @@ namespace Talia_Zwyciestwa.Forms
             this.EnemyHPValue.AutoSize = true;
             this.EnemyHPValue.BackColor = System.Drawing.Color.Transparent;
             this.EnemyHPValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.EnemyHPValue.Location = new System.Drawing.Point(1119, 180);
+            this.EnemyHPValue.Location = new System.Drawing.Point(1119, 224);
             this.EnemyHPValue.Name = "EnemyHPValue";
             this.EnemyHPValue.Size = new System.Drawing.Size(149, 31);
             this.EnemyHPValue.TabIndex = 66;
@@ -289,7 +289,7 @@ namespace Talia_Zwyciestwa.Forms
             this.EnemyStrValue.AutoSize = true;
             this.EnemyStrValue.BackColor = System.Drawing.Color.Transparent;
             this.EnemyStrValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.EnemyStrValue.Location = new System.Drawing.Point(1119, 137);
+            this.EnemyStrValue.Location = new System.Drawing.Point(1119, 136);
             this.EnemyStrValue.Name = "EnemyStrValue";
             this.EnemyStrValue.Size = new System.Drawing.Size(149, 31);
             this.EnemyStrValue.TabIndex = 67;
@@ -300,7 +300,7 @@ namespace Talia_Zwyciestwa.Forms
             this.EnemyDexValue.AutoSize = true;
             this.EnemyDexValue.BackColor = System.Drawing.Color.Transparent;
             this.EnemyDexValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.EnemyDexValue.Location = new System.Drawing.Point(1119, 92);
+            this.EnemyDexValue.Location = new System.Drawing.Point(1119, 91);
             this.EnemyDexValue.Name = "EnemyDexValue";
             this.EnemyDexValue.Size = new System.Drawing.Size(149, 31);
             this.EnemyDexValue.TabIndex = 68;
@@ -322,7 +322,7 @@ namespace Talia_Zwyciestwa.Forms
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label10.Location = new System.Drawing.Point(913, 223);
+            this.label10.Location = new System.Drawing.Point(913, 180);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(202, 31);
             this.label10.TabIndex = 70;
@@ -344,7 +344,7 @@ namespace Talia_Zwyciestwa.Forms
             this.EnemyPOValue.AutoSize = true;
             this.EnemyPOValue.BackColor = System.Drawing.Color.Transparent;
             this.EnemyPOValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.EnemyPOValue.Location = new System.Drawing.Point(1119, 229);
+            this.EnemyPOValue.Location = new System.Drawing.Point(1119, 180);
             this.EnemyPOValue.Name = "EnemyPOValue";
             this.EnemyPOValue.Size = new System.Drawing.Size(149, 31);
             this.EnemyPOValue.TabIndex = 72;
