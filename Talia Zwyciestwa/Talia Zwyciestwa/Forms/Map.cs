@@ -146,7 +146,7 @@ namespace Talia_Zwyciestwa.Forms
         private void button13Clicked(object sender, EventArgs e)
         {
             button13.Enabled = false;
-            GameHandler.RandomEvent(this);
+            GameHandler.RandomHardEvent(this);
         }
 
         private void button12Clicked(object sender, EventArgs e)
@@ -156,7 +156,7 @@ namespace Talia_Zwyciestwa.Forms
             button16.Enabled = true;
             button13.Enabled = false;
             button14.Enabled = false;
-            GameHandler.RandomEvent(this);
+            GameHandler.RandomHardEvent(this);
         }
 
         private void button11Clicked(object sender, EventArgs e)
@@ -268,5 +268,6 @@ namespace Talia_Zwyciestwa.Forms
         public bool BossFight { get => bossFight; set => bossFight = value; }
         public int GetEQ { get => getEQ; set => getEQ = value; }
         public bool[] IsEQGained { get => isEQGained; set => isEQGained = value; }
+
     }
 }
